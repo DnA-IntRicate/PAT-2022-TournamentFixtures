@@ -1,0 +1,26 @@
+{"Fixtures": 
+    [
+        {
+            "type": "PAT2022_u.FixtureEntry",
+            "id": 1, 
+            "fields": 
+            {
+                "TeamID": 3,
+                "LadderStage": 4,
+                "StagePosition": 2,
+                "Eliminated": false
+            }
+        }, 
+        {
+            "type": "PAT2022_u.FixtureEntry",
+            "id": 2, 
+            "fields": 
+            {
+                "TeamID": 1,
+                "LadderStage": 3,
+                "StagePosition": 1,
+                "Eliminated": true
+            }
+        }
+    ]
+}

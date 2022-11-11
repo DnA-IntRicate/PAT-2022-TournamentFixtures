@@ -1,0 +1,23 @@
+GK:	Goalkeeper
+
+DEFENDERS
+SW:	Sweeper
+CB:	Center-back/Central Defender
+RB:	Right Full-back
+LB:	Left Full-back
+RWB:	Right Wing-back
+LWB:	Left Wing-back	
+
+MIDFIELDERS
+DM:	Defensive Midfielder
+CM:	Center Midfielder
+AM: 	Attacking Midfielder
+RW:	Right Wing Midfielder
+LW:	Left Wing Midfielder
+
+FORWARDS
+CF:	Center Forward
+SS:	Support Striker
+RW:	Right Wingers
+LW:	Left Wingers
+S:	Striker
