@@ -1171,6 +1171,150 @@ object Form1: TForm1
       Caption = 'Team 11'
       ParentBiDiMode = False
     end
+    object lblQuaterFinal_1: TLabel
+      Left = 200
+      Top = 59
+      Width = 23
+      Height = 16
+      Caption = 'QF1'
+    end
+    object lblQuaterFinal_2: TLabel
+      Left = 539
+      Top = 59
+      Width = 23
+      Height = 16
+      Alignment = taRightJustify
+      BiDiMode = bdLeftToRight
+      Caption = 'QF2'
+      ParentBiDiMode = False
+    end
+    object lblQuaterFinal_4: TLabel
+      Left = 200
+      Top = 273
+      Width = 23
+      Height = 16
+      Caption = 'QF4'
+    end
+    object lblQuaterFinal_5: TLabel
+      Left = 200
+      Top = 382
+      Width = 23
+      Height = 16
+      Caption = 'QF5'
+    end
+    object lblQuaterFinal_3: TLabel
+      Left = 539
+      Top = 273
+      Width = 23
+      Height = 16
+      Alignment = taRightJustify
+      BiDiMode = bdLeftToRight
+      Caption = 'QF3'
+      ParentBiDiMode = False
+    end
+    object lblQuaterFinal_6: TLabel
+      Left = 539
+      Top = 382
+      Width = 23
+      Height = 16
+      Alignment = taRightJustify
+      BiDiMode = bdLeftToRight
+      Caption = 'QF6'
+      ParentBiDiMode = False
+    end
+    object lblQuaterFinal_7: TLabel
+      Left = 539
+      Top = 167
+      Width = 23
+      Height = 16
+      Alignment = taRightJustify
+      BiDiMode = bdLeftToRight
+      Caption = 'QF7'
+      ParentBiDiMode = False
+    end
+    object lblQuaterFinal_8: TLabel
+      Left = 200
+      Top = 167
+      Width = 23
+      Height = 16
+      Caption = 'QF8'
+    end
+    object lblSemiFinal_1: TLabel
+      Left = 265
+      Top = 111
+      Width = 22
+      Height = 16
+      Caption = 'SF1'
+    end
+    object lblSemiFinal_2: TLabel
+      Left = 473
+      Top = 111
+      Width = 22
+      Height = 16
+      Alignment = taRightJustify
+      BiDiMode = bdLeftToRight
+      Caption = 'SF2'
+      ParentBiDiMode = False
+    end
+    object lblSemiFinal_3: TLabel
+      Left = 473
+      Top = 327
+      Width = 22
+      Height = 16
+      Alignment = taRightJustify
+      BiDiMode = bdLeftToRight
+      Caption = 'SF3'
+      ParentBiDiMode = False
+    end
+    object lblSemiFinal_4: TLabel
+      Left = 265
+      Top = 327
+      Width = 22
+      Height = 16
+      Caption = 'SF4'
+    end
+    object lblFinal_1: TLabel
+      Left = 317
+      Top = 225
+      Width = 14
+      Height = 16
+      Alignment = taCenter
+      Caption = 'F1'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -13
+      Font.Name = 'Tahoma'
+      Font.Style = [fsBold]
+      ParentFont = False
+    end
+    object lblFinal_2: TLabel
+      Left = 430
+      Top = 225
+      Width = 14
+      Height = 16
+      Alignment = taCenter
+      Caption = 'F2'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -13
+      Font.Name = 'Tahoma'
+      Font.Style = [fsBold]
+      ParentFont = False
+    end
+    object lblChampion: TLabel
+      Left = 339
+      Top = 375
+      Width = 86
+      Height = 21
+      Alignment = taCenter
+      Caption = 'Champion'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlue
+      Font.Height = -17
+      Font.Name = 'Tahoma'
+      Font.Style = [fsBold]
+      ParentFont = False
+    end
   end
   object btnRefresh: TButton
     Left = 488
