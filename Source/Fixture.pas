@@ -5,10 +5,11 @@ interface
 const
   LadderStage_Disqualified = -1;
   LadderStage_Qualifier = 0;
-  LadderStage_QuarterFinal = 1;
-  LadderStage_SemiFinal = 2;
-  LadderStage_Final = 3;
-  LadderStage_Champion = 4;
+  LadderStage_Qualifier2 = 1;
+  LadderStage_QuarterFinal = 2;
+  LadderStage_SemiFinal = 3;
+  LadderStage_Final = 4;
+  LadderStage_Champion = 5;
 
 type
   TFixture = class(TObject)
@@ -19,12 +20,13 @@ type
     Eliminated: boolean;
 
     constructor Create();
+    procedure Reset();
   end;
 
 type
   TFixtures = class(TObject)
   public
-    Entries: array [1 .. 20] of TFixture;
+    Entries: array [1 .. 55] of TFixture;  //49
     constructor Create();
   end;
 
@@ -32,10 +34,7 @@ implementation
 
 constructor TFixture.Create();
 begin
-  TeamID := 1;
-  LadderStage := LadderStage_Qualifier;
-  StagePosition := 0;
-  Eliminated := false;
+  Reset();
 end;
 
 constructor TFixtures.Create();
@@ -44,6 +43,14 @@ var
 begin
   for i := Low(Entries) to High(Entries) do
     Entries[i] := TFixture.Create();
+end;
+
+procedure TFixture.Reset();
+begin
+  TeamID := 1;
+  LadderStage := LadderStage_Qualifier;
+  StagePosition := 0;
+  Eliminated := false;
 end;
 
 end.

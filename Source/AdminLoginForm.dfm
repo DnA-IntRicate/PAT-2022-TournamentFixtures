@@ -2,7 +2,7 @@ object Form2: TForm2
   Left = 0
   Top = 0
   Caption = 'Form2'
-  ClientHeight = 674
+  ClientHeight = 589
   ClientWidth = 1005
   Color = clBtnFace
   Font.Charset = ANSI_CHARSET
@@ -1701,6 +1701,354 @@ object Form2: TForm2
         Width = 49
         Height = 24
         TabOrder = 19
+        Items.Strings = (
+          '8A'
+          '8B'
+          '8C'
+          '8D'
+          '9A'
+          '9B'
+          '9C'
+          '9D'
+          '10A'
+          '10B'
+          '10C'
+          '10D'
+          '11A'
+          '11B'
+          '11C'
+          '11D'
+          '12A'
+          '12B'
+          '12C'
+          '12D')
+      end
+      object cmbQualifier2_4: TComboBox
+        Left = 131
+        Top = 292
+        Width = 49
+        Height = 24
+        TabOrder = 20
+        Items.Strings = (
+          '8A'
+          '8B'
+          '8C'
+          '8D'
+          '9A'
+          '9B'
+          '9C'
+          '9D'
+          '10A'
+          '10B'
+          '10C'
+          '10D'
+          '11A'
+          '11B'
+          '11C'
+          '11D'
+          '12A'
+          '12B'
+          '12C'
+          '12D')
+      end
+      object cmbQualifier2_1: TComboBox
+        Left = 131
+        Top = 78
+        Width = 49
+        Height = 24
+        TabOrder = 21
+        Items.Strings = (
+          '8A'
+          '8B'
+          '8C'
+          '8D'
+          '9A'
+          '9B'
+          '9C'
+          '9D'
+          '10A'
+          '10B'
+          '10C'
+          '10D'
+          '11A'
+          '11B'
+          '11C'
+          '11D'
+          '12A'
+          '12B'
+          '12C'
+          '12D')
+      end
+      object cmbQualifier2_3: TComboBox
+        Left = 593
+        Top = 292
+        Width = 49
+        Height = 24
+        BiDiMode = bdRightToLeft
+        ParentBiDiMode = False
+        TabOrder = 22
+        Items.Strings = (
+          '8A'
+          '8B'
+          '8C'
+          '8D'
+          '9A'
+          '9B'
+          '9C'
+          '9D'
+          '10A'
+          '10B'
+          '10C'
+          '10D'
+          '11A'
+          '11B'
+          '11C'
+          '11D'
+          '12A'
+          '12B'
+          '12C'
+          '12D')
+      end
+      object cmbQualifier2_2: TComboBox
+        Left = 591
+        Top = 78
+        Width = 49
+        Height = 24
+        BiDiMode = bdRightToLeft
+        ParentBiDiMode = False
+        TabOrder = 23
+        Items.Strings = (
+          '8A'
+          '8B'
+          '8C'
+          '8D'
+          '9A'
+          '9B'
+          '9C'
+          '9D'
+          '10A'
+          '10B'
+          '10C'
+          '10D'
+          '11A'
+          '11B'
+          '11C'
+          '11D'
+          '12A'
+          '12B'
+          '12C'
+          '12D')
+      end
+      object cmbQuarterFinal_1: TComboBox
+        Left = 198
+        Top = 51
+        Width = 49
+        Height = 24
+        TabOrder = 24
+        Items.Strings = (
+          '8A'
+          '8B'
+          '8C'
+          '8D'
+          '9A'
+          '9B'
+          '9C'
+          '9D'
+          '10A'
+          '10B'
+          '10C'
+          '10D'
+          '11A'
+          '11B'
+          '11C'
+          '11D'
+          '12A'
+          '12B'
+          '12C'
+          '12D')
+      end
+      object cmbQuarterFinal_2: TComboBox
+        Left = 515
+        Top = 51
+        Width = 49
+        Height = 24
+        BiDiMode = bdRightToLeft
+        ParentBiDiMode = False
+        TabOrder = 25
+        Items.Strings = (
+          '8A'
+          '8B'
+          '8C'
+          '8D'
+          '9A'
+          '9B'
+          '9C'
+          '9D'
+          '10A'
+          '10B'
+          '10C'
+          '10D'
+          '11A'
+          '11B'
+          '11C'
+          '11D'
+          '12A'
+          '12B'
+          '12C'
+          '12D')
+      end
+      object cmbQuarterFinal_3: TComboBox
+        Left = 515
+        Top = 265
+        Width = 49
+        Height = 24
+        BiDiMode = bdRightToLeft
+        ParentBiDiMode = False
+        TabOrder = 26
+        Items.Strings = (
+          '8A'
+          '8B'
+          '8C'
+          '8D'
+          '9A'
+          '9B'
+          '9C'
+          '9D'
+          '10A'
+          '10B'
+          '10C'
+          '10D'
+          '11A'
+          '11B'
+          '11C'
+          '11D'
+          '12A'
+          '12B'
+          '12C'
+          '12D')
+      end
+      object cmbQuarterFinal_4: TComboBox
+        Left = 198
+        Top = 265
+        Width = 49
+        Height = 24
+        TabOrder = 27
+        Items.Strings = (
+          '8A'
+          '8B'
+          '8C'
+          '8D'
+          '9A'
+          '9B'
+          '9C'
+          '9D'
+          '10A'
+          '10B'
+          '10C'
+          '10D'
+          '11A'
+          '11B'
+          '11C'
+          '11D'
+          '12A'
+          '12B'
+          '12C'
+          '12D')
+      end
+      object cmbQuarterFinal_5: TComboBox
+        Left = 198
+        Top = 374
+        Width = 49
+        Height = 24
+        TabOrder = 28
+        Items.Strings = (
+          '8A'
+          '8B'
+          '8C'
+          '8D'
+          '9A'
+          '9B'
+          '9C'
+          '9D'
+          '10A'
+          '10B'
+          '10C'
+          '10D'
+          '11A'
+          '11B'
+          '11C'
+          '11D'
+          '12A'
+          '12B'
+          '12C'
+          '12D')
+      end
+      object cmbQuarterFinal_6: TComboBox
+        Left = 515
+        Top = 374
+        Width = 49
+        Height = 24
+        BiDiMode = bdRightToLeft
+        ParentBiDiMode = False
+        TabOrder = 29
+        Items.Strings = (
+          '8A'
+          '8B'
+          '8C'
+          '8D'
+          '9A'
+          '9B'
+          '9C'
+          '9D'
+          '10A'
+          '10B'
+          '10C'
+          '10D'
+          '11A'
+          '11B'
+          '11C'
+          '11D'
+          '12A'
+          '12B'
+          '12C'
+          '12D')
+      end
+      object cmbQuarterFinal_7: TComboBox
+        Left = 515
+        Top = 159
+        Width = 49
+        Height = 24
+        BiDiMode = bdRightToLeft
+        ParentBiDiMode = False
+        TabOrder = 30
+        Items.Strings = (
+          '8A'
+          '8B'
+          '8C'
+          '8D'
+          '9A'
+          '9B'
+          '9C'
+          '9D'
+          '10A'
+          '10B'
+          '10C'
+          '10D'
+          '11A'
+          '11B'
+          '11C'
+          '11D'
+          '12A'
+          '12B'
+          '12C'
+          '12D')
+      end
+      object cmbQuarterFinal_8: TComboBox
+        Left = 198
+        Top = 159
+        Width = 49
+        Height = 24
+        TabOrder = 31
         Items.Strings = (
           '8A'
           '8B'

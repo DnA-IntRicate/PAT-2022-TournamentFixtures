@@ -1,7 +1,7 @@
 object Form1: TForm1
   Left = 0
   Top = 0
-  Caption = 'Form1'
+  Caption = '-'
   ClientHeight = 509
   ClientWidth = 778
   Color = clBtnFace
@@ -1171,14 +1171,14 @@ object Form1: TForm1
       Caption = 'Team 11'
       ParentBiDiMode = False
     end
-    object lblQuaterFinal_1: TLabel
+    object lblQuarterFinal_1: TLabel
       Left = 200
       Top = 59
       Width = 23
       Height = 16
       Caption = 'QF1'
     end
-    object lblQuaterFinal_2: TLabel
+    object lblQuarterFinal_2: TLabel
       Left = 539
       Top = 59
       Width = 23
@@ -1188,21 +1188,21 @@ object Form1: TForm1
       Caption = 'QF2'
       ParentBiDiMode = False
     end
-    object lblQuaterFinal_4: TLabel
+    object lblQuarterFinal_4: TLabel
       Left = 200
       Top = 273
       Width = 23
       Height = 16
       Caption = 'QF4'
     end
-    object lblQuaterFinal_5: TLabel
+    object lblQuarterFinal_5: TLabel
       Left = 200
       Top = 382
       Width = 23
       Height = 16
       Caption = 'QF5'
     end
-    object lblQuaterFinal_3: TLabel
+    object lblQuarterFinal_3: TLabel
       Left = 539
       Top = 273
       Width = 23
@@ -1212,7 +1212,7 @@ object Form1: TForm1
       Caption = 'QF3'
       ParentBiDiMode = False
     end
-    object lblQuaterFinal_6: TLabel
+    object lblQuarterFinal_6: TLabel
       Left = 539
       Top = 382
       Width = 23
@@ -1222,7 +1222,7 @@ object Form1: TForm1
       Caption = 'QF6'
       ParentBiDiMode = False
     end
-    object lblQuaterFinal_7: TLabel
+    object lblQuarterFinal_7: TLabel
       Left = 539
       Top = 167
       Width = 23
@@ -1232,7 +1232,7 @@ object Form1: TForm1
       Caption = 'QF7'
       ParentBiDiMode = False
     end
-    object lblQuaterFinal_8: TLabel
+    object lblQuarterFinal_8: TLabel
       Left = 200
       Top = 167
       Width = 23
@@ -1315,6 +1315,40 @@ object Form1: TForm1
       Font.Style = [fsBold]
       ParentFont = False
     end
+    object lblQualifier2_1: TLabel
+      Left = 120
+      Top = 87
+      Width = 30
+      Height = 16
+      Caption = 'Q2_1'
+    end
+    object lblQualifier2_2: TLabel
+      Left = 614
+      Top = 86
+      Width = 30
+      Height = 16
+      Alignment = taRightJustify
+      BiDiMode = bdLeftToRight
+      Caption = 'Q2_2'
+      ParentBiDiMode = False
+    end
+    object lblQualifier2_3: TLabel
+      Left = 614
+      Top = 300
+      Width = 30
+      Height = 16
+      Alignment = taRightJustify
+      BiDiMode = bdLeftToRight
+      Caption = 'Q2_3'
+      ParentBiDiMode = False
+    end
+    object lblQualifier2_4: TLabel
+      Left = 120
+      Top = 300
+      Width = 30
+      Height = 16
+      Caption = 'Q2_4'
+    end
   end
   object btnRefresh: TButton
     Left = 488
@@ -1323,5 +1357,6 @@ object Form1: TForm1
     Height = 37
     Caption = 'Refresh'
     TabOrder = 2
+    OnClick = btnRefreshClick
   end
 end

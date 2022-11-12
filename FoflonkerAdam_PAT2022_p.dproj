@@ -114,7 +114,6 @@ $(PostBuildEvent)]]></PostBuildEvent>
             <Form>Form1</Form>
             <FormType>dfm</FormType>
         </DCCReference>
-        <DCCReference Include="Source\FileStream.pas"/>
         <DCCReference Include="Source\AdminLoginForm.pas">
             <Form>Form2</Form>
             <FormType>dfm</FormType>
@@ -149,6 +148,12 @@ $(PostBuildEvent)]]></PostBuildEvent>
                 </Excluded_Packages>
             </Delphi.Personality>
             <Deployment Version="3">
+                <DeployFile LocalName="bin\Win32\Release\FoflonkerAdam_PAT2022_p.exe" Configuration="Release" Class="ProjectOutput">
+                    <Platform Name="Win32">
+                        <RemoteName>FoflonkerAdam_PAT2022_p.exe</RemoteName>
+                        <Overwrite>true</Overwrite>
+                    </Platform>
+                </DeployFile>
                 <DeployFile LocalName="bin\Win32\Debug\FoflonkerAdam_PAT2022_p.exe" Configuration="Debug" Class="ProjectOutput">
                     <Platform Name="Win32">
                         <RemoteName>FoflonkerAdam_PAT2022_p.exe</RemoteName>

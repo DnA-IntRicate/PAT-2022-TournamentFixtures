@@ -36,14 +36,14 @@ type
     lblQualifier_6: TLabel;
     lblQualifier_11: TLabel;
     btnRefresh: TButton;
-    lblQuaterFinal_1: TLabel;
-    lblQuaterFinal_2: TLabel;
-    lblQuaterFinal_4: TLabel;
-    lblQuaterFinal_5: TLabel;
-    lblQuaterFinal_3: TLabel;
-    lblQuaterFinal_6: TLabel;
-    lblQuaterFinal_7: TLabel;
-    lblQuaterFinal_8: TLabel;
+    lblQuarterFinal_1: TLabel;
+    lblQuarterFinal_2: TLabel;
+    lblQuarterFinal_4: TLabel;
+    lblQuarterFinal_5: TLabel;
+    lblQuarterFinal_3: TLabel;
+    lblQuarterFinal_6: TLabel;
+    lblQuarterFinal_7: TLabel;
+    lblQuarterFinal_8: TLabel;
     lblSemiFinal_1: TLabel;
     lblSemiFinal_2: TLabel;
     lblSemiFinal_3: TLabel;
@@ -51,6 +51,10 @@ type
     lblFinal_1: TLabel;
     lblFinal_2: TLabel;
     lblChampion: TLabel;
+    lblQualifier2_1: TLabel;
+    lblQualifier2_2: TLabel;
+    lblQualifier2_3: TLabel;
+    lblQualifier2_4: TLabel;
     procedure btnAdminLoginClick(Sender: TObject);
     procedure FormCreate(Sender: TObject);
     procedure FormDestroy(Sender: TObject);
@@ -58,6 +62,7 @@ type
     procedure LoadDatabase();
     procedure LoadFixtures();
     procedure DisplayFixtures();
+    procedure btnRefreshClick(Sender: TObject);
   end;
 
 const
@@ -94,6 +99,49 @@ procedure TForm1.FormCreate(Sender: TObject);
 begin
   imgLadder.Picture.LoadFromFile('Assets/Images/BracketSeeded.png');
   imgLadder.Stretch := true;
+
+  lblQualifier_1.Hide();
+  lblQualifier_2.Hide();
+  lblQualifier_3.Hide();
+  lblQualifier_4.Hide();
+  lblQualifier_5.Hide();
+  lblQualifier_6.Hide();
+  lblQualifier_7.Hide();
+  lblQualifier_8.Hide();
+  lblQualifier_9.Hide();
+  lblQualifier_11.Hide();
+  lblQualifier_12.Hide();
+  lblQualifier_13.Hide();
+  lblQualifier_14.Hide();
+  lblQualifier_15.Hide();
+  lblQualifier_16.Hide();
+  lblQualifier_17.Hide();
+  lblQualifier_18.Hide();
+  lblQualifier_19.Hide();
+  lblQualifier_20.Hide();
+
+  lblQualifier2_1.Hide();
+  lblQualifier2_2.Hide();
+  lblQualifier2_3.Hide();
+  lblQualifier2_4.Hide();
+
+  lblQuarterFinal_1.Hide();
+  lblQuarterFinal_2.Hide();
+  lblQuarterFinal_3.Hide();
+  lblQuarterFinal_4.Hide();
+  lblQuarterFinal_5.Hide();
+  lblQuarterFinal_6.Hide();
+  lblQuarterFinal_7.Hide();
+  lblQuarterFinal_8.Hide();
+
+  lblSemiFinal_1.Hide();
+  lblSemiFinal_2.Hide();
+  lblSemiFinal_3.Hide();
+  lblSemiFinal_4.Hide();
+
+  lblFinal_1.Hide();
+  lblFinal_2.Hide();
+  lblChampion.Hide();
 
   LoadDatabase();
   LoadFixtures();
@@ -159,13 +207,19 @@ begin
   end
   else
   begin
-    iDlgAnswer := MessageDlg
-      ('Local save file ''''Fixtures.json'''' was not found!' + #13#10 +
-      'Would you like to create a new one?', mtWarning, mbYesNo, 0);
+    iDlgAnswer := MessageDlg('Local save file ''Fixtures.json'' was not found!'
+      + #13#10 + 'Would you like to create a new one?', mtWarning, mbYesNo, 0);
 
     if iDlgAnswer = mrYes then
       FileCreate(FILE_PATH_FIXTURES_JSON);
   end;
+end;
+
+procedure TForm1.btnRefreshClick(Sender: TObject);
+begin
+  LoadFixtures();
+  DisplayFixtures();
+  // TODO: Call admin form refresh proc here
 end;
 
 procedure TForm1.DisplayFixtures();
@@ -287,89 +341,175 @@ begin
           case fx.StagePosition of
             1:
               begin
+                lblQualifier_1.Show();
                 lblQualifier_1.Caption := g_TeamList.Teams[fx.TeamID].Name;
               end;
             2:
               begin
+                lblQualifier_2.Show();
                 lblQualifier_2.Caption := g_TeamList.Teams[fx.TeamID].Name;
               end;
             3:
               begin
+                lblQualifier_3.Show();
                 lblQualifier_3.Caption := g_TeamList.Teams[fx.TeamID].Name;
               end;
             4:
               begin
+                lblQualifier_4.Show();
                 lblQualifier_4.Caption := g_TeamList.Teams[fx.TeamID].Name;
               end;
             5:
               begin
+                lblQualifier_5.Show();
                 lblQualifier_5.Caption := g_TeamList.Teams[fx.TeamID].Name;
               end;
             6:
               begin
+                lblQualifier_6.Show();
                 lblQualifier_6.Caption := g_TeamList.Teams[fx.TeamID].Name;
               end;
             7:
               begin
+                lblQualifier_7.Show();
                 lblQualifier_7.Caption := g_TeamList.Teams[fx.TeamID].Name;
               end;
             8:
               begin
+                lblQualifier_8.Show();
                 lblQualifier_8.Caption := g_TeamList.Teams[fx.TeamID].Name;
               end;
             9:
               begin
+                lblQualifier_9.Show();
                 lblQualifier_9.Caption := g_TeamList.Teams[fx.TeamID].Name;
               end;
             10:
               begin
+                lblQualifier_10.Show();
                 lblQualifier_10.Caption := g_TeamList.Teams[fx.TeamID].Name;
               end;
             11:
               begin
+                lblQualifier_11.Show();
                 lblQualifier_11.Caption := g_TeamList.Teams[fx.TeamID].Name;
               end;
             12:
               begin
+                lblQualifier_12.Show();
                 lblQualifier_12.Caption := g_TeamList.Teams[fx.TeamID].Name;
               end;
             13:
               begin
+                lblQualifier_13.Show();
                 lblQualifier_13.Caption := g_TeamList.Teams[fx.TeamID].Name;
               end;
             14:
               begin
+                lblQualifier_14.Show();
                 lblQualifier_14.Caption := g_TeamList.Teams[fx.TeamID].Name;
               end;
             15:
               begin
+                lblQualifier_15.Show();
                 lblQualifier_15.Caption := g_TeamList.Teams[fx.TeamID].Name;
               end;
             16:
               begin
+                lblQualifier_16.Show();
                 lblQualifier_16.Caption := g_TeamList.Teams[fx.TeamID].Name;
               end;
             17:
               begin
+                lblQualifier_17.Show();
                 lblQualifier_17.Caption := g_TeamList.Teams[fx.TeamID].Name;
               end;
             18:
               begin
+                lblQualifier_18.Show();
                 lblQualifier_18.Caption := g_TeamList.Teams[fx.TeamID].Name;
               end;
             19:
               begin
+                lblQualifier_19.Show();
                 lblQualifier_19.Caption := g_TeamList.Teams[fx.TeamID].Name;
               end;
             20:
               begin
+                lblQualifier_20.Show();
                 lblQualifier_20.Caption := g_TeamList.Teams[fx.TeamID].Name;
+              end;
+          end;
+        end;
+      LadderStage_Qualifier2:
+        begin
+          case fx.StagePosition of
+            1:
+              begin
+                lblQualifier2_1.Show();
+                lblQualifier2_1.Caption := g_TeamList.Teams[fx.TeamID].Name;
+              end;
+            2:
+              begin
+                lblQualifier2_2.Show();
+                lblQualifier2_2.Caption := g_TeamList.Teams[fx.TeamID].Name;
+              end;
+            3:
+              begin
+                lblQualifier2_3.Show();
+                lblQualifier2_3.Caption := g_TeamList.Teams[fx.TeamID].Name;
+              end;
+            4:
+              begin
+                lblQualifier2_4.Show();
+                lblQualifier2_4.Caption := g_TeamList.Teams[fx.TeamID].Name;
               end;
           end;
         end;
       LadderStage_QuarterFinal:
         begin
-
+          case fx.StagePosition of
+            1:
+              begin
+                lblQuarterFinal_1.Show();
+                lblQuarterFinal_1.Caption := g_TeamList.Teams[fx.TeamID].Name;
+              end;
+            2:
+              begin
+                lblQuarterFinal_2.Show();
+                lblQuarterFinal_2.Caption := g_TeamList.Teams[fx.TeamID].Name;
+              end;
+            3:
+              begin
+                lblQuarterFinal_3.Show();
+                lblQuarterFinal_3.Caption := g_TeamList.Teams[fx.TeamID].Name;
+              end;
+            4:
+              begin
+                lblQuarterFinal_4.Show();
+                lblQuarterFinal_4.Caption := g_TeamList.Teams[fx.TeamID].Name;
+              end;
+            5:
+              begin
+                lblQuarterFinal_5.Show();
+                lblQuarterFinal_5.Caption := g_TeamList.Teams[fx.TeamID].Name;
+              end;
+            6:
+              begin
+                lblQuarterFinal_6.Show();
+                lblQuarterFinal_6.Caption := g_TeamList.Teams[fx.TeamID].Name;
+              end;
+            7:
+              begin
+                lblQuarterFinal_7.Show();
+                lblQuarterFinal_7.Caption := g_TeamList.Teams[fx.TeamID].Name;
+              end;
+            8:
+              begin
+                lblQuarterFinal_8.Show();
+                lblQuarterFinal_8.Caption := g_TeamList.Teams[fx.TeamID].Name;
+              end;
+          end;
         end;
       LadderStage_SemiFinal:
         begin

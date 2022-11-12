@@ -47,6 +47,18 @@ type
     cmbQualifier_3: TComboBox;
     cmbQualifier_6: TComboBox;
     cmbQualifier_11: TComboBox;
+    cmbQualifier2_4: TComboBox;
+    cmbQualifier2_1: TComboBox;
+    cmbQualifier2_3: TComboBox;
+    cmbQualifier2_2: TComboBox;
+    cmbQuarterFinal_1: TComboBox;
+    cmbQuarterFinal_2: TComboBox;
+    cmbQuarterFinal_3: TComboBox;
+    cmbQuarterFinal_4: TComboBox;
+    cmbQuarterFinal_5: TComboBox;
+    cmbQuarterFinal_6: TComboBox;
+    cmbQuarterFinal_7: TComboBox;
+    cmbQuarterFinal_8: TComboBox;
     procedure FormCreate(Sender: TObject);
     procedure FormDestroy(Sender: TObject);
     procedure btnLoginClick(Sender: TObject);
@@ -78,6 +90,8 @@ var
   Form2: TForm2;
   g_PasswordShowingIcon, g_PasswordHidingIcon: TBitmap;
   g_QualifierCmbList: array [1 .. 20] of ^TComboBox;
+  g_Qualifier2CmbList: array [1 .. 4] of ^TComboBox;
+  g_QuarterFinalCmbList: array [1 .. 8] of ^TComboBox;
 
 implementation
 
@@ -198,11 +212,28 @@ var
 begin
   for fx in Fixtures.Entries do
   begin
-    if fx.LadderStage = LadderStage_Qualifier then
-    begin
-      myCmb := g_QualifierCmbList[fx.StagePosition]^;
-      myCmb.ItemIndex := fx.TeamID - 1;
-    end;
+    if fx.StagePosition > 0 then
+      case fx.LadderStage of
+        LadderStage_Disqualified:
+          begin
+
+          end;
+        LadderStage_Qualifier:
+          begin
+            myCmb := g_QualifierCmbList[fx.StagePosition]^;
+            myCmb.ItemIndex := fx.TeamID - 1;
+          end;
+        LadderStage_Qualifier2:
+          begin
+            myCmb := g_Qualifier2CmbList[fx.StagePosition]^;
+            myCmb.ItemIndex := fx.TeamID - 1;
+          end;
+        LadderStage_QuarterFinal:
+          begin
+            myCmb := g_QuarterFinalCmbList[fx.StagePosition]^;
+            myCmb.ItemIndex := fx.TeamID - 1;
+          end;
+      end;
   end;
 end;
 
@@ -217,13 +248,15 @@ end;
 
 procedure TForm2.UpdateFixtures();
 var
-  i: integer;
+  i, iFixtureIdx: integer;
   myCmb: TComboBox;
   ptrFixture: ^TFixture;
   jsSerialzer: TJsonSerializer;
   sJsonStr: string;
   ostream: TStreamWriter;
 begin
+  iFixtureIdx := 1;
+
   for i := Low(g_QualifierCmbList) to High(g_QualifierCmbList) do
   begin
     if g_QualifierCmbList[i] <> nil then
@@ -231,7 +264,7 @@ begin
       myCmb := g_QualifierCmbList[i]^;
       ptrFixture := @Fixtures.Entries[i];
 
-      if ptrFixture <> nil then
+      if (ptrFixture <> nil) and (myCmb.ItemIndex <> -1) then
       begin
         ptrFixture.TeamID := myCmb.ItemIndex + 1;
         ptrFixture.LadderStage := LadderStage_Qualifier;
@@ -239,7 +272,54 @@ begin
         ptrFixture.Eliminated := false; // TODO: Fix how this boolean is set
       end;
     end;
+
+  //  Inc(iFixtureIdx, 1);
   end;
+
+  Inc(iFixtureIdx, Length(g_QualifierCmbList));
+
+  for i := Low(g_Qualifier2CmbList) to High(g_Qualifier2CmbList) do
+  begin
+    if g_Qualifier2CmbList[i] <> nil then
+    begin
+      myCmb := g_Qualifier2CmbList[i]^;
+      ptrFixture := @Fixtures.Entries[i + iFixtureIdx];
+
+      if (ptrFixture <> nil) and (myCmb.ItemIndex <> -1) then
+      begin
+        ptrFixture.TeamID := myCmb.ItemIndex + 1;
+        ptrFixture.LadderStage := LadderStage_Qualifier2;
+        ptrFixture.StagePosition := i;
+        ptrFixture.Eliminated := false; // TODO: Fix how this boolean is set
+      end;
+    end;
+
+  //  Inc(iFixtureIdx, 1);
+  end;
+
+  Inc(iFixtureIdx, Length(g_Qualifier2CmbList));
+
+  for i := Low(g_QuarterFinalCmbList) to High(g_QuarterFinalCmbList) do
+  begin
+    if g_QuarterFinalCmbList[i] <> nil then
+    begin
+      myCmb := g_QuarterFinalCmbList[i]^;
+      ptrFixture := @Fixtures.Entries[i + iFixtureIdx];
+
+      if (ptrFixture <> nil) and (myCmb.ItemIndex <> -1) then
+      begin
+        ptrFixture.TeamID := myCmb.ItemIndex + 1;
+        ptrFixture.LadderStage := LadderStage_QuarterFinal;
+        ptrFixture.StagePosition := i;
+        ptrFixture.Eliminated := false; // TODO: Fix how this boolean is set
+      end;
+    end;
+
+   // Inc(iFixtureIdx, 1);
+  end;
+
+  //Inc(iFixtureIdx, Length(g_QuarterFinalCmbList));
+ // Inc(iFixtureIdx, i);
 
   if FileExists(FILE_PATH_FIXTURES_JSON) then
   begin
@@ -283,6 +363,20 @@ begin
   g_QualifierCmbList[18] := @cmbQualifier_18;
   g_QualifierCmbList[19] := @cmbQualifier_19;
   g_QualifierCmbList[20] := @cmbQualifier_20;
+
+  g_Qualifier2CmbList[1] := @cmbQualifier2_1;
+  g_Qualifier2CmbList[2] := @cmbQualifier2_2;
+  g_Qualifier2CmbList[3] := @cmbQualifier2_3;
+  g_Qualifier2CmbList[4] := @cmbQualifier2_4;
+
+  g_QuarterFinalCmbList[1] := @cmbQuarterFinal_1;
+  g_QuarterFinalCmbList[2] := @cmbQuarterFinal_2;
+  g_QuarterFinalCmbList[3] := @cmbQuarterFinal_3;
+  g_QuarterFinalCmbList[4] := @cmbQuarterFinal_4;
+  g_QuarterFinalCmbList[5] := @cmbQuarterFinal_5;
+  g_QuarterFinalCmbList[6] := @cmbQuarterFinal_6;
+  g_QuarterFinalCmbList[7] := @cmbQuarterFinal_7;
+  g_QuarterFinalCmbList[8] := @cmbQuarterFinal_8;
 
   pnlAdmin.Show();
   pnlLogin.Hide();

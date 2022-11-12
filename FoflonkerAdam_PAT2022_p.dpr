@@ -3,7 +3,6 @@ program FoflonkerAdam_PAT2022_p;
 uses
   Vcl.Forms,
   MainForm in 'Source\MainForm.pas' {Form1},
-  FileStream in 'Source\FileStream.pas',
   AdminLoginForm in 'Source\AdminLoginForm.pas' {Form2},
   Team in 'Source\Team.pas',
   MainDatabase in 'Source\MainDatabase.pas',
