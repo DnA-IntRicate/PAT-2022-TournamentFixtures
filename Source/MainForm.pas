@@ -112,7 +112,6 @@ begin
     newTeam.SubmitterAdminID :=
       tblTeams[TBL_TEAMS_FIELD_NAME_TEAMSUBMITTERADMINID];
     g_TeamList.Teams[newTeam.ID] := newTeam;
-
     tblTeams.Next();
   end;
 end;
