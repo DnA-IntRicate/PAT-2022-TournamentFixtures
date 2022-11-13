@@ -12,9 +12,7 @@ type
   public
     constructor Create();
     function SerializeJson(obj: TObject): string;
-    function SerializeJsonArray(objects: array of TObject): string;
     function DeserializeJson(const jsonStr: string): TObject;
-    function DeserializeJsonArray(const jsonStr: string): TJSONArray;
 
   private
     m_Marshal: TJSONMarshal;
@@ -64,43 +62,10 @@ begin
   Result := m_Marshal.Marshal(obj).ToString();
 end;
 
-function TJsonSerializer.SerializeJsonArray(objects: array of TObject): string;
-var
-  serializer: TJSONMarshal;
-  jsArray: TJSONArray;
-  jsValue: TJSONValue;
-  myArray: array [1 .. 2] of integer;
-  i: integer;
-begin
-  myArray[1] := 21;
-  myArray[2] := 9999;
-
-  serializer := TJSONMarshal.Create(TJSONConverter.Create());
-  jsArray := TJSONArray.Create();
-
-  for i in myArray do
-  begin
-    jsValue := TJSONValue.Create();
-    // jsValue := serializer.Marshal(i).ToString();
-  end;
-
-
-  // jsArray.add
-
-  // Result := serializer.Marshal(arr).ToString();
-
-end;
-
 function TJsonSerializer.DeserializeJson(const jsonStr: string): TObject;
 begin
   Result := m_Unmarshal.Unmarshal(TJSONObject.ParseJSONValue(jsonStr))
     as TObject;
-end;
-
-function TJsonSerializer.DeserializeJsonArray(const jsonStr: string)
-  : TJSONArray;
-begin
-  Result := TJSONObject.ParseJSONValue(jsonStr) as TJSONArray;
 end;
 
 end.

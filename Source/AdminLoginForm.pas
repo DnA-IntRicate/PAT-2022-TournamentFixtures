@@ -101,6 +101,10 @@ type
     cbxEliminatedQualifier2_18: TCheckBox;
     cbxEliminatedQualifier2_19: TCheckBox;
     cbxEliminatedQualifier2_20: TCheckBox;
+    cmbSemiFinal_1: TComboBox;
+    cmbSemiFinal_2: TComboBox;
+    cmbSemiFinal_3: TComboBox;
+    cmbSemiFinal_4: TComboBox;
     procedure FormCreate(Sender: TObject);
     procedure FormDestroy(Sender: TObject);
     procedure btnLoginClick(Sender: TObject);
@@ -133,9 +137,11 @@ const
 var
   Form2: TForm2;
   g_PasswordShowingIcon, g_PasswordHidingIcon: TBitmap;
+
   g_QualifierCmbList: array [1 .. 20] of ^TComboBox;
   g_Qualifier2CmbList: array [1 .. 4] of ^TComboBox;
   g_QuarterFinalCmbList: array [1 .. 8] of ^TComboBox;
+  g_SemiFinalCmbList: array [1 .. 4] of ^TComboBox;
 
   g_QualifierCbxList: array [1 .. 20] of ^TCheckBox;
   g_Qualifier2CbxList: array [1 .. 20] of ^TCheckBox;
@@ -289,6 +295,14 @@ begin
             if fx.Eliminated then
               SetEliminated(fx.teamID, LadderStage_QuarterFinal);
           end;
+        LadderStage_SemiFinal:
+          begin
+            myCmb := g_SemiFinalCmbList[fx.StagePosition]^;
+            myCmb.ItemIndex := fx.teamID - 1;
+
+            if fx.Eliminated then
+              SetEliminated(fx.teamID, LadderStage_Final);
+          end;
       end;
   end;
 end;
@@ -367,6 +381,26 @@ begin
         ptrFixture.StagePosition := i;
         ptrFixture.Eliminated := IsEliminated(ptrFixture.teamID,
           LadderStage_QuarterFinal);
+      end;
+    end;
+
+    Inc(iFixtureIdx, 1);
+  end;
+
+  for i := Low(g_SemiFinalCmbList) to High(g_SemiFinalCmbList) do
+  begin
+    if g_SemiFinalCmbList[i] <> nil then
+    begin
+      myCmb := g_SemiFinalCmbList[i]^;
+      ptrFixture := @Fixtures.Entries[iFixtureIdx];
+
+      if (ptrFixture <> nil) and (myCmb.ItemIndex <> -1) then
+      begin
+        ptrFixture.teamID := myCmb.ItemIndex + 1;
+        ptrFixture.LadderStage := LadderStage_SemiFinal;
+        ptrFixture.StagePosition := i;
+        ptrFixture.Eliminated := IsEliminated(ptrFixture.teamID,
+          LadderStage_SemiFinal);
       end;
     end;
 
@@ -784,7 +818,7 @@ end;
 
 procedure TForm2.ShowAdminPanel();
 var
-  Team: TTeam;
+  t: TTeam;
   i: integer;
 begin
   g_QualifierCmbList[1] := @cmbQualifier_1;
@@ -821,6 +855,11 @@ begin
   g_QuarterFinalCmbList[6] := @cmbQuarterFinal_6;
   g_QuarterFinalCmbList[7] := @cmbQuarterFinal_7;
   g_QuarterFinalCmbList[8] := @cmbQuarterFinal_8;
+
+  g_SemiFinalCmbList[1] := @cmbSemiFinal_1;
+  g_SemiFinalCmbList[2] := @cmbSemiFinal_2;
+  g_SemiFinalCmbList[3] := @cmbSemiFinal_3;
+  g_SemiFinalCmbList[4] := @cmbSemiFinal_4;
 
   g_QualifierCbxList[1] := @cbxEliminatedQualifier_1;
   g_QualifierCbxList[2] := @cbxEliminatedQualifier_2;
@@ -864,23 +903,26 @@ begin
   g_Qualifier2CbxList[19] := @cbxEliminatedQualifier2_19;
   g_Qualifier2CbxList[20] := @cbxEliminatedQualifier2_20;
 
-  for Team in TeamList.Teams do
+  for t in TeamList.Teams do
   begin
     for i := Low(g_QualifierCmbList) to High(g_QualifierCmbList) do
-      g_QualifierCmbList[i].Items.Add(Team.Name);
+      g_QualifierCmbList[i].Items.Add(t.Name);
 
     for i := Low(g_Qualifier2CmbList) to High(g_Qualifier2CmbList) do
-      g_Qualifier2CmbList[i].Items.Add(Team.Name);
+      g_Qualifier2CmbList[i].Items.Add(t.Name);
 
     for i := Low(g_QuarterFinalCmbList) to High(g_QuarterFinalCmbList) do
-      g_QuarterFinalCmbList[i].Items.Add(Team.Name);
+      g_QuarterFinalCmbList[i].Items.Add(t.Name);
+
+    for i := Low(g_SemiFinalCmbList) to High(g_SemiFinalCmbList) do
+      g_SemiFinalCmbList[i].Items.Add(t.Name);
   end;
 
   for i := Low(g_QualifierCbxList) to High(g_QualifierCbxList) do
     g_QualifierCbxList[i].Caption := TeamList.Teams[i].Name;
 
   for i := Low(g_Qualifier2CbxList) to High(g_Qualifier2CbxList) do
-  g_Qualifier2CbxList[i].Caption := TeamList.Teams[i].Name;
+    g_Qualifier2CbxList[i].Caption := TeamList.Teams[i].Name;
 
   pnlAdmin.Show();
   pnlLogin.Hide();

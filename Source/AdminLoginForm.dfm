@@ -1399,6 +1399,38 @@ object Form2: TForm2
         Height = 24
         TabOrder = 31
       end
+      object cmbSemiFinal_1: TComboBox
+        Left = 269
+        Top = 103
+        Width = 49
+        Height = 24
+        TabOrder = 32
+      end
+      object cmbSemiFinal_2: TComboBox
+        Left = 445
+        Top = 103
+        Width = 49
+        Height = 24
+        BiDiMode = bdRightToLeft
+        ParentBiDiMode = False
+        TabOrder = 33
+      end
+      object cmbSemiFinal_3: TComboBox
+        Left = 445
+        Top = 320
+        Width = 49
+        Height = 24
+        BiDiMode = bdRightToLeft
+        ParentBiDiMode = False
+        TabOrder = 34
+      end
+      object cmbSemiFinal_4: TComboBox
+        Left = 269
+        Top = 320
+        Width = 49
+        Height = 24
+        TabOrder = 35
+      end
     end
     object gbxEliminatedQualifierTeams: TGroupBox
       Left = 9

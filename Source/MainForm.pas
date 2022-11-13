@@ -663,7 +663,44 @@ begin
         end;
       LadderStage_SemiFinal:
         begin
+          case fx.StagePosition of
+            1:
+              begin
+                lblSemiFinal_1.Font.Color := clBlack;
+                if fx.Eliminated then
+                  lblSemiFinal_1.Font.Color := clRed;
 
+                lblSemiFinal_1.Show();
+                lblSemiFinal_1.Caption := g_TeamList.Teams[fx.TeamID].Name;
+              end;
+            2:
+              begin
+                lblSemiFinal_2.Font.Color := clBlack;
+                if fx.Eliminated then
+                  lblSemiFinal_2.Font.Color := clRed;
+
+                lblSemiFinal_2.Show();
+                lblSemiFinal_2.Caption := g_TeamList.Teams[fx.TeamID].Name;
+              end;
+            3:
+              begin
+                lblSemiFinal_3.Font.Color := clBlack;
+                if fx.Eliminated then
+                  lblSemiFinal_3.Font.Color := clRed;
+
+                lblSemiFinal_3.Show();
+                lblSemiFinal_3.Caption := g_TeamList.Teams[fx.TeamID].Name;
+              end;
+            4:
+              begin
+                lblSemiFinal_4.Font.Color := clBlack;
+                if fx.Eliminated then
+                  lblSemiFinal_4.Font.Color := clRed;
+
+                lblSemiFinal_4.Show();
+                lblSemiFinal_4.Caption := g_TeamList.Teams[fx.TeamID].Name;
+              end;
+          end;
         end;
       LadderStage_Final:
         begin
