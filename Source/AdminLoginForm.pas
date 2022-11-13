@@ -126,6 +126,27 @@ type
     cbxEliminatedQuarterFinal_18: TCheckBox;
     cbxEliminatedQuarterFinal_19: TCheckBox;
     cbxEliminatedQuarterFinal_20: TCheckBox;
+    gbxEliminatedSemiFinalTeams: TGroupBox;
+    cbxEliminatedSemiFinal_1: TCheckBox;
+    cbxEliminatedSemiFinal_2: TCheckBox;
+    cbxEliminatedSemiFinal_3: TCheckBox;
+    cbxEliminatedSemiFinal_4: TCheckBox;
+    cbxEliminatedSemiFinal_5: TCheckBox;
+    cbxEliminatedSemiFinal_6: TCheckBox;
+    cbxEliminatedSemiFinal_7: TCheckBox;
+    cbxEliminatedSemiFinal_8: TCheckBox;
+    cbxEliminatedSemiFinal_9: TCheckBox;
+    cbxEliminatedSemiFinal_10: TCheckBox;
+    cbxEliminatedSemiFinal_11: TCheckBox;
+    cbxEliminatedSemiFinal_12: TCheckBox;
+    cbxEliminatedSemiFinal_13: TCheckBox;
+    cbxEliminatedSemiFinal_14: TCheckBox;
+    cbxEliminatedSemiFinal_15: TCheckBox;
+    cbxEliminatedSemiFinal_16: TCheckBox;
+    cbxEliminatedSemiFinal_17: TCheckBox;
+    cbxEliminatedSemiFinal_18: TCheckBox;
+    cbxEliminatedSemiFinal_19: TCheckBox;
+    cbxEliminatedSemiFinal_20: TCheckBox;
     procedure FormCreate(Sender: TObject);
     procedure btnLoginClick(Sender: TObject);
     function HashPasswd(const passwd: string): string;
@@ -166,6 +187,7 @@ var
   g_QualifierCbxList: array [1 .. 20] of ^TCheckBox;
   g_Qualifier2CbxList: array [1 .. 20] of ^TCheckBox;
   g_QuarterFinalCbxList: array [1 .. 20] of ^TCheckBox;
+  g_SemiFinalCbxList: array [1 .. 20] of ^TCheckBox;
 
 implementation
 
@@ -316,7 +338,7 @@ begin
             myCmb.ItemIndex := fx.teamID - 1;
 
             if fx.Eliminated then
-              SetEliminated(fx.teamID, LadderStage_Final);
+              SetEliminated(fx.teamID, LadderStage_SemiFinal);
           end;
       end;
   end;
@@ -707,7 +729,88 @@ begin
       end;
     LadderStage_SemiFinal:
       begin
-
+        case teamID of
+          1:
+            begin
+              Result := cbxEliminatedSemiFinal_1.Checked;
+            end;
+          2:
+            begin
+              Result := cbxEliminatedSemiFinal_2.Checked;
+            end;
+          3:
+            begin
+              Result := cbxEliminatedSemiFinal_3.Checked;
+            end;
+          4:
+            begin
+              Result := cbxEliminatedSemiFinal_4.Checked;
+            end;
+          5:
+            begin
+              Result := cbxEliminatedSemiFinal_5.Checked;
+            end;
+          6:
+            begin
+              Result := cbxEliminatedSemiFinal_6.Checked;
+            end;
+          7:
+            begin
+              Result := cbxEliminatedSemiFinal_7.Checked;
+            end;
+          8:
+            begin
+              Result := cbxEliminatedSemiFinal_8.Checked;
+            end;
+          9:
+            begin
+              Result := cbxEliminatedSemiFinal_9.Checked;
+            end;
+          10:
+            begin
+              Result := cbxEliminatedSemiFinal_10.Checked;
+            end;
+          11:
+            begin
+              Result := cbxEliminatedSemiFinal_11.Checked;
+            end;
+          12:
+            begin
+              Result := cbxEliminatedSemiFinal_12.Checked;
+            end;
+          13:
+            begin
+              Result := cbxEliminatedSemiFinal_13.Checked;
+            end;
+          14:
+            begin
+              Result := cbxEliminatedSemiFinal_14.Checked;
+            end;
+          15:
+            begin
+              Result := cbxEliminatedSemiFinal_15.Checked;
+            end;
+          16:
+            begin
+              Result := cbxEliminatedSemiFinal_16.Checked;
+            end;
+          17:
+            begin
+              Result := cbxEliminatedSemiFinal_17.Checked;
+            end;
+          18:
+            begin
+              Result := cbxEliminatedSemiFinal_18.Checked;
+            end;
+          19:
+            begin
+              Result := cbxEliminatedSemiFinal_19.Checked;
+            end;
+          20:
+            begin
+              Result := cbxEliminatedSemiFinal_20.Checked;
+            end;
+        end;
       end;
     LadderStage_Final:
       begin
@@ -984,7 +1087,88 @@ begin
       end;
     LadderStage_SemiFinal:
       begin
-
+        case teamID of
+          1:
+            begin
+              cbxEliminatedSemiFinal_1.Checked := true;
+            end;
+          2:
+            begin
+              cbxEliminatedSemiFinal_2.Checked := true;
+            end;
+          3:
+            begin
+              cbxEliminatedSemiFinal_3.Checked := true;
+            end;
+          4:
+            begin
+              cbxEliminatedSemiFinal_4.Checked := true;
+            end;
+          5:
+            begin
+              cbxEliminatedSemiFinal_5.Checked := true;
+            end;
+          6:
+            begin
+              cbxEliminatedSemiFinal_6.Checked := true;
+            end;
+          7:
+            begin
+              cbxEliminatedSemiFinal_7.Checked := true;
+            end;
+          8:
+            begin
+              cbxEliminatedSemiFinal_8.Checked := true;
+            end;
+          9:
+            begin
+              cbxEliminatedSemiFinal_9.Checked := true;
+            end;
+          10:
+            begin
+              cbxEliminatedSemiFinal_10.Checked := true;
+            end;
+          11:
+            begin
+              cbxEliminatedSemiFinal_11.Checked := true;
+            end;
+          12:
+            begin
+              cbxEliminatedSemiFinal_12.Checked := true;
+            end;
+          13:
+            begin
+              cbxEliminatedSemiFinal_13.Checked := true;
+            end;
+          14:
+            begin
+              cbxEliminatedSemiFinal_14.Checked := true;
+            end;
+          15:
+            begin
+              cbxEliminatedSemiFinal_15.Checked := true;
+            end;
+          16:
+            begin
+              cbxEliminatedSemiFinal_16.Checked := true;
+            end;
+          17:
+            begin
+              cbxEliminatedSemiFinal_17.Checked := true;
+            end;
+          18:
+            begin
+              cbxEliminatedSemiFinal_18.Checked := true;
+            end;
+          19:
+            begin
+              cbxEliminatedSemiFinal_19.Checked := true;
+            end;
+          20:
+            begin
+              cbxEliminatedSemiFinal_20.Checked := true;
+            end;
+        end;
       end;
     LadderStage_Final:
       begin
@@ -1101,6 +1285,27 @@ begin
   g_QuarterFinalCbxList[19] := @cbxEliminatedQuarterFinal_19;
   g_QuarterFinalCbxList[20] := @cbxEliminatedQuarterFinal_20;
 
+  g_SemiFinalCbxList[1] := @cbxEliminatedSemiFinal_1;
+  g_SemiFinalCbxList[2] := @cbxEliminatedSemiFinal_2;
+  g_SemiFinalCbxList[3] := @cbxEliminatedSemiFinal_3;
+  g_SemiFinalCbxList[4] := @cbxEliminatedSemiFinal_4;
+  g_SemiFinalCbxList[5] := @cbxEliminatedSemiFinal_5;
+  g_SemiFinalCbxList[6] := @cbxEliminatedSemiFinal_6;
+  g_SemiFinalCbxList[7] := @cbxEliminatedSemiFinal_7;
+  g_SemiFinalCbxList[8] := @cbxEliminatedSemiFinal_8;
+  g_SemiFinalCbxList[9] := @cbxEliminatedSemiFinal_9;
+  g_SemiFinalCbxList[10] := @cbxEliminatedSemiFinal_10;
+  g_SemiFinalCbxList[11] := @cbxEliminatedSemiFinal_11;
+  g_SemiFinalCbxList[12] := @cbxEliminatedSemiFinal_12;
+  g_SemiFinalCbxList[13] := @cbxEliminatedSemiFinal_13;
+  g_SemiFinalCbxList[14] := @cbxEliminatedSemiFinal_14;
+  g_SemiFinalCbxList[15] := @cbxEliminatedSemiFinal_15;
+  g_SemiFinalCbxList[16] := @cbxEliminatedSemiFinal_16;
+  g_SemiFinalCbxList[17] := @cbxEliminatedSemiFinal_17;
+  g_SemiFinalCbxList[18] := @cbxEliminatedSemiFinal_18;
+  g_SemiFinalCbxList[19] := @cbxEliminatedSemiFinal_19;
+  g_SemiFinalCbxList[20] := @cbxEliminatedSemiFinal_20;
+
   for t in TeamList.Teams do
   begin
     for i := Low(g_QualifierCmbList) to High(g_QualifierCmbList) do
@@ -1124,6 +1329,9 @@ begin
 
   for i := Low(g_QuarterFinalCbxList) to High(g_QuarterFinalCbxList) do
     g_QuarterFinalCbxList[i].Caption := TeamList.Teams[i].Name;
+
+  for i := Low(g_SemiFinalCbxList) to High(g_SemiFinalCbxList) do
+    g_SemiFinalCbxList[i].Caption := TeamList.Teams[i].Name;
 
   pnlAdmin.Show();
   pnlLogin.Hide();

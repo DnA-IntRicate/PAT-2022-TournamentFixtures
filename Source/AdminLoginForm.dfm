@@ -2,7 +2,7 @@ object Form2: TForm2
   Left = 0
   Top = 0
   Caption = 'Form2'
-  ClientHeight = 563
+  ClientHeight = 687
   ClientWidth = 908
   Color = clBtnFace
   Font.Charset = ANSI_CHARSET
@@ -155,7 +155,7 @@ object Form2: TForm2
     Left = 8
     Top = 8
     Width = 897
-    Height = 553
+    Height = 673
     TabOrder = 1
     object btnUpdateFixtures: TButton
       Left = 776
@@ -1932,6 +1932,174 @@ object Form2: TForm2
         Width = 41
         Height = 17
         Caption = 'QF20'
+        TabOrder = 19
+      end
+    end
+    object gbxEliminatedSemiFinalTeams: TGroupBox
+      Left = 183
+      Top = 551
+      Width = 289
+      Height = 115
+      Caption = 'Eliminated Teams: Semi-Finals'
+      TabOrder = 5
+      object cbxEliminatedSemiFinal_1: TCheckBox
+        Left = 3
+        Top = 24
+        Width = 41
+        Height = 17
+        Caption = 'SF1'
+        TabOrder = 0
+      end
+      object cbxEliminatedSemiFinal_2: TCheckBox
+        Left = 3
+        Top = 49
+        Width = 41
+        Height = 17
+        Caption = 'SF2'
+        TabOrder = 1
+      end
+      object cbxEliminatedSemiFinal_3: TCheckBox
+        Left = 3
+        Top = 72
+        Width = 41
+        Height = 17
+        Caption = 'SF3'
+        TabOrder = 2
+      end
+      object cbxEliminatedSemiFinal_4: TCheckBox
+        Left = 3
+        Top = 95
+        Width = 41
+        Height = 17
+        Caption = 'SF4'
+        TabOrder = 3
+      end
+      object cbxEliminatedSemiFinal_5: TCheckBox
+        Left = 50
+        Top = 24
+        Width = 41
+        Height = 17
+        Caption = 'SF5'
+        TabOrder = 4
+      end
+      object cbxEliminatedSemiFinal_6: TCheckBox
+        Left = 50
+        Top = 49
+        Width = 41
+        Height = 17
+        Caption = 'SF6'
+        TabOrder = 5
+      end
+      object cbxEliminatedSemiFinal_7: TCheckBox
+        Left = 50
+        Top = 72
+        Width = 41
+        Height = 17
+        Caption = 'SF7'
+        TabOrder = 6
+      end
+      object cbxEliminatedSemiFinal_8: TCheckBox
+        Left = 50
+        Top = 95
+        Width = 41
+        Height = 17
+        Caption = 'SF8'
+        TabOrder = 7
+      end
+      object cbxEliminatedSemiFinal_9: TCheckBox
+        Left = 97
+        Top = 24
+        Width = 41
+        Height = 17
+        Caption = 'SF9'
+        TabOrder = 8
+      end
+      object cbxEliminatedSemiFinal_10: TCheckBox
+        Left = 97
+        Top = 47
+        Width = 41
+        Height = 17
+        Caption = 'SF10'
+        TabOrder = 9
+      end
+      object cbxEliminatedSemiFinal_11: TCheckBox
+        Left = 97
+        Top = 72
+        Width = 41
+        Height = 17
+        Caption = 'SF11'
+        TabOrder = 10
+      end
+      object cbxEliminatedSemiFinal_12: TCheckBox
+        Left = 97
+        Top = 95
+        Width = 41
+        Height = 17
+        Caption = 'SF12'
+        TabOrder = 11
+      end
+      object cbxEliminatedSemiFinal_13: TCheckBox
+        Left = 150
+        Top = 24
+        Width = 41
+        Height = 17
+        Caption = 'SF13'
+        TabOrder = 12
+      end
+      object cbxEliminatedSemiFinal_14: TCheckBox
+        Left = 150
+        Top = 47
+        Width = 41
+        Height = 17
+        Caption = 'SF14'
+        TabOrder = 13
+      end
+      object cbxEliminatedSemiFinal_15: TCheckBox
+        Left = 150
+        Top = 72
+        Width = 41
+        Height = 17
+        Caption = 'SF15'
+        TabOrder = 14
+      end
+      object cbxEliminatedSemiFinal_16: TCheckBox
+        Left = 150
+        Top = 95
+        Width = 41
+        Height = 17
+        Caption = 'SF16'
+        TabOrder = 15
+      end
+      object cbxEliminatedSemiFinal_17: TCheckBox
+        Left = 205
+        Top = 24
+        Width = 41
+        Height = 17
+        Caption = 'SF17'
+        TabOrder = 16
+      end
+      object cbxEliminatedSemiFinal_18: TCheckBox
+        Left = 205
+        Top = 47
+        Width = 41
+        Height = 17
+        Caption = 'SF18'
+        TabOrder = 17
+      end
+      object cbxEliminatedSemiFinal_19: TCheckBox
+        Left = 205
+        Top = 72
+        Width = 41
+        Height = 17
+        Caption = 'SF19'
+        TabOrder = 18
+      end
+      object cbxEliminatedSemiFinal_20: TCheckBox
+        Left = 205
+        Top = 95
+        Width = 41
+        Height = 17
+        Caption = 'SF20'
         TabOrder = 19
       end
     end
