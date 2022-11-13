@@ -49,4 +49,4 @@ Example: `Password = 12345678; Hash = a2240212f6e8d7db337b46aab21433ad==`
 - 53    /Source/MainDatabase.pas
 - 624   /Source/MainForm.pas
 - 75    /Source/Team.pas
-*Total = 2403*
+- *Total = 2403*
