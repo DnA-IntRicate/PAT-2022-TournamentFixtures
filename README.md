@@ -42,6 +42,9 @@ Upon startup, the application will load this file’s contents into an array of 
 For security reasons, admin passwords will not be stored as plain text in the backend database. Passwords will therefore be hashed (salted MD5) when being stored in the database (signup) and when being compared to the database (logins).
 Example: `Password = 12345678; Hash = a2240212f6e8d7db337b46aab21433ad==`
 
+![alt text](Screenshots/PopulatedFixtures.png)
+![alt text](Screenshots/FixtureEditor.png)
+
 ### Line Counts
 - 1525  /Source/AdminLoginForm.pas
 - 55    /Source/Fixture.pas
