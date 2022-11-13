@@ -11,6 +11,7 @@ object Form1: TForm1
   Font.Name = 'Tahoma'
   Font.Style = []
   OldCreateOrder = False
+  Position = poDesigned
   OnActivate = FormActivate
   OnCreate = FormCreate
   OnDestroy = FormDestroy
@@ -1302,12 +1303,12 @@ object Form1: TForm1
       ParentFont = False
     end
     object lblChampion: TLabel
-      Left = 339
-      Top = 375
-      Width = 86
+      Left = 369
+      Top = 377
+      Width = 11
       Height = 21
       Alignment = taCenter
-      Caption = 'Champion'
+      Caption = 'C'
       Font.Charset = DEFAULT_CHARSET
       Font.Color = clBlue
       Font.Height = -17

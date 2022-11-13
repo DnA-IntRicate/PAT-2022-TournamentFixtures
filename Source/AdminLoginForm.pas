@@ -352,6 +352,10 @@ begin
             if fx.Eliminated then
               SetEliminated(fx.teamID, LadderStage_Final);
           end;
+        LadderStage_Champion:
+          begin
+            cmbChampion.ItemIndex := fx.teamID - 1;
+          end;
       end;
   end;
 end;
@@ -474,6 +478,15 @@ begin
     end;
 
     Inc(iFixtureIdx, 1);
+  end;
+
+  ptrFixture := @Fixtures.Entries[iFixtureIdx];
+  if (ptrFixture <> nil) and (cmbChampion.ItemIndex <> -1) then
+  begin
+    ptrFixture.teamID := cmbChampion.ItemIndex + 1;
+    ptrFixture.LadderStage := LadderStage_Champion;
+    ptrFixture.StagePosition := 1;
+    ptrFixture.Eliminated := false;
   end;
 
   if FileExists(FILE_PATH_FIXTURES_JSON) then
@@ -1358,7 +1371,7 @@ begin
     for i := Low(g_FinalCmbList) to High(g_FinalCmbList) do
       g_FinalCmbList[i].Items.Add(t.Name);
 
-      cmbChampion.Items.Add(t.Name);
+    cmbChampion.Items.Add(t.Name);
   end;
 
   for i := Low(g_QualifierCbxList) to High(g_QualifierCbxList) do

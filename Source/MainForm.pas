@@ -728,7 +728,8 @@ begin
         end;
       LadderStage_Champion:
         begin
-
+           lblChampion.Show();
+           lblChampion.Caption := g_TeamList.Teams[fx.TeamID].Name;
         end;
     end;
   end;

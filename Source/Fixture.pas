@@ -26,7 +26,7 @@ type
 type
   TFixtures = class(TObject)
   public
-    Entries: array [1 .. 49] of TFixture;
+    Entries: array [1 .. 39] of TFixture;
     constructor Create();
   end;
 
