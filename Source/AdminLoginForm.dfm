@@ -1407,164 +1407,164 @@ object Form2: TForm2
       Height = 115
       Caption = 'Eliminated Teams: Qualifiers'
       TabOrder = 2
-      object cbxEliminatedQualifier_8A: TCheckBox
+      object cbxEliminatedQualifier_1: TCheckBox
         Left = 3
         Top = 24
         Width = 41
         Height = 17
-        Caption = '8A'
+        Caption = 'Q1'
         TabOrder = 0
       end
-      object cbxEliminatedQualifier_8C: TCheckBox
+      object cbxEliminatedQualifier_2: TCheckBox
         Left = 3
-        Top = 72
+        Top = 49
         Width = 41
         Height = 17
-        Caption = '8C'
+        Caption = 'Q2'
         TabOrder = 1
       end
-      object cbxEliminatedQualifier_8D: TCheckBox
+      object cbxEliminatedQualifier_3: TCheckBox
         Left = 3
-        Top = 95
+        Top = 72
         Width = 41
         Height = 17
-        Caption = '8D'
+        Caption = 'Q3'
         TabOrder = 2
       end
-      object cbxEliminatedQualifier_8B: TCheckBox
+      object cbxEliminatedQualifier_4: TCheckBox
         Left = 3
-        Top = 47
+        Top = 95
         Width = 41
         Height = 17
-        Caption = '8B'
+        Caption = 'Q4'
         TabOrder = 3
       end
-      object cbxEliminatedQualifier_9B: TCheckBox
+      object cbxEliminatedQualifier_5: TCheckBox
         Left = 50
-        Top = 47
+        Top = 24
         Width = 41
         Height = 17
-        Caption = '9B'
+        Caption = 'Q5'
         TabOrder = 4
       end
-      object cbxEliminatedQualifier_9C: TCheckBox
+      object cbxEliminatedQualifier_6: TCheckBox
         Left = 50
-        Top = 72
+        Top = 49
         Width = 41
         Height = 17
-        Caption = '9C'
+        Caption = 'Q6'
         TabOrder = 5
       end
-      object cbxEliminatedQualifier_9D: TCheckBox
+      object cbxEliminatedQualifier_7: TCheckBox
         Left = 50
-        Top = 95
+        Top = 72
         Width = 41
         Height = 17
-        Caption = '9D'
+        Caption = 'Q7'
         TabOrder = 6
       end
-      object cbxEliminatedQualifier_9A: TCheckBox
+      object cbxEliminatedQualifier_8: TCheckBox
         Left = 50
-        Top = 24
+        Top = 95
         Width = 41
         Height = 17
-        Caption = '9A'
+        Caption = 'Q8'
         TabOrder = 7
       end
-      object cbxEliminatedQualifier_10A: TCheckBox
+      object cbxEliminatedQualifier_9: TCheckBox
         Left = 97
         Top = 24
         Width = 41
         Height = 17
-        Caption = '10A'
+        Caption = 'Q9'
         TabOrder = 8
       end
-      object cbxEliminatedQualifier_10B: TCheckBox
+      object cbxEliminatedQualifier_10: TCheckBox
         Left = 97
         Top = 47
         Width = 41
         Height = 17
-        Caption = '10B'
+        Caption = 'Q10'
         TabOrder = 9
       end
-      object cbxEliminatedQualifier_10C: TCheckBox
+      object cbxEliminatedQualifier_11: TCheckBox
         Left = 97
         Top = 72
         Width = 41
         Height = 17
-        Caption = '10C'
+        Caption = 'Q11'
         TabOrder = 10
       end
-      object cbxEliminatedQualifier_10D: TCheckBox
+      object cbxEliminatedQualifier_12: TCheckBox
         Left = 97
         Top = 95
         Width = 41
         Height = 17
-        Caption = '10D'
+        Caption = 'Q12'
         TabOrder = 11
       end
-      object cbxEliminatedQualifier_11A: TCheckBox
+      object cbxEliminatedQualifier_13: TCheckBox
         Left = 150
         Top = 24
         Width = 41
         Height = 17
-        Caption = '11A'
+        Caption = 'Q13'
         TabOrder = 12
       end
-      object cbxEliminatedQualifier_11B: TCheckBox
+      object cbxEliminatedQualifier_14: TCheckBox
         Left = 150
         Top = 47
         Width = 41
         Height = 17
-        Caption = '11B'
+        Caption = 'Q14'
         TabOrder = 13
       end
-      object cbxEliminatedQualifier_11C: TCheckBox
+      object cbxEliminatedQualifier_15: TCheckBox
         Left = 150
         Top = 72
         Width = 41
         Height = 17
-        Caption = '11C'
+        Caption = 'Q15'
         TabOrder = 14
       end
-      object cbxEliminatedQualifier_11D: TCheckBox
+      object cbxEliminatedQualifier_16: TCheckBox
         Left = 150
         Top = 95
-        Width = 41
+        Width = 47
         Height = 17
-        Caption = '11D'
+        Caption = 'Q16'
         TabOrder = 15
       end
-      object cbxEliminatedQualifier_12A: TCheckBox
+      object cbxEliminatedQualifier_17: TCheckBox
         Left = 205
         Top = 24
-        Width = 41
+        Width = 59
         Height = 17
-        Caption = '12A'
+        Caption = 'Q17'
         TabOrder = 16
       end
-      object cbxEliminatedQualifier_12B: TCheckBox
+      object cbxEliminatedQualifier_18: TCheckBox
         Left = 205
         Top = 47
-        Width = 41
+        Width = 59
         Height = 17
-        Caption = '12B'
+        Caption = 'Q18'
         TabOrder = 17
       end
-      object cbxEliminatedQualifier_12C: TCheckBox
+      object cbxEliminatedQualifier_19: TCheckBox
         Left = 205
         Top = 72
-        Width = 41
+        Width = 59
         Height = 17
-        Caption = '12C'
+        Caption = 'Q19'
         TabOrder = 18
       end
-      object cbxEliminatedQualifier_12D: TCheckBox
+      object cbxEliminatedQualifier_20: TCheckBox
         Left = 205
         Top = 95
-        Width = 41
+        Width = 59
         Height = 17
-        Caption = '12D'
+        Caption = 'Q20'
         TabOrder = 19
       end
     end
@@ -1575,164 +1575,164 @@ object Form2: TForm2
       Height = 115
       Caption = 'Eliminated Teams: Qualifiers Stage 2'
       TabOrder = 3
-      object cbxEliminatedQualifier2_8A: TCheckBox
+      object cbxEliminatedQualifier2_1: TCheckBox
         Left = 3
         Top = 24
         Width = 41
         Height = 17
-        Caption = '8A'
+        Caption = 'Q2_1'
         TabOrder = 0
       end
-      object cbxEliminatedQualifier2_8C: TCheckBox
+      object cbxEliminatedQualifier2_2: TCheckBox
         Left = 3
-        Top = 72
+        Top = 49
         Width = 41
         Height = 17
-        Caption = '8C'
+        Caption = 'Q2_2'
         TabOrder = 1
       end
-      object cbxEliminatedQualifier2_8D: TCheckBox
+      object cbxEliminatedQualifier2_3: TCheckBox
         Left = 3
-        Top = 95
+        Top = 72
         Width = 41
         Height = 17
-        Caption = '8D'
+        Caption = 'Q2_3'
         TabOrder = 2
       end
-      object cbxEliminatedQualifier2_8B: TCheckBox
+      object cbxEliminatedQualifier2_4: TCheckBox
         Left = 3
-        Top = 47
+        Top = 95
         Width = 41
         Height = 17
-        Caption = '8B'
+        Caption = 'Q2_4'
         TabOrder = 3
       end
-      object cbxEliminatedQualifier2_9B: TCheckBox
+      object cbxEliminatedQualifier2_5: TCheckBox
         Left = 50
-        Top = 47
+        Top = 24
         Width = 41
         Height = 17
-        Caption = '9B'
+        Caption = 'Q2_5'
         TabOrder = 4
       end
-      object cbxEliminatedQualifier2_9C: TCheckBox
+      object cbxEliminatedQualifier2_6: TCheckBox
         Left = 50
-        Top = 72
+        Top = 49
         Width = 41
         Height = 17
-        Caption = '9C'
+        Caption = 'Q2_6'
         TabOrder = 5
       end
-      object cbxEliminatedQualifier2_9D: TCheckBox
+      object cbxEliminatedQualifier2_7: TCheckBox
         Left = 50
-        Top = 95
+        Top = 72
         Width = 41
         Height = 17
-        Caption = '9D'
+        Caption = 'Q2_7'
         TabOrder = 6
       end
-      object cbxEliminatedQualifier2_9A: TCheckBox
+      object cbxEliminatedQualifier2_8: TCheckBox
         Left = 50
-        Top = 24
+        Top = 95
         Width = 41
         Height = 17
-        Caption = '9A'
+        Caption = 'Q2_8'
         TabOrder = 7
       end
-      object cbxEliminatedQualifier2_10A: TCheckBox
+      object cbxEliminatedQualifier2_9: TCheckBox
         Left = 97
         Top = 24
         Width = 41
         Height = 17
-        Caption = '10A'
+        Caption = 'Q2_9'
         TabOrder = 8
       end
-      object cbxEliminatedQualifier2_10B: TCheckBox
+      object cbxEliminatedQualifier2_10: TCheckBox
         Left = 97
         Top = 47
         Width = 41
         Height = 17
-        Caption = '10B'
+        Caption = 'Q2_10'
         TabOrder = 9
       end
-      object cbxEliminatedQualifier2_10C: TCheckBox
+      object cbxEliminatedQualifier2_11: TCheckBox
         Left = 97
         Top = 72
         Width = 41
         Height = 17
-        Caption = '10C'
+        Caption = 'Q2_11'
         TabOrder = 10
       end
-      object cbxEliminatedQualifier2_10D: TCheckBox
+      object cbxEliminatedQualifier2_12: TCheckBox
         Left = 97
         Top = 95
         Width = 41
         Height = 17
-        Caption = '10D'
+        Caption = 'Q2_12'
         TabOrder = 11
       end
-      object cbxEliminatedQualifier2_11A: TCheckBox
+      object cbxEliminatedQualifier2_13: TCheckBox
         Left = 150
         Top = 24
         Width = 41
         Height = 17
-        Caption = '11A'
+        Caption = 'Q2_13'
         TabOrder = 12
       end
-      object cbxEliminatedQualifier2_11B: TCheckBox
+      object cbxEliminatedQualifier2_14: TCheckBox
         Left = 150
         Top = 47
         Width = 41
         Height = 17
-        Caption = '11B'
+        Caption = 'Q2_14'
         TabOrder = 13
       end
-      object cbxEliminatedQualifier2_11C: TCheckBox
+      object cbxEliminatedQualifier2_15: TCheckBox
         Left = 150
         Top = 72
         Width = 41
         Height = 17
-        Caption = '11C'
+        Caption = 'Q2_15'
         TabOrder = 14
       end
-      object cbxEliminatedQualifier2_11D: TCheckBox
+      object cbxEliminatedQualifier2_16: TCheckBox
         Left = 150
         Top = 95
         Width = 41
         Height = 17
-        Caption = '11D'
+        Caption = 'Q2_16'
         TabOrder = 15
       end
-      object cbxEliminatedQualifier2_12A: TCheckBox
+      object cbxEliminatedQualifier2_17: TCheckBox
         Left = 205
         Top = 24
         Width = 41
         Height = 17
-        Caption = '12A'
+        Caption = 'Q2_17'
         TabOrder = 16
       end
-      object cbxEliminatedQualifier2_12B: TCheckBox
+      object cbxEliminatedQualifier2_18: TCheckBox
         Left = 205
         Top = 47
         Width = 41
         Height = 17
-        Caption = '12B'
+        Caption = 'Q2_18'
         TabOrder = 17
       end
-      object cbxEliminatedQualifier2_12C: TCheckBox
+      object cbxEliminatedQualifier2_19: TCheckBox
         Left = 205
         Top = 72
         Width = 41
         Height = 17
-        Caption = '12C'
+        Caption = 'Q2_19'
         TabOrder = 18
       end
-      object cbxEliminatedQualifier2_12D: TCheckBox
+      object cbxEliminatedQualifier2_20: TCheckBox
         Left = 205
         Top = 95
         Width = 41
         Height = 17
-        Caption = '12D'
+        Caption = 'Q2_20'
         TabOrder = 19
       end
     end

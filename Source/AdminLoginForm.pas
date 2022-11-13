@@ -60,47 +60,47 @@ type
     cmbQuarterFinal_7: TComboBox;
     cmbQuarterFinal_8: TComboBox;
     gbxEliminatedQualifierTeams: TGroupBox;
-    cbxEliminatedQualifier_8A: TCheckBox;
-    cbxEliminatedQualifier_8C: TCheckBox;
-    cbxEliminatedQualifier_8D: TCheckBox;
-    cbxEliminatedQualifier_8B: TCheckBox;
-    cbxEliminatedQualifier_9B: TCheckBox;
-    cbxEliminatedQualifier_9C: TCheckBox;
-    cbxEliminatedQualifier_9D: TCheckBox;
-    cbxEliminatedQualifier_9A: TCheckBox;
-    cbxEliminatedQualifier_10A: TCheckBox;
-    cbxEliminatedQualifier_10B: TCheckBox;
-    cbxEliminatedQualifier_10C: TCheckBox;
-    cbxEliminatedQualifier_10D: TCheckBox;
-    cbxEliminatedQualifier_11A: TCheckBox;
-    cbxEliminatedQualifier_11B: TCheckBox;
-    cbxEliminatedQualifier_11C: TCheckBox;
-    cbxEliminatedQualifier_11D: TCheckBox;
-    cbxEliminatedQualifier_12A: TCheckBox;
-    cbxEliminatedQualifier_12B: TCheckBox;
-    cbxEliminatedQualifier_12C: TCheckBox;
-    cbxEliminatedQualifier_12D: TCheckBox;
+    cbxEliminatedQualifier_1: TCheckBox;
+    cbxEliminatedQualifier_2: TCheckBox;
+    cbxEliminatedQualifier_3: TCheckBox;
+    cbxEliminatedQualifier_4: TCheckBox;
+    cbxEliminatedQualifier_5: TCheckBox;
+    cbxEliminatedQualifier_6: TCheckBox;
+    cbxEliminatedQualifier_7: TCheckBox;
+    cbxEliminatedQualifier_8: TCheckBox;
+    cbxEliminatedQualifier_9: TCheckBox;
+    cbxEliminatedQualifier_10: TCheckBox;
+    cbxEliminatedQualifier_11: TCheckBox;
+    cbxEliminatedQualifier_12: TCheckBox;
+    cbxEliminatedQualifier_13: TCheckBox;
+    cbxEliminatedQualifier_14: TCheckBox;
+    cbxEliminatedQualifier_15: TCheckBox;
+    cbxEliminatedQualifier_16: TCheckBox;
+    cbxEliminatedQualifier_17: TCheckBox;
+    cbxEliminatedQualifier_18: TCheckBox;
+    cbxEliminatedQualifier_19: TCheckBox;
+    cbxEliminatedQualifier_20: TCheckBox;
     gbxEliminatedQualifier2Teams: TGroupBox;
-    cbxEliminatedQualifier2_8A: TCheckBox;
-    cbxEliminatedQualifier2_8b: TCheckBox;
-    cbxEliminatedQualifier2_8C: TCheckBox;
-    cbxEliminatedQualifier2_8D: TCheckBox;
-    cbxEliminatedQualifier2_9A: TCheckBox;
-    cbxEliminatedQualifier2_9B: TCheckBox;
-    cbxEliminatedQualifier2_9C: TCheckBox;
-    cbxEliminatedQualifier2_9D: TCheckBox;
-    cbxEliminatedQualifier2_10A: TCheckBox;
-    cbxEliminatedQualifier2_10B: TCheckBox;
-    cbxEliminatedQualifier2_10C: TCheckBox;
-    cbxEliminatedQualifier2_10D: TCheckBox;
-    cbxEliminatedQualifier2_11A: TCheckBox;
-    cbxEliminatedQualifier2_11B: TCheckBox;
-    cbxEliminatedQualifier2_11C: TCheckBox;
-    cbxEliminatedQualifier2_11D: TCheckBox;
-    cbxEliminatedQualifier2_12A: TCheckBox;
-    cbxEliminatedQualifier2_12B: TCheckBox;
-    cbxEliminatedQualifier2_12C: TCheckBox;
-    cbxEliminatedQualifier2_12D: TCheckBox;
+    cbxEliminatedQualifier2_1: TCheckBox;
+    cbxEliminatedQualifier2_2: TCheckBox;
+    cbxEliminatedQualifier2_3: TCheckBox;
+    cbxEliminatedQualifier2_4: TCheckBox;
+    cbxEliminatedQualifier2_5: TCheckBox;
+    cbxEliminatedQualifier2_6: TCheckBox;
+    cbxEliminatedQualifier2_7: TCheckBox;
+    cbxEliminatedQualifier2_8: TCheckBox;
+    cbxEliminatedQualifier2_9: TCheckBox;
+    cbxEliminatedQualifier2_10: TCheckBox;
+    cbxEliminatedQualifier2_11: TCheckBox;
+    cbxEliminatedQualifier2_12: TCheckBox;
+    cbxEliminatedQualifier2_13: TCheckBox;
+    cbxEliminatedQualifier2_14: TCheckBox;
+    cbxEliminatedQualifier2_15: TCheckBox;
+    cbxEliminatedQualifier2_16: TCheckBox;
+    cbxEliminatedQualifier2_17: TCheckBox;
+    cbxEliminatedQualifier2_18: TCheckBox;
+    cbxEliminatedQualifier2_19: TCheckBox;
+    cbxEliminatedQualifier2_20: TCheckBox;
     procedure FormCreate(Sender: TObject);
     procedure FormDestroy(Sender: TObject);
     procedure btnLoginClick(Sender: TObject);
@@ -406,83 +406,83 @@ begin
         case teamID of
           1:
             begin
-              Result := cbxEliminatedQualifier_8A.Checked;
+              Result := cbxEliminatedQualifier_1.Checked;
             end;
           2:
             begin
-              Result := cbxEliminatedQualifier_8B.Checked;
+              Result := cbxEliminatedQualifier_2.Checked;
             end;
           3:
             begin
-              Result := cbxEliminatedQualifier_8C.Checked;
+              Result := cbxEliminatedQualifier_3.Checked;
             end;
           4:
             begin
-              Result := cbxEliminatedQualifier_8D.Checked;
+              Result := cbxEliminatedQualifier_4.Checked;
             end;
           5:
             begin
-              Result := cbxEliminatedQualifier_9A.Checked;
+              Result := cbxEliminatedQualifier_5.Checked;
             end;
           6:
             begin
-              Result := cbxEliminatedQualifier_9B.Checked;
+              Result := cbxEliminatedQualifier_6.Checked;
             end;
           7:
             begin
-              Result := cbxEliminatedQualifier_9C.Checked;
+              Result := cbxEliminatedQualifier_7.Checked;
             end;
           8:
             begin
-              Result := cbxEliminatedQualifier_9D.Checked;
+              Result := cbxEliminatedQualifier_8.Checked;
             end;
           9:
             begin
-              Result := cbxEliminatedQualifier_10A.Checked;
+              Result := cbxEliminatedQualifier_9.Checked;
             end;
           10:
             begin
-              Result := cbxEliminatedQualifier_10B.Checked;
+              Result := cbxEliminatedQualifier_10.Checked;
             end;
           11:
             begin
-              Result := cbxEliminatedQualifier_10C.Checked;
+              Result := cbxEliminatedQualifier_11.Checked;
             end;
           12:
             begin
-              Result := cbxEliminatedQualifier_10D.Checked;
+              Result := cbxEliminatedQualifier_12.Checked;
             end;
           13:
             begin
-              Result := cbxEliminatedQualifier_11A.Checked;
+              Result := cbxEliminatedQualifier_13.Checked;
             end;
           14:
             begin
-              Result := cbxEliminatedQualifier_11B.Checked;
+              Result := cbxEliminatedQualifier_14.Checked;
             end;
           15:
             begin
-              Result := cbxEliminatedQualifier_11C.Checked;
+              Result := cbxEliminatedQualifier_15.Checked;
             end;
           16:
             begin
-              Result := cbxEliminatedQualifier_11D.Checked;
+              Result := cbxEliminatedQualifier_16.Checked;
             end;
           17:
             begin
-              Result := cbxEliminatedQualifier_12A.Checked;
+              Result := cbxEliminatedQualifier_17.Checked;
             end;
           18:
             begin
-              Result := cbxEliminatedQualifier_12B.Checked;
+              Result := cbxEliminatedQualifier_18.Checked;
             end;
           19:
             begin
-              Result := cbxEliminatedQualifier_12C.Checked;
+              Result := cbxEliminatedQualifier_19.Checked;
             end;
           20:
             begin
-              Result := cbxEliminatedQualifier_12D.Checked;
+              Result := cbxEliminatedQualifier_20.Checked;
             end;
         end;
       end;
@@ -491,83 +491,83 @@ begin
         case teamID of
           1:
             begin
-              Result := cbxEliminatedQualifier2_8A.Checked;
+              Result := cbxEliminatedQualifier2_1.Checked;
             end;
           2:
             begin
-              Result := cbxEliminatedQualifier2_8b.Checked;
+              Result := cbxEliminatedQualifier2_2.Checked;
             end;
           3:
             begin
-              Result := cbxEliminatedQualifier2_8C.Checked;
+              Result := cbxEliminatedQualifier2_3.Checked;
             end;
           4:
             begin
-              Result := cbxEliminatedQualifier2_8D.Checked;
+              Result := cbxEliminatedQualifier2_4.Checked;
             end;
           5:
             begin
-              Result := cbxEliminatedQualifier2_9A.Checked;
+              Result := cbxEliminatedQualifier2_5.Checked;
             end;
           6:
             begin
-              Result := cbxEliminatedQualifier2_9B.Checked;
+              Result := cbxEliminatedQualifier2_6.Checked;
             end;
           7:
             begin
-              Result := cbxEliminatedQualifier2_9C.Checked;
+              Result := cbxEliminatedQualifier2_7.Checked;
             end;
           8:
             begin
-              Result := cbxEliminatedQualifier2_9D.Checked;
+              Result := cbxEliminatedQualifier2_8.Checked;
             end;
           9:
             begin
-              Result := cbxEliminatedQualifier2_10A.Checked;
+              Result := cbxEliminatedQualifier2_9.Checked;
             end;
           10:
             begin
-              Result := cbxEliminatedQualifier2_10B.Checked;
+              Result := cbxEliminatedQualifier2_10.Checked;
             end;
           11:
             begin
-              Result := cbxEliminatedQualifier2_10C.Checked;
+              Result := cbxEliminatedQualifier2_11.Checked;
             end;
           12:
             begin
-              Result := cbxEliminatedQualifier2_10D.Checked;
+              Result := cbxEliminatedQualifier2_12.Checked;
             end;
           13:
             begin
-              Result := cbxEliminatedQualifier2_11A.Checked;
+              Result := cbxEliminatedQualifier2_13.Checked;
             end;
           14:
             begin
-              Result := cbxEliminatedQualifier2_11B.Checked;
+              Result := cbxEliminatedQualifier2_14.Checked;
             end;
           15:
             begin
-              Result := cbxEliminatedQualifier2_11C.Checked;
+              Result := cbxEliminatedQualifier2_15.Checked;
             end;
           16:
             begin
-              Result := cbxEliminatedQualifier2_11D.Checked;
+              Result := cbxEliminatedQualifier2_16.Checked;
             end;
           17:
             begin
-              Result := cbxEliminatedQualifier2_12A.Checked;
+              Result := cbxEliminatedQualifier2_17.Checked;
             end;
           18:
             begin
-              Result := cbxEliminatedQualifier2_12B.Checked;
+              Result := cbxEliminatedQualifier2_18.Checked;
             end;
           19:
             begin
-              Result := cbxEliminatedQualifier2_12C.Checked;
+              Result := cbxEliminatedQualifier2_19.Checked;
             end;
           20:
             begin
-              Result := cbxEliminatedQualifier2_12D.Checked;
+              Result := cbxEliminatedQualifier2_20.Checked;
             end;
         end;
       end;
@@ -602,83 +602,83 @@ begin
         case teamID of
           1:
             begin
-              cbxEliminatedQualifier_8A.Checked := true;
+              cbxEliminatedQualifier_1.Checked := true;
             end;
           2:
             begin
-              cbxEliminatedQualifier_8B.Checked := true;
+              cbxEliminatedQualifier_2.Checked := true;
             end;
           3:
             begin
-              cbxEliminatedQualifier_8C.Checked := true;
+              cbxEliminatedQualifier_3.Checked := true;
             end;
           4:
             begin
-              cbxEliminatedQualifier_8D.Checked := true;
+              cbxEliminatedQualifier_4.Checked := true;
             end;
           5:
             begin
-              cbxEliminatedQualifier_9A.Checked := true;
+              cbxEliminatedQualifier_5.Checked := true;
             end;
           6:
             begin
-              cbxEliminatedQualifier_9B.Checked := true;
+              cbxEliminatedQualifier_6.Checked := true;
             end;
           7:
             begin
-              cbxEliminatedQualifier_9C.Checked := true;
+              cbxEliminatedQualifier_7.Checked := true;
             end;
           8:
             begin
-              cbxEliminatedQualifier_9D.Checked := true;
+              cbxEliminatedQualifier_8.Checked := true;
             end;
           9:
             begin
-              cbxEliminatedQualifier_10A.Checked := true;
+              cbxEliminatedQualifier_9.Checked := true;
             end;
           10:
             begin
-              cbxEliminatedQualifier_10B.Checked := true;
+              cbxEliminatedQualifier_10.Checked := true;
             end;
           11:
             begin
-              cbxEliminatedQualifier_10C.Checked := true;
+              cbxEliminatedQualifier_11.Checked := true;
             end;
           12:
             begin
-              cbxEliminatedQualifier_10D.Checked := true;
+              cbxEliminatedQualifier_12.Checked := true;
             end;
           13:
             begin
-              cbxEliminatedQualifier_11A.Checked := true;
+              cbxEliminatedQualifier_13.Checked := true;
             end;
           14:
             begin
-              cbxEliminatedQualifier_11B.Checked := true;
+              cbxEliminatedQualifier_14.Checked := true;
             end;
           15:
             begin
-              cbxEliminatedQualifier_11C.Checked := true;
+              cbxEliminatedQualifier_15.Checked := true;
             end;
           16:
             begin
-              cbxEliminatedQualifier_11D.Checked := true;
+              cbxEliminatedQualifier_16.Checked := true;
             end;
           17:
             begin
-              cbxEliminatedQualifier_12A.Checked := true;
+              cbxEliminatedQualifier_17.Checked := true;
             end;
           18:
             begin
-              cbxEliminatedQualifier_12B.Checked := true;
+              cbxEliminatedQualifier_18.Checked := true;
             end;
           19:
             begin
-              cbxEliminatedQualifier_12C.Checked := true;
+              cbxEliminatedQualifier_19.Checked := true;
             end;
           20:
             begin
-              cbxEliminatedQualifier_12D.Checked := true;
+              cbxEliminatedQualifier_20.Checked := true;
             end;
         end;
       end;
@@ -687,83 +687,83 @@ begin
         case teamID of
           1:
             begin
-              cbxEliminatedQualifier2_8A.Checked := true;
+              cbxEliminatedQualifier2_1.Checked := true;
             end;
           2:
             begin
-              cbxEliminatedQualifier2_8b.Checked := true;
+              cbxEliminatedQualifier2_2.Checked := true;
             end;
           3:
             begin
-              cbxEliminatedQualifier2_8C.Checked := true;
+              cbxEliminatedQualifier2_3.Checked := true;
             end;
           4:
             begin
-              cbxEliminatedQualifier2_8D.Checked := true;
+              cbxEliminatedQualifier2_4.Checked := true;
             end;
           5:
             begin
-              cbxEliminatedQualifier2_9A.Checked := true;
+              cbxEliminatedQualifier2_5.Checked := true;
             end;
           6:
             begin
-              cbxEliminatedQualifier2_9B.Checked := true;
+              cbxEliminatedQualifier2_6.Checked := true;
             end;
           7:
             begin
-              cbxEliminatedQualifier2_9C.Checked := true;
+              cbxEliminatedQualifier2_7.Checked := true;
             end;
           8:
             begin
-              cbxEliminatedQualifier2_9D.Checked := true;
+              cbxEliminatedQualifier2_8.Checked := true;
             end;
           9:
             begin
-              cbxEliminatedQualifier2_10A.Checked := true;
+              cbxEliminatedQualifier2_9.Checked := true;
             end;
           10:
             begin
-              cbxEliminatedQualifier2_10B.Checked := true;
+              cbxEliminatedQualifier2_10.Checked := true;
             end;
           11:
             begin
-              cbxEliminatedQualifier2_10C.Checked := true;
+              cbxEliminatedQualifier2_11.Checked := true;
             end;
           12:
             begin
-              cbxEliminatedQualifier2_10D.Checked := true;
+              cbxEliminatedQualifier2_12.Checked := true;
             end;
           13:
             begin
-              cbxEliminatedQualifier2_11A.Checked := true;
+              cbxEliminatedQualifier2_13.Checked := true;
             end;
           14:
             begin
-              cbxEliminatedQualifier2_11B.Checked := true;
+              cbxEliminatedQualifier2_14.Checked := true;
             end;
           15:
             begin
-              cbxEliminatedQualifier2_11C.Checked := true;
+              cbxEliminatedQualifier2_15.Checked := true;
             end;
           16:
             begin
-              cbxEliminatedQualifier2_11D.Checked := true;
+              cbxEliminatedQualifier2_16.Checked := true;
             end;
           17:
             begin
-              cbxEliminatedQualifier2_12A.Checked := true;
+              cbxEliminatedQualifier2_17.Checked := true;
             end;
           18:
             begin
-              cbxEliminatedQualifier2_12B.Checked := true;
+              cbxEliminatedQualifier2_18.Checked := true;
             end;
           19:
             begin
-              cbxEliminatedQualifier2_12C.Checked := true;
+              cbxEliminatedQualifier2_19.Checked := true;
             end;
           20:
             begin
-              cbxEliminatedQualifier2_12D.Checked := true;
+              cbxEliminatedQualifier2_20.Checked := true;
             end;
         end;
       end;
@@ -822,47 +822,47 @@ begin
   g_QuarterFinalCmbList[7] := @cmbQuarterFinal_7;
   g_QuarterFinalCmbList[8] := @cmbQuarterFinal_8;
 
-  g_QualifierCbxList[1] := @cbxEliminatedQualifier_8A;
-  g_QualifierCbxList[2] := @cbxEliminatedQualifier_8B;
-  g_QualifierCbxList[3] := @cbxEliminatedQualifier_8C;
-  g_QualifierCbxList[4] := @cbxEliminatedQualifier_8D;
-  g_QualifierCbxList[5] := @cbxEliminatedQualifier_9A;
-  g_QualifierCbxList[6] := @cbxEliminatedQualifier_9B;
-  g_QualifierCbxList[7] := @cbxEliminatedQualifier_9C;
-  g_QualifierCbxList[8] := @cbxEliminatedQualifier_9D;
-  g_QualifierCbxList[9] := @cbxEliminatedQualifier_10A;
-  g_QualifierCbxList[10] := @cbxEliminatedQualifier_10B;
-  g_QualifierCbxList[11] := @cbxEliminatedQualifier_10C;
-  g_QualifierCbxList[12] := @cbxEliminatedQualifier_10D;
-  g_QualifierCbxList[13] := @cbxEliminatedQualifier_11A;
-  g_QualifierCbxList[14] := @cbxEliminatedQualifier_11B;
-  g_QualifierCbxList[15] := @cbxEliminatedQualifier_11C;
-  g_QualifierCbxList[16] := @cbxEliminatedQualifier_11D;
-  g_QualifierCbxList[17] := @cbxEliminatedQualifier_12A;
-  g_QualifierCbxList[18] := @cbxEliminatedQualifier_12B;
-  g_QualifierCbxList[19] := @cbxEliminatedQualifier_12C;
-  g_QualifierCbxList[20] := @cbxEliminatedQualifier_12D;
+  g_QualifierCbxList[1] := @cbxEliminatedQualifier_1;
+  g_QualifierCbxList[2] := @cbxEliminatedQualifier_2;
+  g_QualifierCbxList[3] := @cbxEliminatedQualifier_3;
+  g_QualifierCbxList[4] := @cbxEliminatedQualifier_4;
+  g_QualifierCbxList[5] := @cbxEliminatedQualifier_5;
+  g_QualifierCbxList[6] := @cbxEliminatedQualifier_6;
+  g_QualifierCbxList[7] := @cbxEliminatedQualifier_7;
+  g_QualifierCbxList[8] := @cbxEliminatedQualifier_8;
+  g_QualifierCbxList[9] := @cbxEliminatedQualifier_9;
+  g_QualifierCbxList[10] := @cbxEliminatedQualifier_10;
+  g_QualifierCbxList[11] := @cbxEliminatedQualifier_11;
+  g_QualifierCbxList[12] := @cbxEliminatedQualifier_12;
+  g_QualifierCbxList[13] := @cbxEliminatedQualifier_13;
+  g_QualifierCbxList[14] := @cbxEliminatedQualifier_14;
+  g_QualifierCbxList[15] := @cbxEliminatedQualifier_15;
+  g_QualifierCbxList[16] := @cbxEliminatedQualifier_16;
+  g_QualifierCbxList[17] := @cbxEliminatedQualifier_17;
+  g_QualifierCbxList[18] := @cbxEliminatedQualifier_18;
+  g_QualifierCbxList[19] := @cbxEliminatedQualifier_19;
+  g_QualifierCbxList[20] := @cbxEliminatedQualifier_20;
 
-  g_Qualifier2CbxList[1] := @cbxEliminatedQualifier2_8A;
-  g_Qualifier2CbxList[2] := @cbxEliminatedQualifier2_8b;
-  g_Qualifier2CbxList[3] := @cbxEliminatedQualifier2_8C;
-  g_Qualifier2CbxList[4] := @cbxEliminatedQualifier2_8D;
-  g_Qualifier2CbxList[5] := @cbxEliminatedQualifier2_9A;
-  g_Qualifier2CbxList[6] := @cbxEliminatedQualifier2_9B;
-  g_Qualifier2CbxList[7] := @cbxEliminatedQualifier2_9C;
-  g_Qualifier2CbxList[8] := @cbxEliminatedQualifier2_9D;
-  g_Qualifier2CbxList[9] := @cbxEliminatedQualifier2_10A;
-  g_Qualifier2CbxList[10] := @cbxEliminatedQualifier2_10B;
-  g_Qualifier2CbxList[11] := @cbxEliminatedQualifier2_10C;
-  g_Qualifier2CbxList[12] := @cbxEliminatedQualifier2_10D;
-  g_Qualifier2CbxList[13] := @cbxEliminatedQualifier2_11A;
-  g_Qualifier2CbxList[14] := @cbxEliminatedQualifier2_11B;
-  g_Qualifier2CbxList[15] := @cbxEliminatedQualifier2_11C;
-  g_Qualifier2CbxList[16] := @cbxEliminatedQualifier2_11D;
-  g_Qualifier2CbxList[17] := @cbxEliminatedQualifier2_12A;
-  g_Qualifier2CbxList[18] := @cbxEliminatedQualifier2_12B;
-  g_Qualifier2CbxList[19] := @cbxEliminatedQualifier2_12C;
-  g_Qualifier2CbxList[20] := @cbxEliminatedQualifier2_12D;
+  g_Qualifier2CbxList[1] := @cbxEliminatedQualifier2_1;
+  g_Qualifier2CbxList[2] := @cbxEliminatedQualifier2_2;
+  g_Qualifier2CbxList[3] := @cbxEliminatedQualifier2_3;
+  g_Qualifier2CbxList[4] := @cbxEliminatedQualifier2_4;
+  g_Qualifier2CbxList[5] := @cbxEliminatedQualifier2_5;
+  g_Qualifier2CbxList[6] := @cbxEliminatedQualifier2_6;
+  g_Qualifier2CbxList[7] := @cbxEliminatedQualifier2_7;
+  g_Qualifier2CbxList[8] := @cbxEliminatedQualifier2_8;
+  g_Qualifier2CbxList[9] := @cbxEliminatedQualifier2_9;
+  g_Qualifier2CbxList[10] := @cbxEliminatedQualifier2_10;
+  g_Qualifier2CbxList[11] := @cbxEliminatedQualifier2_11;
+  g_Qualifier2CbxList[12] := @cbxEliminatedQualifier2_12;
+  g_Qualifier2CbxList[13] := @cbxEliminatedQualifier2_13;
+  g_Qualifier2CbxList[14] := @cbxEliminatedQualifier2_14;
+  g_Qualifier2CbxList[15] := @cbxEliminatedQualifier2_15;
+  g_Qualifier2CbxList[16] := @cbxEliminatedQualifier2_16;
+  g_Qualifier2CbxList[17] := @cbxEliminatedQualifier2_17;
+  g_Qualifier2CbxList[18] := @cbxEliminatedQualifier2_18;
+  g_Qualifier2CbxList[19] := @cbxEliminatedQualifier2_19;
+  g_Qualifier2CbxList[20] := @cbxEliminatedQualifier2_20;
 
   for Team in TeamList.Teams do
   begin
@@ -875,6 +875,12 @@ begin
     for i := Low(g_QuarterFinalCmbList) to High(g_QuarterFinalCmbList) do
       g_QuarterFinalCmbList[i].Items.Add(Team.Name);
   end;
+
+  for i := Low(g_QualifierCbxList) to High(g_QualifierCbxList) do
+    g_QualifierCbxList[i].Caption := TeamList.Teams[i].Name;
+
+  for i := Low(g_Qualifier2CbxList) to High(g_Qualifier2CbxList) do
+  g_Qualifier2CbxList[i].Caption := TeamList.Teams[i].Name;
 
   pnlAdmin.Show();
   pnlLogin.Hide();
