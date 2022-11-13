@@ -3,7 +3,7 @@ object Form2: TForm2
   Top = 0
   Caption = 'Form2'
   ClientHeight = 563
-  ClientWidth = 902
+  ClientWidth = 908
   Color = clBtnFace
   Font.Charset = ANSI_CHARSET
   Font.Color = clWindowText
@@ -12,7 +12,6 @@ object Form2: TForm2
   Font.Style = []
   OldCreateOrder = False
   OnCreate = FormCreate
-  OnDestroy = FormDestroy
   PixelsPerInch = 120
   TextHeight = 16
   object pnlLogin: TPanel
@@ -155,7 +154,7 @@ object Form2: TForm2
   object pnlAdmin: TPanel
     Left = 8
     Top = 8
-    Width = 889
+    Width = 897
     Height = 553
     TabOrder = 1
     object btnUpdateFixtures: TButton
@@ -1765,6 +1764,174 @@ object Form2: TForm2
         Width = 41
         Height = 17
         Caption = 'Q2_20'
+        TabOrder = 19
+      end
+    end
+    object gbxEliminatedQuarterFinalTeams: TGroupBox
+      Left = 599
+      Top = 430
+      Width = 289
+      Height = 115
+      Caption = 'Eliminated Teams: Quarter-Finals'
+      TabOrder = 4
+      object cbxEliminatedQuarterFinal_1: TCheckBox
+        Left = 3
+        Top = 24
+        Width = 41
+        Height = 17
+        Caption = 'QF1'
+        TabOrder = 0
+      end
+      object cbxEliminatedQuarterFinal_2: TCheckBox
+        Left = 3
+        Top = 49
+        Width = 41
+        Height = 17
+        Caption = 'QF2'
+        TabOrder = 1
+      end
+      object cbxEliminatedQuarterFinal_3: TCheckBox
+        Left = 3
+        Top = 72
+        Width = 41
+        Height = 17
+        Caption = 'QF3'
+        TabOrder = 2
+      end
+      object cbxEliminatedQuarterFinal_4: TCheckBox
+        Left = 3
+        Top = 95
+        Width = 41
+        Height = 17
+        Caption = 'QF4'
+        TabOrder = 3
+      end
+      object cbxEliminatedQuarterFinal_5: TCheckBox
+        Left = 50
+        Top = 24
+        Width = 41
+        Height = 17
+        Caption = 'QF5'
+        TabOrder = 4
+      end
+      object cbxEliminatedQuarterFinal_6: TCheckBox
+        Left = 50
+        Top = 49
+        Width = 41
+        Height = 17
+        Caption = 'QF6'
+        TabOrder = 5
+      end
+      object cbxEliminatedQuarterFinal_7: TCheckBox
+        Left = 50
+        Top = 72
+        Width = 41
+        Height = 17
+        Caption = 'QF7'
+        TabOrder = 6
+      end
+      object cbxEliminatedQuarterFinal_8: TCheckBox
+        Left = 50
+        Top = 95
+        Width = 41
+        Height = 17
+        Caption = 'QF8'
+        TabOrder = 7
+      end
+      object cbxEliminatedQuarterFinal_9: TCheckBox
+        Left = 97
+        Top = 24
+        Width = 41
+        Height = 17
+        Caption = 'QF9'
+        TabOrder = 8
+      end
+      object cbxEliminatedQuarterFinal_10: TCheckBox
+        Left = 97
+        Top = 47
+        Width = 41
+        Height = 17
+        Caption = 'QF10'
+        TabOrder = 9
+      end
+      object cbxEliminatedQuarterFinal_11: TCheckBox
+        Left = 97
+        Top = 72
+        Width = 41
+        Height = 17
+        Caption = 'QF11'
+        TabOrder = 10
+      end
+      object cbxEliminatedQuarterFinal_12: TCheckBox
+        Left = 97
+        Top = 95
+        Width = 41
+        Height = 17
+        Caption = 'QF12'
+        TabOrder = 11
+      end
+      object cbxEliminatedQuarterFinal_13: TCheckBox
+        Left = 150
+        Top = 24
+        Width = 41
+        Height = 17
+        Caption = 'QF13'
+        TabOrder = 12
+      end
+      object cbxEliminatedQuarterFinal_14: TCheckBox
+        Left = 150
+        Top = 47
+        Width = 41
+        Height = 17
+        Caption = 'QF14'
+        TabOrder = 13
+      end
+      object cbxEliminatedQuarterFinal_15: TCheckBox
+        Left = 150
+        Top = 72
+        Width = 41
+        Height = 17
+        Caption = 'QF15'
+        TabOrder = 14
+      end
+      object cbxEliminatedQuarterFinal_16: TCheckBox
+        Left = 150
+        Top = 95
+        Width = 41
+        Height = 17
+        Caption = 'QF16'
+        TabOrder = 15
+      end
+      object cbxEliminatedQuarterFinal_17: TCheckBox
+        Left = 205
+        Top = 24
+        Width = 41
+        Height = 17
+        Caption = 'QF17'
+        TabOrder = 16
+      end
+      object cbxEliminatedQuarterFinal_18: TCheckBox
+        Left = 205
+        Top = 47
+        Width = 41
+        Height = 17
+        Caption = 'QF18'
+        TabOrder = 17
+      end
+      object cbxEliminatedQuarterFinal_19: TCheckBox
+        Left = 205
+        Top = 72
+        Width = 41
+        Height = 17
+        Caption = 'QF19'
+        TabOrder = 18
+      end
+      object cbxEliminatedQuarterFinal_20: TCheckBox
+        Left = 205
+        Top = 95
+        Width = 41
+        Height = 17
+        Caption = 'QF20'
         TabOrder = 19
       end
     end

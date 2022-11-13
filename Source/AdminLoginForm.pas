@@ -105,8 +105,28 @@ type
     cmbSemiFinal_2: TComboBox;
     cmbSemiFinal_3: TComboBox;
     cmbSemiFinal_4: TComboBox;
+    gbxEliminatedQuarterFinalTeams: TGroupBox;
+    cbxEliminatedQuarterFinal_1: TCheckBox;
+    cbxEliminatedQuarterFinal_2: TCheckBox;
+    cbxEliminatedQuarterFinal_3: TCheckBox;
+    cbxEliminatedQuarterFinal_4: TCheckBox;
+    cbxEliminatedQuarterFinal_5: TCheckBox;
+    cbxEliminatedQuarterFinal_6: TCheckBox;
+    cbxEliminatedQuarterFinal_7: TCheckBox;
+    cbxEliminatedQuarterFinal_8: TCheckBox;
+    cbxEliminatedQuarterFinal_9: TCheckBox;
+    cbxEliminatedQuarterFinal_10: TCheckBox;
+    cbxEliminatedQuarterFinal_11: TCheckBox;
+    cbxEliminatedQuarterFinal_12: TCheckBox;
+    cbxEliminatedQuarterFinal_13: TCheckBox;
+    cbxEliminatedQuarterFinal_14: TCheckBox;
+    cbxEliminatedQuarterFinal_15: TCheckBox;
+    cbxEliminatedQuarterFinal_16: TCheckBox;
+    cbxEliminatedQuarterFinal_17: TCheckBox;
+    cbxEliminatedQuarterFinal_18: TCheckBox;
+    cbxEliminatedQuarterFinal_19: TCheckBox;
+    cbxEliminatedQuarterFinal_20: TCheckBox;
     procedure FormCreate(Sender: TObject);
-    procedure FormDestroy(Sender: TObject);
     procedure btnLoginClick(Sender: TObject);
     function HashPasswd(const passwd: string): string;
     procedure ShowLoginPanel();
@@ -145,6 +165,7 @@ var
 
   g_QualifierCbxList: array [1 .. 20] of ^TCheckBox;
   g_Qualifier2CbxList: array [1 .. 20] of ^TCheckBox;
+  g_QuarterFinalCbxList: array [1 .. 20] of ^TCheckBox;
 
 implementation
 
@@ -213,7 +234,6 @@ begin
       ShowMessage('Incorrect surname!');
       edtSurname.SetFocus();
     end;
-
   end
   else
   begin
@@ -236,11 +256,6 @@ begin
   g_PasswordHidingIcon.LoadFromFile(ICON_PATH_PASSWORDHIDING);
 
   ShowLoginPanel();
-end;
-
-procedure TForm2.FormDestroy(Sender: TObject);
-begin
-  //
 end;
 
 function TForm2.HashPasswd(const passwd: string): string;
@@ -607,7 +622,88 @@ begin
       end;
     LadderStage_QuarterFinal:
       begin
-
+        case teamID of
+          1:
+            begin
+              Result := cbxEliminatedQuarterFinal_1.Checked;
+            end;
+          2:
+            begin
+              Result := cbxEliminatedQuarterFinal_2.Checked;
+            end;
+          3:
+            begin
+              Result := cbxEliminatedQuarterFinal_3.Checked;
+            end;
+          4:
+            begin
+              Result := cbxEliminatedQuarterFinal_4.Checked;
+            end;
+          5:
+            begin
+              Result := cbxEliminatedQuarterFinal_5.Checked;
+            end;
+          6:
+            begin
+              Result := cbxEliminatedQuarterFinal_6.Checked;
+            end;
+          7:
+            begin
+              Result := cbxEliminatedQuarterFinal_7.Checked;
+            end;
+          8:
+            begin
+              Result := cbxEliminatedQuarterFinal_8.Checked;
+            end;
+          9:
+            begin
+              Result := cbxEliminatedQuarterFinal_9.Checked;
+            end;
+          10:
+            begin
+              Result := cbxEliminatedQuarterFinal_10.Checked;
+            end;
+          11:
+            begin
+              Result := cbxEliminatedQuarterFinal_11.Checked;
+            end;
+          12:
+            begin
+              Result := cbxEliminatedQuarterFinal_12.Checked;
+            end;
+          13:
+            begin
+              Result := cbxEliminatedQuarterFinal_13.Checked;
+            end;
+          14:
+            begin
+              Result := cbxEliminatedQuarterFinal_14.Checked;
+            end;
+          15:
+            begin
+              Result := cbxEliminatedQuarterFinal_15.Checked;
+            end;
+          16:
+            begin
+              Result := cbxEliminatedQuarterFinal_16.Checked;
+            end;
+          17:
+            begin
+              Result := cbxEliminatedQuarterFinal_17.Checked;
+            end;
+          18:
+            begin
+              Result := cbxEliminatedQuarterFinal_18.Checked;
+            end;
+          19:
+            begin
+              Result := cbxEliminatedQuarterFinal_19.Checked;
+            end;
+          20:
+            begin
+              Result := cbxEliminatedQuarterFinal_20.Checked;
+            end;
+        end;
       end;
     LadderStage_SemiFinal:
       begin
@@ -803,7 +899,88 @@ begin
       end;
     LadderStage_QuarterFinal:
       begin
-
+        case teamID of
+          1:
+            begin
+              cbxEliminatedQuarterFinal_1.Checked := true;
+            end;
+          2:
+            begin
+              cbxEliminatedQuarterFinal_2.Checked := true;
+            end;
+          3:
+            begin
+              cbxEliminatedQuarterFinal_3.Checked := true;
+            end;
+          4:
+            begin
+              cbxEliminatedQuarterFinal_4.Checked := true;
+            end;
+          5:
+            begin
+              cbxEliminatedQuarterFinal_5.Checked := true;
+            end;
+          6:
+            begin
+              cbxEliminatedQuarterFinal_6.Checked := true;
+            end;
+          7:
+            begin
+              cbxEliminatedQuarterFinal_7.Checked := true;
+            end;
+          8:
+            begin
+              cbxEliminatedQuarterFinal_8.Checked := true;
+            end;
+          9:
+            begin
+              cbxEliminatedQuarterFinal_9.Checked := true;
+            end;
+          10:
+            begin
+              cbxEliminatedQuarterFinal_10.Checked := true;
+            end;
+          11:
+            begin
+              cbxEliminatedQuarterFinal_11.Checked := true;
+            end;
+          12:
+            begin
+              cbxEliminatedQuarterFinal_12.Checked := true;
+            end;
+          13:
+            begin
+              cbxEliminatedQuarterFinal_13.Checked := true;
+            end;
+          14:
+            begin
+              cbxEliminatedQuarterFinal_14.Checked := true;
+            end;
+          15:
+            begin
+              cbxEliminatedQuarterFinal_15.Checked := true;
+            end;
+          16:
+            begin
+              cbxEliminatedQuarterFinal_16.Checked := true;
+            end;
+          17:
+            begin
+              cbxEliminatedQuarterFinal_17.Checked := true;
+            end;
+          18:
+            begin
+              cbxEliminatedQuarterFinal_18.Checked := true;
+            end;
+          19:
+            begin
+              cbxEliminatedQuarterFinal_19.Checked := true;
+            end;
+          20:
+            begin
+              cbxEliminatedQuarterFinal_20.Checked := true;
+            end;
+        end;
       end;
     LadderStage_SemiFinal:
       begin
@@ -903,6 +1080,27 @@ begin
   g_Qualifier2CbxList[19] := @cbxEliminatedQualifier2_19;
   g_Qualifier2CbxList[20] := @cbxEliminatedQualifier2_20;
 
+  g_QuarterFinalCbxList[1] := @cbxEliminatedQuarterFinal_1;
+  g_QuarterFinalCbxList[2] := @cbxEliminatedQuarterFinal_2;
+  g_QuarterFinalCbxList[3] := @cbxEliminatedQuarterFinal_3;
+  g_QuarterFinalCbxList[4] := @cbxEliminatedQuarterFinal_4;
+  g_QuarterFinalCbxList[5] := @cbxEliminatedQuarterFinal_5;
+  g_QuarterFinalCbxList[6] := @cbxEliminatedQuarterFinal_6;
+  g_QuarterFinalCbxList[7] := @cbxEliminatedQuarterFinal_7;
+  g_QuarterFinalCbxList[8] := @cbxEliminatedQuarterFinal_8;
+  g_QuarterFinalCbxList[9] := @cbxEliminatedQuarterFinal_9;
+  g_QuarterFinalCbxList[10] := @cbxEliminatedQuarterFinal_10;
+  g_QuarterFinalCbxList[11] := @cbxEliminatedQuarterFinal_11;
+  g_QuarterFinalCbxList[12] := @cbxEliminatedQuarterFinal_12;
+  g_QuarterFinalCbxList[13] := @cbxEliminatedQuarterFinal_13;
+  g_QuarterFinalCbxList[14] := @cbxEliminatedQuarterFinal_14;
+  g_QuarterFinalCbxList[15] := @cbxEliminatedQuarterFinal_15;
+  g_QuarterFinalCbxList[16] := @cbxEliminatedQuarterFinal_16;
+  g_QuarterFinalCbxList[17] := @cbxEliminatedQuarterFinal_17;
+  g_QuarterFinalCbxList[18] := @cbxEliminatedQuarterFinal_18;
+  g_QuarterFinalCbxList[19] := @cbxEliminatedQuarterFinal_19;
+  g_QuarterFinalCbxList[20] := @cbxEliminatedQuarterFinal_20;
+
   for t in TeamList.Teams do
   begin
     for i := Low(g_QualifierCmbList) to High(g_QualifierCmbList) do
@@ -923,6 +1121,9 @@ begin
 
   for i := Low(g_Qualifier2CbxList) to High(g_Qualifier2CbxList) do
     g_Qualifier2CbxList[i].Caption := TeamList.Teams[i].Name;
+
+  for i := Low(g_QuarterFinalCbxList) to High(g_QuarterFinalCbxList) do
+    g_QuarterFinalCbxList[i].Caption := TeamList.Teams[i].Name;
 
   pnlAdmin.Show();
   pnlLogin.Hide();
