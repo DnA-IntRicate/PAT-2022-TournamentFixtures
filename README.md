@@ -50,3 +50,5 @@ Example: `Password = 12345678; Hash = a2240212f6e8d7db337b46aab21433ad==`
 - 624   /Source/MainForm.pas
 - 75    /Source/Team.pas
 - *Total = 2403*
+
+Note: tblPlayers is present in Assets/Database.mdb however in this version of the application it is not currently being used. 
