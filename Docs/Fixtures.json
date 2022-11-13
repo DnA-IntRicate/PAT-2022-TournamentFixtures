@@ -1,0 +1,398 @@
+{
+    "type": "Fixture.TFixtures",
+    "id": 1,
+    "fields": {
+        "Entries": [
+            {
+                "type": "Fixture.TFixture",
+                "id": 2,
+                "fields": {
+                    "TeamID": 1,
+                    "LadderStage": 0,
+                    "StagePosition": 1,
+                    "Eliminated": true
+                }
+            },
+            {
+                "type": "Fixture.TFixture",
+                "id": 3,
+                "fields": {
+                    "TeamID": 6,
+                    "LadderStage": 0,
+                    "StagePosition": 2,
+                    "Eliminated": true
+                }
+            },
+            {
+                "type": "Fixture.TFixture",
+                "id": 4,
+                "fields": {
+                    "TeamID": 18,
+                    "LadderStage": 0,
+                    "StagePosition": 3,
+                    "Eliminated": true
+                }
+            },
+            {
+                "type": "Fixture.TFixture",
+                "id": 5,
+                "fields": {
+                    "TeamID": 3,
+                    "LadderStage": 0,
+                    "StagePosition": 4,
+                    "Eliminated": true
+                }
+            },
+            {
+                "type": "Fixture.TFixture",
+                "id": 6,
+                "fields": {
+                    "TeamID": 5,
+                    "LadderStage": 0,
+                    "StagePosition": 5,
+                    "Eliminated": false
+                }
+            },
+            {
+                "type": "Fixture.TFixture",
+                "id": 7,
+                "fields": {
+                    "TeamID": 9,
+                    "LadderStage": 0,
+                    "StagePosition": 6,
+                    "Eliminated": true
+                }
+            },
+            {
+                "type": "Fixture.TFixture",
+                "id": 8,
+                "fields": {
+                    "TeamID": 10,
+                    "LadderStage": 0,
+                    "StagePosition": 7,
+                    "Eliminated": true
+                }
+            },
+            {
+                "type": "Fixture.TFixture",
+                "id": 9,
+                "fields": {
+                    "TeamID": 8,
+                    "LadderStage": 0,
+                    "StagePosition": 8,
+                    "Eliminated": false
+                }
+            },
+            {
+                "type": "Fixture.TFixture",
+                "id": 10,
+                "fields": {
+                    "TeamID": 17,
+                    "LadderStage": 0,
+                    "StagePosition": 9,
+                    "Eliminated": true
+                }
+            },
+            {
+                "type": "Fixture.TFixture",
+                "id": 11,
+                "fields": {
+                    "TeamID": 7,
+                    "LadderStage": 0,
+                    "StagePosition": 10,
+                    "Eliminated": false
+                }
+            },
+            {
+                "type": "Fixture.TFixture",
+                "id": 12,
+                "fields": {
+                    "TeamID": 12,
+                    "LadderStage": 0,
+                    "StagePosition": 11,
+                    "Eliminated": false
+                }
+            },
+            {
+                "type": "Fixture.TFixture",
+                "id": 13,
+                "fields": {
+                    "TeamID": 16,
+                    "LadderStage": 0,
+                    "StagePosition": 12,
+                    "Eliminated": true
+                }
+            },
+            {
+                "type": "Fixture.TFixture",
+                "id": 14,
+                "fields": {
+                    "TeamID": 19,
+                    "LadderStage": 0,
+                    "StagePosition": 13,
+                    "Eliminated": false
+                }
+            },
+            {
+                "type": "Fixture.TFixture",
+                "id": 15,
+                "fields": {
+                    "TeamID": 14,
+                    "LadderStage": 0,
+                    "StagePosition": 14,
+                    "Eliminated": false
+                }
+            },
+            {
+                "type": "Fixture.TFixture",
+                "id": 16,
+                "fields": {
+                    "TeamID": 15,
+                    "LadderStage": 0,
+                    "StagePosition": 15,
+                    "Eliminated": false
+                }
+            },
+            {
+                "type": "Fixture.TFixture",
+                "id": 17,
+                "fields": {
+                    "TeamID": 2,
+                    "LadderStage": 0,
+                    "StagePosition": 16,
+                    "Eliminated": false
+                }
+            },
+            {
+                "type": "Fixture.TFixture",
+                "id": 18,
+                "fields": {
+                    "TeamID": 11,
+                    "LadderStage": 0,
+                    "StagePosition": 17,
+                    "Eliminated": true
+                }
+            },
+            {
+                "type": "Fixture.TFixture",
+                "id": 19,
+                "fields": {
+                    "TeamID": 16,
+                    "LadderStage": 0,
+                    "StagePosition": 18,
+                    "Eliminated": true
+                }
+            },
+            {
+                "type": "Fixture.TFixture",
+                "id": 20,
+                "fields": {
+                    "TeamID": 20,
+                    "LadderStage": 0,
+                    "StagePosition": 19,
+                    "Eliminated": true
+                }
+            },
+            {
+                "type": "Fixture.TFixture",
+                "id": 21,
+                "fields": {
+                    "TeamID": 13,
+                    "LadderStage": 0,
+                    "StagePosition": 20,
+                    "Eliminated": true
+                }
+            },
+            {
+                "type": "Fixture.TFixture",
+                "id": 22,
+                "fields": {
+                    "TeamID": 2,
+                    "LadderStage": 1,
+                    "StagePosition": 1,
+                    "Eliminated": false
+                }
+            },
+            {
+                "type": "Fixture.TFixture",
+                "id": 23,
+                "fields": {
+                    "TeamID": 15,
+                    "LadderStage": 1,
+                    "StagePosition": 2,
+                    "Eliminated": false
+                }
+            },
+            {
+                "type": "Fixture.TFixture",
+                "id": 24,
+                "fields": {
+                    "TeamID": 14,
+                    "LadderStage": 1,
+                    "StagePosition": 3,
+                    "Eliminated": false
+                }
+            },
+            {
+                "type": "Fixture.TFixture",
+                "id": 25,
+                "fields": {
+                    "TeamID": 19,
+                    "LadderStage": 1,
+                    "StagePosition": 4,
+                    "Eliminated": false
+                }
+            },
+            {
+                "type": "Fixture.TFixture",
+                "id": 26,
+                "fields": {
+                    "TeamID": 2,
+                    "LadderStage": 2,
+                    "StagePosition": 1,
+                    "Eliminated": false
+                }
+            },
+            {
+                "type": "Fixture.TFixture",
+                "id": 27,
+                "fields": {
+                    "TeamID": 15,
+                    "LadderStage": 2,
+                    "StagePosition": 2,
+                    "Eliminated": false
+                }
+            },
+            {
+                "type": "Fixture.TFixture",
+                "id": 28,
+                "fields": {
+                    "TeamID": 14,
+                    "LadderStage": 2,
+                    "StagePosition": 3,
+                    "Eliminated": false
+                }
+            },
+            {
+                "type": "Fixture.TFixture",
+                "id": 29,
+                "fields": {
+                    "TeamID": 19,
+                    "LadderStage": 2,
+                    "StagePosition": 4,
+                    "Eliminated": false
+                }
+            },
+            {
+                "type": "Fixture.TFixture",
+                "id": 30,
+                "fields": {
+                    "TeamID": 5,
+                    "LadderStage": 2,
+                    "StagePosition": 5,
+                    "Eliminated": true
+                }
+            },
+            {
+                "type": "Fixture.TFixture",
+                "id": 31,
+                "fields": {
+                    "TeamID": 12,
+                    "LadderStage": 2,
+                    "StagePosition": 6,
+                    "Eliminated": true
+                }
+            },
+            {
+                "type": "Fixture.TFixture",
+                "id": 32,
+                "fields": {
+                    "TeamID": 7,
+                    "LadderStage": 2,
+                    "StagePosition": 7,
+                    "Eliminated": true
+                }
+            },
+            {
+                "type": "Fixture.TFixture",
+                "id": 33,
+                "fields": {
+                    "TeamID": 8,
+                    "LadderStage": 2,
+                    "StagePosition": 8,
+                    "Eliminated": true
+                }
+            },
+            {
+                "type": "Fixture.TFixture",
+                "id": 34,
+                "fields": {
+                    "TeamID": 2,
+                    "LadderStage": 3,
+                    "StagePosition": 1,
+                    "Eliminated": false
+                }
+            },
+            {
+                "type": "Fixture.TFixture",
+                "id": 35,
+                "fields": {
+                    "TeamID": 15,
+                    "LadderStage": 3,
+                    "StagePosition": 2,
+                    "Eliminated": false
+                }
+            },
+            {
+                "type": "Fixture.TFixture",
+                "id": 36,
+                "fields": {
+                    "TeamID": 14,
+                    "LadderStage": 3,
+                    "StagePosition": 3,
+                    "Eliminated": true
+                }
+            },
+            {
+                "type": "Fixture.TFixture",
+                "id": 37,
+                "fields": {
+                    "TeamID": 19,
+                    "LadderStage": 3,
+                    "StagePosition": 4,
+                    "Eliminated": true
+                }
+            },
+            {
+                "type": "Fixture.TFixture",
+                "id": 38,
+                "fields": {
+                    "TeamID": 2,
+                    "LadderStage": 4,
+                    "StagePosition": 1,
+                    "Eliminated": false
+                }
+            },
+            {
+                "type": "Fixture.TFixture",
+                "id": 39,
+                "fields": {
+                    "TeamID": 15,
+                    "LadderStage": 4,
+                    "StagePosition": 2,
+                    "Eliminated": false
+                }
+            },
+            {
+                "type": "Fixture.TFixture",
+                "id": 40,
+                "fields": {
+                    "TeamID": 15,
+                    "LadderStage": 5,
+                    "StagePosition": 1,
+                    "Eliminated": false
+                }
+            }
+        ]
+    }
+}
