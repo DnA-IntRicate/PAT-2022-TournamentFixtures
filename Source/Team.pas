@@ -21,8 +21,6 @@ type
     Teams: array [1 .. 20] of TTeam;
 
     constructor Create();
-    function FindTeamByID(const ID: integer): TTeam;
-    function FindTeamByName(const Name: string): TTeam;
   end;
 
 implementation
@@ -42,34 +40,6 @@ var
 begin
   for i := Low(Teams) to High(Teams) do
     Teams[i] := TTeam.Create();
-end;
-
-function TTeamList.FindTeamByID(const ID: integer): TTeam;
-var
-  i: integer;
-begin
-  for i := Low(Teams) to High(Teams) do
-  begin
-    if Teams[i].ID = ID then
-    begin
-      Result := Teams[i];
-      break;
-    end;
-  end;
-end;
-
-function TTeamList.FindTeamByName(const Name: string): TTeam;
-var
-  i: integer;
-begin
-  for i := Low(Teams) to High(Teams) do
-  begin
-    if Teams[i].Name = name then
-    begin
-      Result := Teams[i];
-      break;
-    end;
-  end;
 end;
 
 end.

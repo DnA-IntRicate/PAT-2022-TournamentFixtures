@@ -46,12 +46,12 @@ Example: `Password = 12345678; Hash = a2240212f6e8d7db337b46aab21433ad==`
 ![alt text](Screenshots/FixtureEditor.png)
 
 ### Line Counts
-- 1525  /Source/AdminLoginForm.pas
+- 1521  /Source/AdminLoginForm.pas
 - 55    /Source/Fixture.pas
 - 71    /Source/JsonSerializer.pas
-- 53    /Source/MainDatabase.pas
-- 624   /Source/MainForm.pas
-- 75    /Source/Team.pas
-- *Total = 2403*
+- 45    /Source/MainDatabase.pas
+- 625   /Source/MainForm.pas
+- 45    /Source/Team.pas
+- *Total = 2362*
 
 Note: tblPlayers is present in Assets/Database.mdb however in this version of the application it is not currently being used. 

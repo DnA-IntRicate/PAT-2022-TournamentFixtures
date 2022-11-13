@@ -4,12 +4,12 @@ unit AdminLoginForm;
 interface
 
 uses
-  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants,
-  System.Classes, Vcl.Graphics,
-  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.StdCtrls, Data.Win.ADODB, Hash,
-  Vcl.ExtCtrls, Data.DB, Vcl.Grids, Vcl.DBGrids, MainDatabase, Vcl.Buttons,
-  System.ImageList, Vcl.ImgList, Team, Fixture, JsonSerializer,
-  Vcl.Imaging.pngimage, Vcl.ComCtrls;
+  Winapi.Windows, Winapi.Messages, System.SysUtils, Vcl.StdCtrls, Vcl.Controls,
+  Vcl.Imaging.pngimage, Vcl.ExtCtrls, Vcl.Buttons, System.Classes,
+  System.Variants, Vcl.Graphics, System.UITypes,
+  Vcl.Forms, Vcl.Dialogs, Data.Win.ADODB, Hash, Data.DB, Vcl.Grids, Vcl.DBGrids,
+  MainDatabase,
+  System.ImageList, Vcl.ImgList, Team, Fixture, JsonSerializer, Vcl.ComCtrls;
 
 type
   TForm2 = class(TForm)
@@ -234,7 +234,7 @@ begin
   begin
     for c in sForenames do
     begin
-      if c in CHARS_NUMBERS then
+      if CharInSet(c, CHARS_NUMBERS) then
       begin
         ShowMessage('Forename cannot contain any numbers!');
         Exit();
@@ -251,7 +251,7 @@ begin
   begin
     for c in sSurname do
     begin
-      if c in CHARS_NUMBERS then
+      if CharInSet(c, CHARS_NUMBERS) then
       begin
         ShowMessage('Surname cannot contain any numbers!');
         Exit();
@@ -297,11 +297,8 @@ begin
 end;
 
 procedure TForm2.btnChangePasswordClick(Sender: TObject);
-const
-  CHARS_NUMBERS = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9'];
 var
   sPassword, sHashedPassword: string;
-  c: char;
   query: TADOQuery;
 begin
   sPassword := edtCurrentAdminNewPassword.Text;
@@ -318,8 +315,9 @@ begin
   query.Connection := Database.Connection;
   query.SQL.Add('UPDATE tblAdmins SET ' + Format('%s = ''%s''',
     [TBL_ADMINS_FIELD_NAME_PASSWORDHASH, sHashedPassword]) +
-    Format(' WHERE %s = ''%s'' AND %s = ''%s'';', [TBL_ADMINS_FIELD_NAME_FORENAMES,
-    g_AdminForenames, TBL_ADMINS_FIELD_NAME_SURNAME, g_AdminSurname]));
+    Format(' WHERE %s = ''%s'' AND %s = ''%s'';',
+    [TBL_ADMINS_FIELD_NAME_FORENAMES, g_AdminForenames,
+    TBL_ADMINS_FIELD_NAME_SURNAME, g_AdminSurname]));
 
   if query.ExecSQL() = 1 then
     ShowMessage('Password updated.');
@@ -993,11 +991,9 @@ begin
       begin
         Result := false;
       end;
-  else
-    begin
-      Result := false;
-    end;
   end;
+
+  Result := false;
 end;
 
 procedure TForm2.SetEliminated(const teamID: integer; const stage: integer);

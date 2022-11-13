@@ -19,7 +19,6 @@ type
     TBL_NAME_PLAYERS = 'tblPlayers';
 
     constructor Create();
-    destructor Destroy();
   end;
 
 implementation
@@ -41,13 +40,6 @@ begin
   TblTeams := TADOTable.Create(nil);
   TblTeams.Connection := Connection;
   TblTeams.TableName := TBL_NAME_TEAMS;
-end;
-
-destructor TMainDatabase.Destroy;
-begin
-  TblTeams.Destroy();
-  TblAdmins.Destroy();
-  Connection.Destroy();
 end;
 
 end.

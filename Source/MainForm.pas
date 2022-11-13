@@ -5,6 +5,7 @@ interface
 
 uses
   Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants,
+  System.UITypes,
   System.Classes, Vcl.Graphics,
   Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.StdCtrls,
   AdminLoginForm, Vcl.ExtCtrls, Jpeg, PngImage, Data.Win.ADODB, Data.DB, Team,
