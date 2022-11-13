@@ -57,7 +57,6 @@ type
     lblQualifier2_4: TLabel;
     procedure btnAdminLoginClick(Sender: TObject);
     procedure FormCreate(Sender: TObject);
-    procedure FormDestroy(Sender: TObject);
     procedure FormActivate(Sender: TObject);
     procedure LoadDatabase();
     function LoadFixtures(): boolean;
@@ -99,7 +98,6 @@ end;
 procedure TForm1.FormCreate(Sender: TObject);
 begin
   imgLadder.Picture.LoadFromFile('Assets/Images/BracketSeeded.png');
-  // use const string for this
   imgLadder.Stretch := true;
 
   lblQualifier_1.Hide();
@@ -149,11 +147,6 @@ begin
   LoadDatabase();
   if LoadFixtures() then
     DisplayFixtures();
-end;
-
-procedure TForm1.FormDestroy(Sender: TObject);
-begin
-  //
 end;
 
 procedure TForm1.LoadDatabase();
@@ -252,113 +245,6 @@ begin
   for fx in g_Fixtures.Entries do
   begin
     case fx.LadderStage of
-      LadderStage_Disqualified: // Can this ladder stage be removed?
-        begin
-          case fx.StagePosition of
-            1:
-              begin
-                lblQualifier_1.Font.Color := clRed;
-                lblQualifier_1.Caption := g_TeamList.Teams[fx.TeamID].Name;
-              end;
-            2:
-              begin
-                lblQualifier_2.Font.Color := clRed;
-                lblQualifier_2.Caption := g_TeamList.Teams[fx.TeamID].Name;
-              end;
-            3:
-              begin
-                lblQualifier_3.Font.Color := clRed;
-                // red colour used for teams that lost
-                lblQualifier_3.Font.Style := [fsStrikeOut];
-                lblQualifier_3.Caption := g_TeamList.Teams[fx.TeamID].Name;
-              end;
-            4:
-              begin
-                lblQualifier_4.Font.Color := clRed;
-                lblQualifier_4.Caption := g_TeamList.Teams[fx.TeamID].Name;
-              end;
-            5:
-              begin
-                lblQualifier_5.Font.Color := clRed;
-                lblQualifier_5.Caption := g_TeamList.Teams[fx.TeamID].Name;
-              end;
-            6:
-              begin
-                lblQualifier_6.Font.Color := clRed;
-                lblQualifier_6.Caption := g_TeamList.Teams[fx.TeamID].Name;
-              end;
-            7:
-              begin
-                lblQualifier_7.Font.Color := clRed;
-                lblQualifier_7.Caption := g_TeamList.Teams[fx.TeamID].Name;
-              end;
-            8:
-              begin
-                lblQualifier_8.Font.Color := clRed;
-                lblQualifier_8.Caption := g_TeamList.Teams[fx.TeamID].Name;
-              end;
-            9:
-              begin
-                lblQualifier_9.Font.Color := clRed;
-                lblQualifier_9.Caption := g_TeamList.Teams[fx.TeamID].Name;
-              end;
-            10:
-              begin
-                lblQualifier_10.Font.Color := clRed;
-                lblQualifier_10.Caption := g_TeamList.Teams[fx.TeamID].Name;
-              end;
-            11:
-              begin
-                lblQualifier_11.Font.Color := clRed;
-                lblQualifier_11.Caption := g_TeamList.Teams[fx.TeamID].Name;
-              end;
-            12:
-              begin
-                lblQualifier_12.Font.Color := clRed;
-                lblQualifier_12.Caption := g_TeamList.Teams[fx.TeamID].Name;
-              end;
-            13:
-              begin
-                lblQualifier_13.Font.Color := clRed;
-                lblQualifier_13.Caption := g_TeamList.Teams[fx.TeamID].Name;
-              end;
-            14:
-              begin
-                lblQualifier_14.Font.Color := clRed;
-                lblQualifier_14.Caption := g_TeamList.Teams[fx.TeamID].Name;
-              end;
-            15:
-              begin
-                lblQualifier_15.Font.Color := clRed;
-                lblQualifier_15.Caption := g_TeamList.Teams[fx.TeamID].Name;
-              end;
-            16:
-              begin
-                lblQualifier_16.Font.Color := clRed;
-                lblQualifier_16.Caption := g_TeamList.Teams[fx.TeamID].Name;
-              end;
-            17:
-              begin
-                lblQualifier_17.Font.Color := clRed;
-                lblQualifier_17.Caption := g_TeamList.Teams[fx.TeamID].Name;
-              end;
-            18:
-              begin
-                lblQualifier_18.Font.Color := clRed;
-                lblQualifier_18.Caption := g_TeamList.Teams[fx.TeamID].Name;
-              end;
-            19:
-              begin
-                lblQualifier_19.Font.Color := clRed;
-                lblQualifier_19.Caption := g_TeamList.Teams[fx.TeamID].Name;
-              end;
-            20:
-              begin
-                lblQualifier_20.Font.Color := clRed;
-                lblQualifier_20.Caption := g_TeamList.Teams[fx.TeamID].Name;
-              end;
-          end;
-        end;
       LadderStage_Qualifier:
         begin
           case fx.StagePosition of
@@ -728,8 +614,8 @@ begin
         end;
       LadderStage_Champion:
         begin
-           lblChampion.Show();
-           lblChampion.Caption := g_TeamList.Teams[fx.TeamID].Name;
+          lblChampion.Show();
+          lblChampion.Caption := g_TeamList.Teams[fx.TeamID].Name;
         end;
     end;
   end;

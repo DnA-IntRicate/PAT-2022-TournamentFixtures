@@ -200,7 +200,7 @@ const
 
 var
   Form2: TForm2;
-  g_AdminForenames: string;
+  g_AdminForenames, g_AdminSurname: string;
   g_PasswordShowingIcon, g_PasswordHidingIcon: TBitmap;
 
   g_QualifierCmbList: array [1 .. 20] of ^TComboBox;
@@ -318,8 +318,8 @@ begin
   query.Connection := Database.Connection;
   query.SQL.Add('UPDATE tblAdmins SET ' + Format('%s = ''%s''',
     [TBL_ADMINS_FIELD_NAME_PASSWORDHASH, sHashedPassword]) +
-    Format(' WHERE %s = ''%s'';', [TBL_ADMINS_FIELD_NAME_FORENAMES,
-    g_AdminForenames]));
+    Format(' WHERE %s = ''%s'' AND %s = ''%s'';', [TBL_ADMINS_FIELD_NAME_FORENAMES,
+    g_AdminForenames, TBL_ADMINS_FIELD_NAME_SURNAME, g_AdminSurname]));
 
   if query.ExecSQL() = 1 then
     ShowMessage('Password updated.');
@@ -374,10 +374,13 @@ begin
 
     if sSurname = tblAdmins[TBL_ADMINS_FIELD_NAME_SURNAME] then
     begin
+      g_AdminSurname := sSurname;
+
       if HashPasswd(sPassword) = tblAdmins[TBL_ADMINS_FIELD_NAME_PASSWORDHASH]
       then
       begin
         ShowMessage(Format('Welcome %s %s.', [sForenames, sSurname]));
+        self.Caption := Format('Admin: %s %s', [sForenames, sSurname]);
         ShowFixtureEditorPanel();
       end
       else
@@ -440,10 +443,6 @@ begin
   begin
     if fx.StagePosition > 0 then
       case fx.LadderStage of
-        LadderStage_Disqualified:
-          begin
-
-          end;
         LadderStage_Qualifier:
           begin
             myCmb := g_QualifierCmbList[fx.StagePosition]^;
@@ -646,10 +645,6 @@ function TForm2.IsEliminated(const teamID: integer;
   const stage: integer): boolean;
 begin
   case stage of
-    LadderStage_Disqualified:
-      begin
-        Result := true;
-      end;
     LadderStage_Qualifier:
       begin
         case teamID of
@@ -1347,10 +1342,6 @@ begin
               cbxEliminatedSemiFinal_20.Checked := true;
             end;
         end;
-      end;
-    LadderStage_Final:
-      begin
-
       end;
   end;
 end;

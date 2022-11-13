@@ -1,9 +1,10 @@
 object Form1: TForm1
   Left = 0
   Top = 0
-  Caption = '-'
-  ClientHeight = 509
-  ClientWidth = 778
+  AutoSize = True
+  Caption = 'Fixtures'
+  ClientHeight = 476
+  ClientWidth = 762
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -14,21 +15,20 @@ object Form1: TForm1
   Position = poDesigned
   OnActivate = FormActivate
   OnCreate = FormCreate
-  OnDestroy = FormDestroy
   PixelsPerInch = 120
   TextHeight = 16
   object btnAdminLogin: TButton
-    Left = 616
-    Top = 447
-    Width = 153
-    Height = 57
+    Left = 649
+    Top = 436
+    Width = 113
+    Height = 40
     Caption = 'Admin Login'
     TabOrder = 0
     OnClick = btnAdminLoginClick
   end
   object pnlFixtures: TPanel
-    Left = 8
-    Top = 8
+    Left = 0
+    Top = 0
     Width = 761
     Height = 430
     TabOrder = 1
@@ -1352,10 +1352,10 @@ object Form1: TForm1
     end
   end
   object btnRefresh: TButton
-    Left = 488
-    Top = 464
-    Width = 89
-    Height = 37
+    Left = 530
+    Top = 436
+    Width = 113
+    Height = 40
     Caption = 'Refresh'
     TabOrder = 2
     OnClick = btnRefreshClick

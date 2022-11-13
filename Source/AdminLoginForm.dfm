@@ -2,7 +2,7 @@ object Form2: TForm2
   Left = 0
   Top = 0
   AutoSize = True
-  Caption = 'Form2'
+  Caption = 'Admin'
   ClientHeight = 673
   ClientWidth = 902
   Color = clBtnFace

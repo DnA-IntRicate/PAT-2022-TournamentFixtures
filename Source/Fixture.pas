@@ -3,7 +3,6 @@ unit Fixture;
 interface
 
 const
-  LadderStage_Disqualified = -1;
   LadderStage_Qualifier = 0;
   LadderStage_Qualifier2 = 1;
   LadderStage_QuarterFinal = 2;
