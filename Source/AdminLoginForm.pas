@@ -9,7 +9,7 @@ uses
   Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.StdCtrls, Data.Win.ADODB, Hash,
   Vcl.ExtCtrls, Data.DB, Vcl.Grids, Vcl.DBGrids, MainDatabase, Vcl.Buttons,
   System.ImageList, Vcl.ImgList, Team, Fixture, JsonSerializer,
-  Vcl.Imaging.pngimage;
+  Vcl.Imaging.pngimage, Vcl.ComCtrls;
 
 type
   TForm2 = class(TForm)
@@ -21,9 +21,8 @@ type
     Label3: TLabel;
     btnLogin: TButton;
     pnlLogin: TPanel;
-    pnlAdmin: TPanel;
+    pnlFixtureEditor: TPanel;
     btnEye: TBitBtn;
-    Button1: TButton;
     btnUpdateFixtures: TButton;
     pnlFixtures: TPanel;
     imgLadder: TImage;
@@ -150,17 +149,38 @@ type
     cmbFinal_1: TComboBox;
     cmbFinal_2: TComboBox;
     cmbChampion: TComboBox;
+    pnlAdminEditor: TPanel;
+    btnAdminEditor: TButton;
+    btnBack: TButton;
+    edtNewForenames: TEdit;
+    edtNewSurname: TEdit;
+    edtNewPassword: TEdit;
+    Label4: TLabel;
+    Label5: TLabel;
+    Label6: TLabel;
+    gbxNewAdmin: TGroupBox;
+    btnAddNewAdmin: TButton;
+    gbxChangePassword: TGroupBox;
+    edtCurrentAdminNewPassword: TEdit;
+    Label7: TLabel;
+    btnChangePassword: TButton;
+    gbxAdminLogin: TGroupBox;
     procedure FormCreate(Sender: TObject);
     procedure btnLoginClick(Sender: TObject);
     function HashPasswd(const passwd: string): string;
     procedure ShowLoginPanel();
-    procedure ShowAdminPanel();
+    procedure ShowFixtureEditorPanel();
+    procedure ShowAdminEditorPanel();
     procedure btnEyeClick(Sender: TObject);
     procedure btnUpdateFixturesClick(Sender: TObject);
     procedure ShowFixtures();
     procedure UpdateFixtures();
     function IsEliminated(const teamID: integer; const stage: integer): boolean;
     procedure SetEliminated(const teamID: integer; const stage: integer);
+    procedure btnAdminEditorClick(Sender: TObject);
+    procedure btnBackClick(Sender: TObject);
+    procedure btnAddNewAdminClick(Sender: TObject);
+    procedure btnChangePasswordClick(Sender: TObject);
 
   public
     Database: TMainDatabase;
@@ -180,6 +200,7 @@ const
 
 var
   Form2: TForm2;
+  g_AdminForenames: string;
   g_PasswordShowingIcon, g_PasswordHidingIcon: TBitmap;
 
   g_QualifierCmbList: array [1 .. 20] of ^TComboBox;
@@ -196,6 +217,115 @@ var
 implementation
 
 {$R *.dfm}
+
+procedure TForm2.btnAddNewAdminClick(Sender: TObject);
+const
+  CHARS_NUMBERS = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9'];
+var
+  sForenames, sSurname, sPassword, sHashedPassword: string;
+  c: char;
+  query: TADOQuery;
+begin
+  sForenames := edtNewForenames.Text;
+  sSurname := edtNewSurname.Text;
+  sPassword := edtNewPassword.Text;
+
+  if sForenames <> '' then
+  begin
+    for c in sForenames do
+    begin
+      if c in CHARS_NUMBERS then
+      begin
+        ShowMessage('Forename cannot contain any numbers!');
+        Exit();
+      end;
+    end;
+  end
+  else
+  begin
+    ShowMessage('Forename cannot be left blank!');
+    Exit();
+  end;
+
+  if sSurname <> '' then
+  begin
+    for c in sSurname do
+    begin
+      if c in CHARS_NUMBERS then
+      begin
+        ShowMessage('Surname cannot contain any numbers!');
+        Exit();
+      end;
+    end;
+  end
+  else
+  begin
+    ShowMessage('Surname cannot be left blank!');
+    Exit();
+  end;
+
+  if sPassword.Length < 8 then
+  begin
+    ShowMessage('Password must be longer than 8 characters!');
+    Exit();
+  end;
+
+  sHashedPassword := HashPasswd(sPassword);
+
+  query := TADOQuery.Create(self);
+  query.Connection := Database.Connection;
+  query.SQL.Add('INSERT INTO tblAdmins ' + Format('(%s, %s, %s)',
+    [TBL_ADMINS_FIELD_NAME_FORENAMES, TBL_ADMINS_FIELD_NAME_SURNAME,
+    TBL_ADMINS_FIELD_NAME_PASSWORDHASH]) + ' VALUES ' +
+    Format('(''%s'', ''%s'', ''%s'');', [sForenames, sSurname,
+    sHashedPassword]));
+
+  if query.ExecSQL() = 1 then
+    ShowMessage('Admin added to database.');
+
+  query.Destroy();
+end;
+
+procedure TForm2.btnAdminEditorClick(Sender: TObject);
+begin
+  ShowAdminEditorPanel();
+end;
+
+procedure TForm2.btnBackClick(Sender: TObject);
+begin
+  ShowFixtureEditorPanel();
+end;
+
+procedure TForm2.btnChangePasswordClick(Sender: TObject);
+const
+  CHARS_NUMBERS = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9'];
+var
+  sPassword, sHashedPassword: string;
+  c: char;
+  query: TADOQuery;
+begin
+  sPassword := edtCurrentAdminNewPassword.Text;
+
+  if sPassword.Length < 8 then
+  begin
+    ShowMessage('Password must be longer than 8 characters!');
+    Exit();
+  end;
+
+  sHashedPassword := HashPasswd(sPassword);
+
+  query := TADOQuery.Create(self);
+  query.Connection := Database.Connection;
+  query.SQL.Add('UPDATE tblAdmins SET ' + Format('%s = ''%s''',
+    [TBL_ADMINS_FIELD_NAME_PASSWORDHASH, sHashedPassword]) +
+    Format(' WHERE %s = ''%s'';', [TBL_ADMINS_FIELD_NAME_FORENAMES,
+    g_AdminForenames]));
+
+  if query.ExecSQL() = 1 then
+    ShowMessage('Password updated.');
+
+  query.Destroy();
+end;
 
 procedure TForm2.btnEyeClick(Sender: TObject);
 begin
@@ -240,13 +370,15 @@ begin
 
   if bEntryFound then
   begin
+    g_AdminForenames := sForenames;
+
     if sSurname = tblAdmins[TBL_ADMINS_FIELD_NAME_SURNAME] then
     begin
       if HashPasswd(sPassword) = tblAdmins[TBL_ADMINS_FIELD_NAME_PASSWORDHASH]
       then
       begin
         ShowMessage(Format('Welcome %s %s.', [sForenames, sSurname]));
-        ShowAdminPanel();
+        ShowFixtureEditorPanel();
       end
       else
       begin
@@ -362,7 +494,8 @@ end;
 
 procedure TForm2.ShowLoginPanel();
 begin
-  pnlAdmin.Hide();
+  pnlFixtureEditor.Hide();
+  pnlAdminEditor.Hide();
   pnlLogin.Show();
 
   edtPassword.PasswordChar := '•';
@@ -1222,7 +1355,13 @@ begin
   end;
 end;
 
-procedure TForm2.ShowAdminPanel();
+procedure TForm2.ShowAdminEditorPanel();
+begin
+  pnlFixtureEditor.Hide();
+  pnlAdminEditor.Show();
+end;
+
+procedure TForm2.ShowFixtureEditorPanel();
 var
   t: TTeam;
   i: integer;
@@ -1386,8 +1525,9 @@ begin
   for i := Low(g_SemiFinalCbxList) to High(g_SemiFinalCbxList) do
     g_SemiFinalCbxList[i].Caption := TeamList.Teams[i].Name;
 
-  pnlAdmin.Show();
+  pnlFixtureEditor.Show();
   pnlLogin.Hide();
+  pnlAdminEditor.Hide();
   ShowFixtures();
 end;
 
