@@ -2,8 +2,8 @@ object Form2: TForm2
   Left = 0
   Top = 0
   Caption = 'Form2'
-  ClientHeight = 589
-  ClientWidth = 1005
+  ClientHeight = 563
+  ClientWidth = 902
   Color = clBtnFace
   Font.Charset = ANSI_CHARSET
   Font.Color = clWindowText
@@ -154,9 +154,9 @@ object Form2: TForm2
   end
   object pnlAdmin: TPanel
     Left = 8
-    Top = 17
-    Width = 914
-    Height = 557
+    Top = 8
+    Width = 889
+    Height = 553
     TabOrder = 1
     object btnUpdateFixtures: TButton
       Left = 776
@@ -1149,27 +1149,6 @@ object Form2: TForm2
         Width = 49
         Height = 24
         TabOrder = 0
-        Items.Strings = (
-          '8A'
-          '8B'
-          '8C'
-          '8D'
-          '9A'
-          '9B'
-          '9C'
-          '9D'
-          '10A'
-          '10B'
-          '10C'
-          '10D'
-          '11A'
-          '11B'
-          '11C'
-          '11D'
-          '12A'
-          '12B'
-          '12C'
-          '12D')
       end
       object cmbQualifier_10: TComboBox
         Left = 591
@@ -1179,27 +1158,6 @@ object Form2: TForm2
         BiDiMode = bdRightToLeft
         ParentBiDiMode = False
         TabOrder = 1
-        Items.Strings = (
-          '8A'
-          '8B'
-          '8C'
-          '8D'
-          '9A'
-          '9B'
-          '9C'
-          '9D'
-          '10A'
-          '10B'
-          '10C'
-          '10D'
-          '11A'
-          '11B'
-          '11C'
-          '11D'
-          '12A'
-          '12B'
-          '12C'
-          '12D')
       end
       object cmbQualifier_11: TComboBox
         Left = 593
@@ -1209,27 +1167,6 @@ object Form2: TForm2
         BiDiMode = bdRightToLeft
         ParentBiDiMode = False
         TabOrder = 2
-        Items.Strings = (
-          '8A'
-          '8B'
-          '8C'
-          '8D'
-          '9A'
-          '9B'
-          '9C'
-          '9D'
-          '10A'
-          '10B'
-          '10C'
-          '10D'
-          '11A'
-          '11B'
-          '11C'
-          '11D'
-          '12A'
-          '12B'
-          '12C'
-          '12D')
       end
       object cmbQualifier_12: TComboBox
         Left = 131
@@ -1237,27 +1174,6 @@ object Form2: TForm2
         Width = 49
         Height = 24
         TabOrder = 3
-        Items.Strings = (
-          '8A'
-          '8B'
-          '8C'
-          '8D'
-          '9A'
-          '9B'
-          '9C'
-          '9D'
-          '10A'
-          '10B'
-          '10C'
-          '10D'
-          '11A'
-          '11B'
-          '11C'
-          '11D'
-          '12A'
-          '12B'
-          '12C'
-          '12D')
       end
       object cmbQualifier_13: TComboBox
         Left = 35
@@ -1265,27 +1181,6 @@ object Form2: TForm2
         Width = 49
         Height = 24
         TabOrder = 4
-        Items.Strings = (
-          '8A'
-          '8B'
-          '8C'
-          '8D'
-          '9A'
-          '9B'
-          '9C'
-          '9D'
-          '10A'
-          '10B'
-          '10C'
-          '10D'
-          '11A'
-          '11B'
-          '11C'
-          '11D'
-          '12A'
-          '12B'
-          '12C'
-          '12D')
       end
       object cmbQualifier_14: TComboBox
         Left = 688
@@ -1295,85 +1190,22 @@ object Form2: TForm2
         BiDiMode = bdRightToLeft
         ParentBiDiMode = False
         TabOrder = 5
-        Items.Strings = (
-          '8A'
-          '8B'
-          '8C'
-          '8D'
-          '9A'
-          '9B'
-          '9C'
-          '9D'
-          '10A'
-          '10B'
-          '10C'
-          '10D'
-          '11A'
-          '11B'
-          '11C'
-          '11D'
-          '12A'
-          '12B'
-          '12C'
-          '12D')
       end
       object cmbQualifier_15: TComboBox
         Left = 688
-        Top = 63
+        Top = 64
         Width = 49
         Height = 24
         BiDiMode = bdRightToLeft
         ParentBiDiMode = False
         TabOrder = 6
-        Items.Strings = (
-          '8A'
-          '8B'
-          '8C'
-          '8D'
-          '9A'
-          '9B'
-          '9C'
-          '9D'
-          '10A'
-          '10B'
-          '10C'
-          '10D'
-          '11A'
-          '11B'
-          '11C'
-          '11D'
-          '12A'
-          '12B'
-          '12C'
-          '12D')
       end
       object cmbQualifier_16: TComboBox
         Left = 35
-        Top = 63
+        Top = 64
         Width = 49
         Height = 24
         TabOrder = 7
-        Items.Strings = (
-          '8A'
-          '8B'
-          '8C'
-          '8D'
-          '9A'
-          '9B'
-          '9C'
-          '9D'
-          '10A'
-          '10B'
-          '10C'
-          '10D'
-          '11A'
-          '11B'
-          '11C'
-          '11D'
-          '12A'
-          '12B'
-          '12C'
-          '12D')
       end
       object cmbQualifier_17: TComboBox
         Left = 35
@@ -1381,27 +1213,6 @@ object Form2: TForm2
         Width = 49
         Height = 24
         TabOrder = 8
-        Items.Strings = (
-          '8A'
-          '8B'
-          '8C'
-          '8D'
-          '9A'
-          '9B'
-          '9C'
-          '9D'
-          '10A'
-          '10B'
-          '10C'
-          '10D'
-          '11A'
-          '11B'
-          '11C'
-          '11D'
-          '12A'
-          '12B'
-          '12C'
-          '12D')
       end
       object cmbQualifier_18: TComboBox
         Left = 688
@@ -1411,27 +1222,6 @@ object Form2: TForm2
         BiDiMode = bdRightToLeft
         ParentBiDiMode = False
         TabOrder = 9
-        Items.Strings = (
-          '8A'
-          '8B'
-          '8C'
-          '8D'
-          '9A'
-          '9B'
-          '9C'
-          '9D'
-          '10A'
-          '10B'
-          '10C'
-          '10D'
-          '11A'
-          '11B'
-          '11C'
-          '11D'
-          '12A'
-          '12B'
-          '12C'
-          '12D')
       end
       object cmbQualifier_19: TComboBox
         Left = 688
@@ -1441,27 +1231,6 @@ object Form2: TForm2
         BiDiMode = bdRightToLeft
         ParentBiDiMode = False
         TabOrder = 10
-        Items.Strings = (
-          '8A'
-          '8B'
-          '8C'
-          '8D'
-          '9A'
-          '9B'
-          '9C'
-          '9D'
-          '10A'
-          '10B'
-          '10C'
-          '10D'
-          '11A'
-          '11B'
-          '11C'
-          '11D'
-          '12A'
-          '12B'
-          '12C'
-          '12D')
       end
       object cmbQualifier_2: TComboBox
         Left = 591
@@ -1471,27 +1240,6 @@ object Form2: TForm2
         BiDiMode = bdRightToLeft
         ParentBiDiMode = False
         TabOrder = 11
-        Items.Strings = (
-          '8A'
-          '8B'
-          '8C'
-          '8D'
-          '9A'
-          '9B'
-          '9C'
-          '9D'
-          '10A'
-          '10B'
-          '10C'
-          '10D'
-          '11A'
-          '11B'
-          '11C'
-          '11D'
-          '12A'
-          '12B'
-          '12C'
-          '12D')
       end
       object cmbQualifier_20: TComboBox
         Left = 35
@@ -1499,27 +1247,6 @@ object Form2: TForm2
         Width = 49
         Height = 24
         TabOrder = 12
-        Items.Strings = (
-          '8A'
-          '8B'
-          '8C'
-          '8D'
-          '9A'
-          '9B'
-          '9C'
-          '9D'
-          '10A'
-          '10B'
-          '10C'
-          '10D'
-          '11A'
-          '11B'
-          '11C'
-          '11D'
-          '12A'
-          '12B'
-          '12C'
-          '12D')
       end
       object cmbQualifier_3: TComboBox
         Left = 593
@@ -1529,27 +1256,6 @@ object Form2: TForm2
         BiDiMode = bdRightToLeft
         ParentBiDiMode = False
         TabOrder = 13
-        Items.Strings = (
-          '8A'
-          '8B'
-          '8C'
-          '8D'
-          '9A'
-          '9B'
-          '9C'
-          '9D'
-          '10A'
-          '10B'
-          '10C'
-          '10D'
-          '11A'
-          '11B'
-          '11C'
-          '11D'
-          '12A'
-          '12B'
-          '12C'
-          '12D')
       end
       object cmbQualifier_4: TComboBox
         Left = 131
@@ -1557,27 +1263,6 @@ object Form2: TForm2
         Width = 49
         Height = 24
         TabOrder = 14
-        Items.Strings = (
-          '8A'
-          '8B'
-          '8C'
-          '8D'
-          '9A'
-          '9B'
-          '9C'
-          '9D'
-          '10A'
-          '10B'
-          '10C'
-          '10D'
-          '11A'
-          '11B'
-          '11C'
-          '11D'
-          '12A'
-          '12B'
-          '12C'
-          '12D')
       end
       object cmbQualifier_5: TComboBox
         Left = 131
@@ -1585,27 +1270,6 @@ object Form2: TForm2
         Width = 49
         Height = 24
         TabOrder = 15
-        Items.Strings = (
-          '8A'
-          '8B'
-          '8C'
-          '8D'
-          '9A'
-          '9B'
-          '9C'
-          '9D'
-          '10A'
-          '10B'
-          '10C'
-          '10D'
-          '11A'
-          '11B'
-          '11C'
-          '11D'
-          '12A'
-          '12B'
-          '12C'
-          '12D')
       end
       object cmbQualifier_6: TComboBox
         Left = 593
@@ -1615,27 +1279,6 @@ object Form2: TForm2
         BiDiMode = bdRightToLeft
         ParentBiDiMode = False
         TabOrder = 16
-        Items.Strings = (
-          '8A'
-          '8B'
-          '8C'
-          '8D'
-          '9A'
-          '9B'
-          '9C'
-          '9D'
-          '10A'
-          '10B'
-          '10C'
-          '10D'
-          '11A'
-          '11B'
-          '11C'
-          '11D'
-          '12A'
-          '12B'
-          '12C'
-          '12D')
       end
       object cmbQualifier_7: TComboBox
         Left = 591
@@ -1645,27 +1288,6 @@ object Form2: TForm2
         BiDiMode = bdRightToLeft
         ParentBiDiMode = False
         TabOrder = 17
-        Items.Strings = (
-          '8A'
-          '8B'
-          '8C'
-          '8D'
-          '9A'
-          '9B'
-          '9C'
-          '9D'
-          '10A'
-          '10B'
-          '10C'
-          '10D'
-          '11A'
-          '11B'
-          '11C'
-          '11D'
-          '12A'
-          '12B'
-          '12C'
-          '12D')
       end
       object cmbQualifier_8: TComboBox
         Left = 131
@@ -1673,27 +1295,6 @@ object Form2: TForm2
         Width = 49
         Height = 24
         TabOrder = 18
-        Items.Strings = (
-          '8A'
-          '8B'
-          '8C'
-          '8D'
-          '9A'
-          '9B'
-          '9C'
-          '9D'
-          '10A'
-          '10B'
-          '10C'
-          '10D'
-          '11A'
-          '11B'
-          '11C'
-          '11D'
-          '12A'
-          '12B'
-          '12C'
-          '12D')
       end
       object cmbQualifier_9: TComboBox
         Left = 131
@@ -1701,27 +1302,6 @@ object Form2: TForm2
         Width = 49
         Height = 24
         TabOrder = 19
-        Items.Strings = (
-          '8A'
-          '8B'
-          '8C'
-          '8D'
-          '9A'
-          '9B'
-          '9C'
-          '9D'
-          '10A'
-          '10B'
-          '10C'
-          '10D'
-          '11A'
-          '11B'
-          '11C'
-          '11D'
-          '12A'
-          '12B'
-          '12C'
-          '12D')
       end
       object cmbQualifier2_4: TComboBox
         Left = 131
@@ -1729,27 +1309,6 @@ object Form2: TForm2
         Width = 49
         Height = 24
         TabOrder = 20
-        Items.Strings = (
-          '8A'
-          '8B'
-          '8C'
-          '8D'
-          '9A'
-          '9B'
-          '9C'
-          '9D'
-          '10A'
-          '10B'
-          '10C'
-          '10D'
-          '11A'
-          '11B'
-          '11C'
-          '11D'
-          '12A'
-          '12B'
-          '12C'
-          '12D')
       end
       object cmbQualifier2_1: TComboBox
         Left = 131
@@ -1757,27 +1316,6 @@ object Form2: TForm2
         Width = 49
         Height = 24
         TabOrder = 21
-        Items.Strings = (
-          '8A'
-          '8B'
-          '8C'
-          '8D'
-          '9A'
-          '9B'
-          '9C'
-          '9D'
-          '10A'
-          '10B'
-          '10C'
-          '10D'
-          '11A'
-          '11B'
-          '11C'
-          '11D'
-          '12A'
-          '12B'
-          '12C'
-          '12D')
       end
       object cmbQualifier2_3: TComboBox
         Left = 593
@@ -1787,27 +1325,6 @@ object Form2: TForm2
         BiDiMode = bdRightToLeft
         ParentBiDiMode = False
         TabOrder = 22
-        Items.Strings = (
-          '8A'
-          '8B'
-          '8C'
-          '8D'
-          '9A'
-          '9B'
-          '9C'
-          '9D'
-          '10A'
-          '10B'
-          '10C'
-          '10D'
-          '11A'
-          '11B'
-          '11C'
-          '11D'
-          '12A'
-          '12B'
-          '12C'
-          '12D')
       end
       object cmbQualifier2_2: TComboBox
         Left = 591
@@ -1817,27 +1334,6 @@ object Form2: TForm2
         BiDiMode = bdRightToLeft
         ParentBiDiMode = False
         TabOrder = 23
-        Items.Strings = (
-          '8A'
-          '8B'
-          '8C'
-          '8D'
-          '9A'
-          '9B'
-          '9C'
-          '9D'
-          '10A'
-          '10B'
-          '10C'
-          '10D'
-          '11A'
-          '11B'
-          '11C'
-          '11D'
-          '12A'
-          '12B'
-          '12C'
-          '12D')
       end
       object cmbQuarterFinal_1: TComboBox
         Left = 198
@@ -1845,27 +1341,6 @@ object Form2: TForm2
         Width = 49
         Height = 24
         TabOrder = 24
-        Items.Strings = (
-          '8A'
-          '8B'
-          '8C'
-          '8D'
-          '9A'
-          '9B'
-          '9C'
-          '9D'
-          '10A'
-          '10B'
-          '10C'
-          '10D'
-          '11A'
-          '11B'
-          '11C'
-          '11D'
-          '12A'
-          '12B'
-          '12C'
-          '12D')
       end
       object cmbQuarterFinal_2: TComboBox
         Left = 515
@@ -1875,27 +1350,6 @@ object Form2: TForm2
         BiDiMode = bdRightToLeft
         ParentBiDiMode = False
         TabOrder = 25
-        Items.Strings = (
-          '8A'
-          '8B'
-          '8C'
-          '8D'
-          '9A'
-          '9B'
-          '9C'
-          '9D'
-          '10A'
-          '10B'
-          '10C'
-          '10D'
-          '11A'
-          '11B'
-          '11C'
-          '11D'
-          '12A'
-          '12B'
-          '12C'
-          '12D')
       end
       object cmbQuarterFinal_3: TComboBox
         Left = 515
@@ -1905,27 +1359,6 @@ object Form2: TForm2
         BiDiMode = bdRightToLeft
         ParentBiDiMode = False
         TabOrder = 26
-        Items.Strings = (
-          '8A'
-          '8B'
-          '8C'
-          '8D'
-          '9A'
-          '9B'
-          '9C'
-          '9D'
-          '10A'
-          '10B'
-          '10C'
-          '10D'
-          '11A'
-          '11B'
-          '11C'
-          '11D'
-          '12A'
-          '12B'
-          '12C'
-          '12D')
       end
       object cmbQuarterFinal_4: TComboBox
         Left = 198
@@ -1933,27 +1366,6 @@ object Form2: TForm2
         Width = 49
         Height = 24
         TabOrder = 27
-        Items.Strings = (
-          '8A'
-          '8B'
-          '8C'
-          '8D'
-          '9A'
-          '9B'
-          '9C'
-          '9D'
-          '10A'
-          '10B'
-          '10C'
-          '10D'
-          '11A'
-          '11B'
-          '11C'
-          '11D'
-          '12A'
-          '12B'
-          '12C'
-          '12D')
       end
       object cmbQuarterFinal_5: TComboBox
         Left = 198
@@ -1961,27 +1373,6 @@ object Form2: TForm2
         Width = 49
         Height = 24
         TabOrder = 28
-        Items.Strings = (
-          '8A'
-          '8B'
-          '8C'
-          '8D'
-          '9A'
-          '9B'
-          '9C'
-          '9D'
-          '10A'
-          '10B'
-          '10C'
-          '10D'
-          '11A'
-          '11B'
-          '11C'
-          '11D'
-          '12A'
-          '12B'
-          '12C'
-          '12D')
       end
       object cmbQuarterFinal_6: TComboBox
         Left = 515
@@ -1991,27 +1382,6 @@ object Form2: TForm2
         BiDiMode = bdRightToLeft
         ParentBiDiMode = False
         TabOrder = 29
-        Items.Strings = (
-          '8A'
-          '8B'
-          '8C'
-          '8D'
-          '9A'
-          '9B'
-          '9C'
-          '9D'
-          '10A'
-          '10B'
-          '10C'
-          '10D'
-          '11A'
-          '11B'
-          '11C'
-          '11D'
-          '12A'
-          '12B'
-          '12C'
-          '12D')
       end
       object cmbQuarterFinal_7: TComboBox
         Left = 515
@@ -2021,27 +1391,6 @@ object Form2: TForm2
         BiDiMode = bdRightToLeft
         ParentBiDiMode = False
         TabOrder = 30
-        Items.Strings = (
-          '8A'
-          '8B'
-          '8C'
-          '8D'
-          '9A'
-          '9B'
-          '9C'
-          '9D'
-          '10A'
-          '10B'
-          '10C'
-          '10D'
-          '11A'
-          '11B'
-          '11C'
-          '11D'
-          '12A'
-          '12B'
-          '12C'
-          '12D')
       end
       object cmbQuarterFinal_8: TComboBox
         Left = 198
@@ -2049,27 +1398,342 @@ object Form2: TForm2
         Width = 49
         Height = 24
         TabOrder = 31
-        Items.Strings = (
-          '8A'
-          '8B'
-          '8C'
-          '8D'
-          '9A'
-          '9B'
-          '9C'
-          '9D'
-          '10A'
-          '10B'
-          '10C'
-          '10D'
-          '11A'
-          '11B'
-          '11C'
-          '11D'
-          '12A'
-          '12B'
-          '12C'
-          '12D')
+      end
+    end
+    object gbxEliminatedQualifierTeams: TGroupBox
+      Left = 9
+      Top = 430
+      Width = 289
+      Height = 115
+      Caption = 'Eliminated Teams: Qualifiers'
+      TabOrder = 2
+      object cbxEliminatedQualifier_8A: TCheckBox
+        Left = 3
+        Top = 24
+        Width = 41
+        Height = 17
+        Caption = '8A'
+        TabOrder = 0
+      end
+      object cbxEliminatedQualifier_8C: TCheckBox
+        Left = 3
+        Top = 72
+        Width = 41
+        Height = 17
+        Caption = '8C'
+        TabOrder = 1
+      end
+      object cbxEliminatedQualifier_8D: TCheckBox
+        Left = 3
+        Top = 95
+        Width = 41
+        Height = 17
+        Caption = '8D'
+        TabOrder = 2
+      end
+      object cbxEliminatedQualifier_8B: TCheckBox
+        Left = 3
+        Top = 47
+        Width = 41
+        Height = 17
+        Caption = '8B'
+        TabOrder = 3
+      end
+      object cbxEliminatedQualifier_9B: TCheckBox
+        Left = 50
+        Top = 47
+        Width = 41
+        Height = 17
+        Caption = '9B'
+        TabOrder = 4
+      end
+      object cbxEliminatedQualifier_9C: TCheckBox
+        Left = 50
+        Top = 72
+        Width = 41
+        Height = 17
+        Caption = '9C'
+        TabOrder = 5
+      end
+      object cbxEliminatedQualifier_9D: TCheckBox
+        Left = 50
+        Top = 95
+        Width = 41
+        Height = 17
+        Caption = '9D'
+        TabOrder = 6
+      end
+      object cbxEliminatedQualifier_9A: TCheckBox
+        Left = 50
+        Top = 24
+        Width = 41
+        Height = 17
+        Caption = '9A'
+        TabOrder = 7
+      end
+      object cbxEliminatedQualifier_10A: TCheckBox
+        Left = 97
+        Top = 24
+        Width = 41
+        Height = 17
+        Caption = '10A'
+        TabOrder = 8
+      end
+      object cbxEliminatedQualifier_10B: TCheckBox
+        Left = 97
+        Top = 47
+        Width = 41
+        Height = 17
+        Caption = '10B'
+        TabOrder = 9
+      end
+      object cbxEliminatedQualifier_10C: TCheckBox
+        Left = 97
+        Top = 72
+        Width = 41
+        Height = 17
+        Caption = '10C'
+        TabOrder = 10
+      end
+      object cbxEliminatedQualifier_10D: TCheckBox
+        Left = 97
+        Top = 95
+        Width = 41
+        Height = 17
+        Caption = '10D'
+        TabOrder = 11
+      end
+      object cbxEliminatedQualifier_11A: TCheckBox
+        Left = 150
+        Top = 24
+        Width = 41
+        Height = 17
+        Caption = '11A'
+        TabOrder = 12
+      end
+      object cbxEliminatedQualifier_11B: TCheckBox
+        Left = 150
+        Top = 47
+        Width = 41
+        Height = 17
+        Caption = '11B'
+        TabOrder = 13
+      end
+      object cbxEliminatedQualifier_11C: TCheckBox
+        Left = 150
+        Top = 72
+        Width = 41
+        Height = 17
+        Caption = '11C'
+        TabOrder = 14
+      end
+      object cbxEliminatedQualifier_11D: TCheckBox
+        Left = 150
+        Top = 95
+        Width = 41
+        Height = 17
+        Caption = '11D'
+        TabOrder = 15
+      end
+      object cbxEliminatedQualifier_12A: TCheckBox
+        Left = 205
+        Top = 24
+        Width = 41
+        Height = 17
+        Caption = '12A'
+        TabOrder = 16
+      end
+      object cbxEliminatedQualifier_12B: TCheckBox
+        Left = 205
+        Top = 47
+        Width = 41
+        Height = 17
+        Caption = '12B'
+        TabOrder = 17
+      end
+      object cbxEliminatedQualifier_12C: TCheckBox
+        Left = 205
+        Top = 72
+        Width = 41
+        Height = 17
+        Caption = '12C'
+        TabOrder = 18
+      end
+      object cbxEliminatedQualifier_12D: TCheckBox
+        Left = 205
+        Top = 95
+        Width = 41
+        Height = 17
+        Caption = '12D'
+        TabOrder = 19
+      end
+    end
+    object gbxEliminatedQualifier2Teams: TGroupBox
+      Left = 304
+      Top = 430
+      Width = 289
+      Height = 115
+      Caption = 'Eliminated Teams: Qualifiers Stage 2'
+      TabOrder = 3
+      object cbxEliminatedQualifier2_8A: TCheckBox
+        Left = 3
+        Top = 24
+        Width = 41
+        Height = 17
+        Caption = '8A'
+        TabOrder = 0
+      end
+      object cbxEliminatedQualifier2_8C: TCheckBox
+        Left = 3
+        Top = 72
+        Width = 41
+        Height = 17
+        Caption = '8C'
+        TabOrder = 1
+      end
+      object cbxEliminatedQualifier2_8D: TCheckBox
+        Left = 3
+        Top = 95
+        Width = 41
+        Height = 17
+        Caption = '8D'
+        TabOrder = 2
+      end
+      object cbxEliminatedQualifier2_8B: TCheckBox
+        Left = 3
+        Top = 47
+        Width = 41
+        Height = 17
+        Caption = '8B'
+        TabOrder = 3
+      end
+      object cbxEliminatedQualifier2_9B: TCheckBox
+        Left = 50
+        Top = 47
+        Width = 41
+        Height = 17
+        Caption = '9B'
+        TabOrder = 4
+      end
+      object cbxEliminatedQualifier2_9C: TCheckBox
+        Left = 50
+        Top = 72
+        Width = 41
+        Height = 17
+        Caption = '9C'
+        TabOrder = 5
+      end
+      object cbxEliminatedQualifier2_9D: TCheckBox
+        Left = 50
+        Top = 95
+        Width = 41
+        Height = 17
+        Caption = '9D'
+        TabOrder = 6
+      end
+      object cbxEliminatedQualifier2_9A: TCheckBox
+        Left = 50
+        Top = 24
+        Width = 41
+        Height = 17
+        Caption = '9A'
+        TabOrder = 7
+      end
+      object cbxEliminatedQualifier2_10A: TCheckBox
+        Left = 97
+        Top = 24
+        Width = 41
+        Height = 17
+        Caption = '10A'
+        TabOrder = 8
+      end
+      object cbxEliminatedQualifier2_10B: TCheckBox
+        Left = 97
+        Top = 47
+        Width = 41
+        Height = 17
+        Caption = '10B'
+        TabOrder = 9
+      end
+      object cbxEliminatedQualifier2_10C: TCheckBox
+        Left = 97
+        Top = 72
+        Width = 41
+        Height = 17
+        Caption = '10C'
+        TabOrder = 10
+      end
+      object cbxEliminatedQualifier2_10D: TCheckBox
+        Left = 97
+        Top = 95
+        Width = 41
+        Height = 17
+        Caption = '10D'
+        TabOrder = 11
+      end
+      object cbxEliminatedQualifier2_11A: TCheckBox
+        Left = 150
+        Top = 24
+        Width = 41
+        Height = 17
+        Caption = '11A'
+        TabOrder = 12
+      end
+      object cbxEliminatedQualifier2_11B: TCheckBox
+        Left = 150
+        Top = 47
+        Width = 41
+        Height = 17
+        Caption = '11B'
+        TabOrder = 13
+      end
+      object cbxEliminatedQualifier2_11C: TCheckBox
+        Left = 150
+        Top = 72
+        Width = 41
+        Height = 17
+        Caption = '11C'
+        TabOrder = 14
+      end
+      object cbxEliminatedQualifier2_11D: TCheckBox
+        Left = 150
+        Top = 95
+        Width = 41
+        Height = 17
+        Caption = '11D'
+        TabOrder = 15
+      end
+      object cbxEliminatedQualifier2_12A: TCheckBox
+        Left = 205
+        Top = 24
+        Width = 41
+        Height = 17
+        Caption = '12A'
+        TabOrder = 16
+      end
+      object cbxEliminatedQualifier2_12B: TCheckBox
+        Left = 205
+        Top = 47
+        Width = 41
+        Height = 17
+        Caption = '12B'
+        TabOrder = 17
+      end
+      object cbxEliminatedQualifier2_12C: TCheckBox
+        Left = 205
+        Top = 72
+        Width = 41
+        Height = 17
+        Caption = '12C'
+        TabOrder = 18
+      end
+      object cbxEliminatedQualifier2_12D: TCheckBox
+        Left = 205
+        Top = 95
+        Width = 41
+        Height = 17
+        Caption = '12D'
+        TabOrder = 19
       end
     end
   end
