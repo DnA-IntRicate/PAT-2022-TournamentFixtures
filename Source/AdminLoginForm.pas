@@ -147,6 +147,9 @@ type
     cbxEliminatedSemiFinal_18: TCheckBox;
     cbxEliminatedSemiFinal_19: TCheckBox;
     cbxEliminatedSemiFinal_20: TCheckBox;
+    cmbFinal_1: TComboBox;
+    cmbFinal_2: TComboBox;
+    cmbChampion: TComboBox;
     procedure FormCreate(Sender: TObject);
     procedure btnLoginClick(Sender: TObject);
     function HashPasswd(const passwd: string): string;
@@ -183,6 +186,7 @@ var
   g_Qualifier2CmbList: array [1 .. 4] of ^TComboBox;
   g_QuarterFinalCmbList: array [1 .. 8] of ^TComboBox;
   g_SemiFinalCmbList: array [1 .. 4] of ^TComboBox;
+  g_FinalCmbList: array [1 .. 2] of ^TComboBox;
 
   g_QualifierCbxList: array [1 .. 20] of ^TCheckBox;
   g_Qualifier2CbxList: array [1 .. 20] of ^TCheckBox;
@@ -340,6 +344,14 @@ begin
             if fx.Eliminated then
               SetEliminated(fx.teamID, LadderStage_SemiFinal);
           end;
+        LadderStage_Final:
+          begin
+            myCmb := g_FinalCmbList[fx.StagePosition]^;
+            myCmb.ItemIndex := fx.teamID - 1;
+
+            if fx.Eliminated then
+              SetEliminated(fx.teamID, LadderStage_Final);
+          end;
       end;
   end;
 end;
@@ -438,6 +450,26 @@ begin
         ptrFixture.StagePosition := i;
         ptrFixture.Eliminated := IsEliminated(ptrFixture.teamID,
           LadderStage_SemiFinal);
+      end;
+    end;
+
+    Inc(iFixtureIdx, 1);
+  end;
+
+  for i := Low(g_FinalCmbList) to High(g_FinalCmbList) do
+  begin
+    if g_FinalCmbList[i] <> nil then
+    begin
+      myCmb := g_FinalCmbList[i]^;
+      ptrFixture := @Fixtures.Entries[iFixtureIdx];
+
+      if (ptrFixture <> nil) and (myCmb.ItemIndex <> -1) then
+      begin
+        ptrFixture.teamID := myCmb.ItemIndex + 1;
+        ptrFixture.LadderStage := LadderStage_Final;
+        ptrFixture.StagePosition := i;
+        ptrFixture.Eliminated := IsEliminated(ptrFixture.teamID,
+          LadderStage_Final);
       end;
     end;
 
@@ -1222,6 +1254,9 @@ begin
   g_SemiFinalCmbList[3] := @cmbSemiFinal_3;
   g_SemiFinalCmbList[4] := @cmbSemiFinal_4;
 
+  g_FinalCmbList[1] := @cmbFinal_1;
+  g_FinalCmbList[2] := @cmbFinal_2;
+
   g_QualifierCbxList[1] := @cbxEliminatedQualifier_1;
   g_QualifierCbxList[2] := @cbxEliminatedQualifier_2;
   g_QualifierCbxList[3] := @cbxEliminatedQualifier_3;
@@ -1319,6 +1354,11 @@ begin
 
     for i := Low(g_SemiFinalCmbList) to High(g_SemiFinalCmbList) do
       g_SemiFinalCmbList[i].Items.Add(t.Name);
+
+    for i := Low(g_FinalCmbList) to High(g_FinalCmbList) do
+      g_FinalCmbList[i].Items.Add(t.Name);
+
+      cmbChampion.Items.Add(t.Name);
   end;
 
   for i := Low(g_QualifierCbxList) to High(g_QualifierCbxList) do

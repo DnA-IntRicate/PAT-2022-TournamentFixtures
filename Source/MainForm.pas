@@ -99,6 +99,7 @@ end;
 procedure TForm1.FormCreate(Sender: TObject);
 begin
   imgLadder.Picture.LoadFromFile('Assets/Images/BracketSeeded.png');
+  // use const string for this
   imgLadder.Stretch := true;
 
   lblQualifier_1.Hide();
@@ -704,7 +705,26 @@ begin
         end;
       LadderStage_Final:
         begin
+          case fx.StagePosition of
+            1:
+              begin
+                lblFinal_1.Font.Color := clBlack;
+                if fx.Eliminated then
+                  lblFinal_1.Font.Color := clRed;
 
+                lblFinal_1.Show();
+                lblFinal_1.Caption := g_TeamList.Teams[fx.TeamID].Name;
+              end;
+            2:
+              begin
+                lblFinal_2.Font.Color := clBlack;
+                if fx.Eliminated then
+                  lblFinal_2.Font.Color := clRed;
+
+                lblFinal_2.Show();
+                lblFinal_2.Caption := g_TeamList.Teams[fx.TeamID].Name;
+              end;
+          end;
         end;
       LadderStage_Champion:
         begin

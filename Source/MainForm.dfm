@@ -1288,7 +1288,7 @@ object Form1: TForm1
       ParentFont = False
     end
     object lblFinal_2: TLabel
-      Left = 430
+      Left = 429
       Top = 225
       Width = 14
       Height = 16
