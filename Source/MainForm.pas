@@ -60,7 +60,7 @@ type
     procedure FormDestroy(Sender: TObject);
     procedure FormActivate(Sender: TObject);
     procedure LoadDatabase();
-    procedure LoadFixtures();
+    function LoadFixtures(): boolean;
     procedure DisplayFixtures();
     procedure btnRefreshClick(Sender: TObject);
   end;
@@ -109,6 +109,7 @@ begin
   lblQualifier_7.Hide();
   lblQualifier_8.Hide();
   lblQualifier_9.Hide();
+  lblQualifier_10.Hide();
   lblQualifier_11.Hide();
   lblQualifier_12.Hide();
   lblQualifier_13.Hide();
@@ -144,8 +145,8 @@ begin
   lblChampion.Hide();
 
   LoadDatabase();
-  LoadFixtures();
-  DisplayFixtures();
+  if LoadFixtures() then
+    DisplayFixtures();
 end;
 
 procedure TForm1.FormDestroy(Sender: TObject);
@@ -179,11 +180,12 @@ begin
   end;
 end;
 
-procedure TForm1.LoadFixtures();
+function TForm1.LoadFixtures(): boolean;
 var
   sJsonStr: string;
   jsSerializer: TJsonSerializer;
   istream: TStreamReader;
+  ostream: TStreamWriter;
   iDlgAnswer: integer;
 begin
   if FileExists(FILE_PATH_FIXTURES_JSON) then
@@ -196,12 +198,15 @@ begin
       jsSerializer := TJsonSerializer.Create();
       g_Fixtures := TFixtures.Create();
       g_Fixtures := jsSerializer.DeserializeJson(sJsonStr) as TFixtures;
+      Result := true;
     except
       on e: Exception do
       begin
         g_Fixtures := TFixtures.Create();
         MessageDlg('Failed to read json data from corrupted file! - ' +
           e.Message, mtError, [mbOk], 0);
+
+        Result := false;
       end;
     end;
   end
@@ -211,14 +216,31 @@ begin
       + #13#10 + 'Would you like to create a new one?', mtWarning, mbYesNo, 0);
 
     if iDlgAnswer = mrYes then
+    begin
       FileCreate(FILE_PATH_FIXTURES_JSON);
+
+      g_Fixtures := TFixtures.Create();
+      jsSerializer := TJsonSerializer.Create();
+      sJsonStr := jsSerializer.SerializeJson(g_Fixtures);
+
+      ostream := TStreamWriter.Create(FILE_PATH_FIXTURES_JSON, false,
+        TEncoding.UTF8, SizeOf(char) * sJsonStr.Length);
+      ostream.Write(sJsonStr);
+      ostream.Close();
+
+      Result := true;
+    end
+    else
+    begin
+      Result := false;
+    end;
   end;
 end;
 
 procedure TForm1.btnRefreshClick(Sender: TObject);
 begin
-  LoadFixtures();
-  DisplayFixtures();
+  if LoadFixtures() then
+    DisplayFixtures();
   // TODO: Call admin form refresh proc here
 end;
 

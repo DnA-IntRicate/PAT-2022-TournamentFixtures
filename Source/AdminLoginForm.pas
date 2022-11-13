@@ -262,7 +262,7 @@ begin
     if g_QualifierCmbList[i] <> nil then
     begin
       myCmb := g_QualifierCmbList[i]^;
-      ptrFixture := @Fixtures.Entries[i];
+      ptrFixture := @Fixtures.Entries[iFixtureIdx];
 
       if (ptrFixture <> nil) and (myCmb.ItemIndex <> -1) then
       begin
@@ -273,17 +273,15 @@ begin
       end;
     end;
 
-  //  Inc(iFixtureIdx, 1);
+    Inc(iFixtureIdx, 1);
   end;
-
-  Inc(iFixtureIdx, Length(g_QualifierCmbList));
 
   for i := Low(g_Qualifier2CmbList) to High(g_Qualifier2CmbList) do
   begin
     if g_Qualifier2CmbList[i] <> nil then
     begin
       myCmb := g_Qualifier2CmbList[i]^;
-      ptrFixture := @Fixtures.Entries[i + iFixtureIdx];
+      ptrFixture := @Fixtures.Entries[iFixtureIdx];
 
       if (ptrFixture <> nil) and (myCmb.ItemIndex <> -1) then
       begin
@@ -294,17 +292,15 @@ begin
       end;
     end;
 
-  //  Inc(iFixtureIdx, 1);
+    Inc(iFixtureIdx, 1);
   end;
-
-  Inc(iFixtureIdx, Length(g_Qualifier2CmbList));
 
   for i := Low(g_QuarterFinalCmbList) to High(g_QuarterFinalCmbList) do
   begin
     if g_QuarterFinalCmbList[i] <> nil then
     begin
       myCmb := g_QuarterFinalCmbList[i]^;
-      ptrFixture := @Fixtures.Entries[i + iFixtureIdx];
+      ptrFixture := @Fixtures.Entries[iFixtureIdx];
 
       if (ptrFixture <> nil) and (myCmb.ItemIndex <> -1) then
       begin
@@ -315,11 +311,8 @@ begin
       end;
     end;
 
-   // Inc(iFixtureIdx, 1);
+    Inc(iFixtureIdx, 1);
   end;
-
-  //Inc(iFixtureIdx, Length(g_QuarterFinalCmbList));
- // Inc(iFixtureIdx, i);
 
   if FileExists(FILE_PATH_FIXTURES_JSON) then
   begin
