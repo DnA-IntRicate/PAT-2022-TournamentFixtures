@@ -675,6 +675,8 @@ end;
 function TForm2.IsEliminated(const teamID: integer;
   const stage: integer): boolean;
 begin
+  Result := false;
+
   case stage of
     LadderStage_Qualifier:
       begin
@@ -1016,17 +1018,7 @@ begin
             end;
         end;
       end;
-    LadderStage_Final:
-      begin
-
-      end;
-    LadderStage_Champion:
-      begin
-        Result := false;
-      end;
   end;
-
-  Result := false;
 end;
 
 procedure TForm2.SetEliminated(const teamID: integer; const stage: integer);

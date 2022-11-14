@@ -46,13 +46,13 @@ Example: `Password = 12345678; Hash = a2240212f6e8d7db337b46aab21433ad==`
 ![alt text](Screenshots/FixtureEditor.png)
 
 ### Line Counts
-- 1556  /Source/AdminLoginForm.pas
+- 1548  /Source/AdminLoginForm.pas
 - 61    /Source/Fixture.pas
 - 74    /Source/JsonSerializer.pas
 - 51    /Source/MainDatabase.pas
 - 637   /Source/MainForm.pas
 - 49    /Source/Team.pas
-- *Total = 2428*
+- *Total = 2420*
 
 - 2246  /Source/AdminLoginForm.dfm
 - 1363  /Source/MainForm.dfm
