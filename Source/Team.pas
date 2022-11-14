@@ -12,14 +12,17 @@ type
     Layout: string;
     SubmitterAdminID: integer;
 
+    // Default constructor
     constructor Create();
   end;
 
 type
   TTeamList = class(TObject)
   public
+    // Maximum of 20 teams required
     Teams: array [1 .. 20] of TTeam;
 
+    // Default constructor
     constructor Create();
   end;
 
@@ -38,6 +41,7 @@ constructor TTeamList.Create();
 var
   i: integer;
 begin
+  // Loop through all teams and initialize them just to ensure none of the values in array are null
   for i := Low(Teams) to High(Teams) do
     Teams[i] := TTeam.Create();
 end;

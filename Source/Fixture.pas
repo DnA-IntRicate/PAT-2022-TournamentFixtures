@@ -1,7 +1,11 @@
+// Adam Foflonker 11C
 unit Fixture;
 
 interface
 
+// These const integers will be used to set LadderStage instead of typing ordinal integers.
+// Initially Ladder stage was going to be an enumerated type, but it was changed due to some json
+// serializing issues.
 const
   LadderStage_Qualifier = 0;
   LadderStage_Qualifier2 = 1;
@@ -18,6 +22,7 @@ type
     StagePosition: integer;
     Eliminated: boolean;
 
+    // Default constructor
     constructor Create();
     procedure Reset();
   end;
@@ -25,6 +30,7 @@ type
 type
   TFixtures = class(TObject)
   public
+    // Max of 39 Fixture entries required
     Entries: array [1 .. 39] of TFixture;
     constructor Create();
   end;

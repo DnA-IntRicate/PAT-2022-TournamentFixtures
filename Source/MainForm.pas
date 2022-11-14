@@ -65,6 +65,7 @@ type
     procedure btnRefreshClick(Sender: TObject);
   end;
 
+  // const fields to make it easier to change field names if required
 const
   TBL_TEAMS_FIELD_PK = 'TeamID';
   TBL_TEAMS_FIELD_NAME_TEAMCLASSNAME = 'TeamClassName';
@@ -76,9 +77,11 @@ const
 
 var
   Form1: TForm1;
-  g_Database: TMainDatabase;
-  g_TeamList: TTeamList;
-  g_Fixtures: TFixtures;
+
+  // Global variables prefixed with 'g_'
+  g_Database: TMainDatabase; // MainDatabase.pas
+  g_TeamList: TTeamList; // Team.pas
+  g_Fixtures: TFixtures; // Fixture.pas
 
 implementation
 
@@ -91,6 +94,7 @@ end;
 
 procedure TForm1.FormActivate(Sender: TObject);
 begin
+  // Pass data to AdminLoginform
   Form2.Database := g_Database;
   Form2.Fixtures := g_Fixtures;
   Form2.TeamList := g_TeamList;
@@ -145,6 +149,7 @@ begin
   lblFinal_2.Hide();
   lblChampion.Hide();
 
+  // Display fixtures only if loading succeeded
   LoadDatabase();
   if LoadFixtures() then
     DisplayFixtures();
@@ -158,10 +163,12 @@ begin
   g_Database := TMainDatabase.Create();
   g_TeamList := TTeamList.Create();
 
+  // Assign tblTeams simply for ease of typing instead of using a 'with' block
   tblTeams := g_Database.tblTeams;
   tblTeams.Open();
   tblTeams.First();
 
+  // Populating g_TeamList array
   while not tblTeams.Eof do
   begin
     newTeam := TTeam.Create();
@@ -180,10 +187,14 @@ function TForm1.LoadFixtures(): boolean;
 var
   sJsonStr: string;
   jsSerializer: TJsonSerializer;
+
+  // StreamReader/Writer was used instead of TextFile to accomodate reading and writing large strings
+  // Using a TextFile variable didn't fully work with larger strings.
   istream: TStreamReader;
   ostream: TStreamWriter;
   iDlgAnswer: integer;
 begin
+  // Loads fixtures if file exists else default initializes g_Fixtures
   if FileExists(FILE_PATH_FIXTURES_JSON) then
   begin
     istream := TStreamReader.Create(FILE_PATH_FIXTURES_JSON, TEncoding.UTF8);
@@ -219,6 +230,7 @@ begin
       jsSerializer := TJsonSerializer.Create();
       sJsonStr := jsSerializer.SerializeJson(g_Fixtures);
 
+      // Manually allocating size of output stream
       ostream := TStreamWriter.Create(FILE_PATH_FIXTURES_JSON, false,
         TEncoding.UTF8, SizeOf(char) * sJsonStr.Length);
       ostream.Write(sJsonStr);

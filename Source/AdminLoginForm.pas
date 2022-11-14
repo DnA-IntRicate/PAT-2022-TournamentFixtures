@@ -182,12 +182,14 @@ type
     procedure btnAddNewAdminClick(Sender: TObject);
     procedure btnChangePasswordClick(Sender: TObject);
 
+    // Public class variables used for sharing data between forms
   public
     Database: TMainDatabase;
     TeamList: TTeamList;
     Fixtures: TFixtures;
   end;
 
+  // const fields to make it easier to change field names if required
 const
   TBL_ADMINS_FIELD_NAME_FORENAMES = 'Forenames';
   TBL_ADMINS_FIELD_NAME_SURNAME = 'Surname';
@@ -200,15 +202,23 @@ const
 
 var
   Form2: TForm2;
+
+  // Global variables prefixed with 'g_'
   g_AdminForenames, g_AdminSurname: string;
+
+  // Load bitmap images once on startup
   g_PasswordShowingIcon, g_PasswordHidingIcon: TBitmap;
 
+  // Arrays of pointers to TComboBox to easily loop through them for operations
+  // Pointers were used to save memory and to make sure the proper component is being accessed.
   g_QualifierCmbList: array [1 .. 20] of ^TComboBox;
   g_Qualifier2CmbList: array [1 .. 4] of ^TComboBox;
   g_QuarterFinalCmbList: array [1 .. 8] of ^TComboBox;
   g_SemiFinalCmbList: array [1 .. 4] of ^TComboBox;
   g_FinalCmbList: array [1 .. 2] of ^TComboBox;
 
+  // Arrays of pointers to TCheckBox to easily loop through them for operations
+  // Pointers were used to save memory and to make sure the proper component is being accessed.
   g_QualifierCbxList: array [1 .. 20] of ^TCheckBox;
   g_Qualifier2CbxList: array [1 .. 20] of ^TCheckBox;
   g_QuarterFinalCbxList: array [1 .. 20] of ^TCheckBox;
@@ -230,6 +240,7 @@ begin
   sSurname := edtNewSurname.Text;
   sPassword := edtNewPassword.Text;
 
+  // Data validation
   if sForenames <> '' then
   begin
     for c in sForenames do
@@ -247,6 +258,7 @@ begin
     Exit();
   end;
 
+  // Data validation
   if sSurname <> '' then
   begin
     for c in sSurname do
@@ -264,6 +276,7 @@ begin
     Exit();
   end;
 
+  // Data validation
   if sPassword.Length < 8 then
   begin
     ShowMessage('Password must be longer than 8 characters!');
@@ -272,6 +285,7 @@ begin
 
   sHashedPassword := HashPasswd(sPassword);
 
+  // Creating a SQL query to add a new user to tblAdmins
   query := TADOQuery.Create(self);
   query.Connection := Database.Connection;
   query.SQL.Add('INSERT INTO tblAdmins ' + Format('(%s, %s, %s)',
@@ -303,6 +317,7 @@ var
 begin
   sPassword := edtCurrentAdminNewPassword.Text;
 
+  // Data validation
   if sPassword.Length < 8 then
   begin
     ShowMessage('Password must be longer than 8 characters!');
@@ -311,6 +326,7 @@ begin
 
   sHashedPassword := HashPasswd(sPassword);
 
+  // Creating a SQL query to update password of current admin in tblAdmins
   query := TADOQuery.Create(self);
   query.Connection := Database.Connection;
   query.SQL.Add('UPDATE tblAdmins SET ' + Format('%s = ''%s''',
@@ -329,7 +345,7 @@ procedure TForm2.btnEyeClick(Sender: TObject);
 begin
   if edtPassword.PasswordChar = #0 then
   begin
-    edtPassword.PasswordChar := '•';
+    edtPassword.PasswordChar := '•'; // Password char, ASCII Alt-7
     btnEye.Glyph := g_PasswordHidingIcon;
   end
   else
@@ -350,6 +366,7 @@ begin
   sSurname := edtSurname.Text;
   sPassword := edtPassword.Text;
 
+  // Assign tblAdmins simply for ease of typing instead of using a 'with' block
   tblAdmins := Database.tblAdmins;
   tblAdmins.Open();
   tblAdmins.First();
@@ -368,10 +385,12 @@ begin
 
   if bEntryFound then
   begin
+    // Assigning for later use with updating the database
     g_AdminForenames := sForenames;
 
     if sSurname = tblAdmins[TBL_ADMINS_FIELD_NAME_SURNAME] then
     begin
+      // Assigning for later use with updating the database
       g_AdminSurname := sSurname;
 
       if HashPasswd(sPassword) = tblAdmins[TBL_ADMINS_FIELD_NAME_PASSWORDHASH]
@@ -386,7 +405,6 @@ begin
         ShowMessage('Incorrect password!');
         edtPassword.SetFocus();
       end;
-
     end
     else
     begin
@@ -424,9 +442,14 @@ var
 begin
   MD5 := THashMD5.Create();
 
+  // Hash password to plain MD5
   sHash := MD5.GetHashString(passwd);
+
+  // Add a dynamic salt to the plain hash
   sHash := sHash.Insert(Length(passwd),
     MD5.GetHashString(IntToStr(Length(passwd))));
+
+  // Rehash with salt and add 2 equals signs for further complexity
   sHash := MD5.GetHashString(sHash) + '==';
 
   Result := sHash;
@@ -443,6 +466,7 @@ begin
       case fx.LadderStage of
         LadderStage_Qualifier:
           begin
+            // Dereference pointer
             myCmb := g_QualifierCmbList[fx.StagePosition]^;
             myCmb.ItemIndex := fx.teamID - 1;
 
@@ -495,7 +519,7 @@ begin
   pnlAdminEditor.Hide();
   pnlLogin.Show();
 
-  edtPassword.PasswordChar := '•';
+  edtPassword.PasswordChar := '•'; // Password char, ASCII Alt-7
   btnEye.Glyph := g_PasswordHidingIcon;
 end;
 
@@ -503,9 +527,14 @@ procedure TForm2.UpdateFixtures();
 var
   i, iFixtureIdx: integer;
   myCmb: TComboBox;
-  ptrFixture: ^TFixture;
   jsSerialzer: TJsonSerializer;
   sJsonStr: string;
+
+  // Pointer used for directly modifying data instead of creating a new TFixture instance and reassigning
+  ptrFixture: ^TFixture;
+
+  // StreamReader/Writer was used instead of TextFile to accomodate reading and writing large strings
+  // Using a TextFile variable didn't fully work with larger strings.
   ostream: TStreamWriter;
 begin
   iFixtureIdx := 1;
@@ -514,7 +543,10 @@ begin
   begin
     if g_QualifierCmbList[i] <> nil then
     begin
+      // // Dereference pointer
       myCmb := g_QualifierCmbList[i]^;
+
+      // Set ptrFixture to the memory address of Fixtures.Entries[iFixtureIdx]
       ptrFixture := @Fixtures.Entries[iFixtureIdx];
 
       if (ptrFixture <> nil) and (myCmb.ItemIndex <> -1) then
@@ -619,6 +651,7 @@ begin
     ptrFixture.Eliminated := false;
   end;
 
+  // Write to file
   if FileExists(FILE_PATH_FIXTURES_JSON) then
   begin
     jsSerialzer := TJsonSerializer.Create();
@@ -1353,6 +1386,7 @@ var
   t: TTeam;
   i: integer;
 begin
+  // Assigning pointer arrays to memory addresses of components
   g_QualifierCmbList[1] := @cmbQualifier_1;
   g_QualifierCmbList[2] := @cmbQualifier_2;
   g_QualifierCmbList[3] := @cmbQualifier_3;
@@ -1480,6 +1514,7 @@ begin
   g_SemiFinalCbxList[19] := @cbxEliminatedSemiFinal_19;
   g_SemiFinalCbxList[20] := @cbxEliminatedSemiFinal_20;
 
+  // Populating all TComboBox's Items array with the teams from the database
   for t in TeamList.Teams do
   begin
     for i := Low(g_QualifierCmbList) to High(g_QualifierCmbList) do

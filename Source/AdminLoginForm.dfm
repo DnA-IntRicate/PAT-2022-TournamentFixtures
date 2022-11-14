@@ -2161,14 +2161,14 @@ object Form2: TForm2
       TabOrder = 1
       object Label4: TLabel
         Left = 7
-        Top = 42
+        Top = 38
         Width = 69
         Height = 16
         Caption = 'Forenames:'
       end
       object Label5: TLabel
         Left = 19
-        Top = 71
+        Top = 69
         Width = 57
         Height = 16
         Caption = 'Surname:'
@@ -2219,8 +2219,8 @@ object Form2: TForm2
       Caption = 'Change Password'
       TabOrder = 2
       object Label7: TLabel
-        Left = 3
-        Top = 35
+        Left = 4
+        Top = 30
         Width = 89
         Height = 16
         Caption = 'New Password:'

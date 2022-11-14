@@ -15,6 +15,7 @@ type
     function DeserializeJson(const jsonStr: string): TObject;
 
   private
+    // Private class member variables prefixed with 'm_'
     m_Marshal: TJSONMarshal;
     m_Unmarshal: TJSONUnMarshal;
   end;
@@ -26,6 +27,7 @@ begin
   m_Marshal := TJSONMarshal.Create(TJSONConverter.Create());
   m_Unmarshal := TJSONUnMarshal.Create();
 
+  // Create json converter for type TFixtures using a lambda/anonymous function
   m_Marshal.RegisterConverter(TFixtures, 'Entries',
     function(Data: TObject; Field: string): TListOfObjects
     var
@@ -42,6 +44,7 @@ begin
       end;
     end);
 
+  // Create json reverter for type TFixtures using a lambda/anonymous procedure
   m_Unmarshal.RegisterReverter(TFixtures, 'Entries',
     procedure(Data: TObject; Field: string; Args: TListOfObjects)
     var
